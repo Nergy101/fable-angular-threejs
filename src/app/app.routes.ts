@@ -26,6 +26,10 @@ export const routes: Routes = [
     loadComponent: () => import('./games/blobby-volley').then((m) => m.BlobbyVolley),
   },
   {
+    path: 'games/tiny-legend',
+    loadComponent: () => import('./games/tiny-legend').then((m) => m.TinyLegend),
+  },
+  {
     path: 'explorer/:uid',
     loadComponent: () => import('./explorer/model-detail').then((m) => m.ModelDetail),
   },

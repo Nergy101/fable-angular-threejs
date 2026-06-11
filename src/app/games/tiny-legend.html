@@ -1,0 +1,40 @@
+<div class="game">
+  <div class="canvas-host"><canvas #canvas></canvas></div>
+
+  <header class="hud hud-top">
+    <a routerLink="/games" class="back">← games</a>
+
+    <div class="status">
+      <span class="hearts">
+        @for (full of hearts(); track $index) {
+          <i [class.full]="full">{{ full ? '♥' : '♡' }}</i>
+        }
+      </span>
+      <span class="rupees">◆ {{ rupees() }}</span>
+    </div>
+
+    <span class="area">{{ area() }}</span>
+  </header>
+
+  @if (message()) {
+    <div class="banner" [class.big]="phase() !== 'play'">
+      @if (phase() === 'title') {
+        <h1>Tiny Legend</h1>
+        <p class="sub">a fan-made miniature · in the spirit of 1986</p>
+      }
+      <p class="msg" [class.gold]="phase() === 'win'">{{ message() }}</p>
+      @if (phase() === 'title') {
+        <p class="hint">find the golden trishard in the shrine</p>
+      }
+      @if (phase() === 'win' || phase() === 'dead') {
+        <p class="hint">space — play again</p>
+      }
+    </div>
+  }
+
+  <footer class="hud hud-bottom">
+    <span class="legend">WASD / arrows — move</span>
+    <span class="rules">walk off open edges to change screens · enemies drop loot</span>
+    <span class="legend">SPACE / J — sword · R — reset</span>
+  </footer>
+</div>

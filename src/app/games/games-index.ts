@@ -39,6 +39,31 @@ import { RouterLink } from '@angular/router';
           </div>
         </a>
 
+        <a routerLink="/games/tiny-legend" class="cartridge">
+          <div class="screen screen-legend">
+            <div class="forest">
+              <i class="tree t1"></i><i class="tree t2"></i><i class="tree t3"></i>
+              <i class="tree t4"></i><i class="tree t5"></i>
+              <div class="hero"><b></b></div>
+              <div class="tri">
+                <s></s><s></s><s></s>
+              </div>
+            </div>
+            <span class="play">▶ play</span>
+          </div>
+          <div class="label">
+            <span class="year">in the spirit of 1986</span>
+            <h2>Tiny Legend</h2>
+            <p>
+              A fan-made miniature of the top-down classic. Four moonlit screens, a sword,
+              octorok-ish blobs — find the golden trishard hidden in the shrine.
+            </p>
+            <span class="tags">
+              <code>1 player</code><code>keyboard</code><code>screen-scroll world</code>
+            </span>
+          </div>
+        </a>
+
         <div class="cartridge soon">
           <div class="screen"><span class="qmark">?</span></div>
           <div class="label">
@@ -218,6 +243,83 @@ import { RouterLink } from '@angular/router';
         padding: 1px 8px;
       }
     }
+    /* --- tiny CSS diorama: the legend --- */
+    .screen-legend {
+      background: radial-gradient(ellipse 90% 80% at 50% 20%, #16301e 0%, #0a1410 75%);
+    }
+    .forest { position: absolute; inset: 0; }
+    .tree {
+      position: absolute;
+      width: 0; height: 0;
+      border-left: 13px solid transparent;
+      border-right: 13px solid transparent;
+      border-bottom: 34px solid #1f4424;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: -3px; top: 34px;
+        width: 6px; height: 7px;
+        background: #3a2c1e;
+      }
+      &.t1 { left: 8%; top: 16%; }
+      &.t2 { left: 20%; top: 56%; transform: scale(0.85); }
+      &.t3 { right: 12%; top: 12%; transform: scale(1.1); }
+      &.t4 { right: 24%; top: 60%; transform: scale(0.8); }
+      &.t5 { left: 44%; top: 8%; transform: scale(0.7); }
+    }
+    .hero {
+      position: absolute;
+      left: 30%; bottom: 26%;
+      width: 22px; height: 26px;
+      background: #45d07b;
+      border-radius: 4px;
+      animation: step 1.2s steps(2) infinite;
+
+      b {
+        position: absolute;
+        top: -12px; left: 4px;
+        width: 14px; height: 12px;
+        background: #e8b88a;
+        border-radius: 3px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: -7px; left: 2px;
+          width: 0; height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 8px solid #2f9e58;
+        }
+      }
+    }
+    @keyframes step {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+    .tri {
+      position: absolute;
+      right: 26%; bottom: 30%;
+      animation: glowy 2.4s ease-in-out infinite;
+
+      s {
+        position: absolute;
+        width: 0; height: 0;
+        border-left: 11px solid transparent;
+        border-right: 11px solid transparent;
+        border-bottom: 19px solid #ffd75e;
+
+        &:nth-child(1) { left: -11px; top: -38px; }
+        &:nth-child(2) { left: -23px; top: -19px; }
+        &:nth-child(3) { left: 1px; top: -19px; }
+      }
+    }
+    @keyframes glowy {
+      0%, 100% { filter: drop-shadow(0 0 6px rgba(255, 215, 94, 0.8)); }
+      50% { filter: drop-shadow(0 0 16px rgba(255, 215, 94, 1)); transform: translateY(-4px); }
+    }
+
     .soon {
       opacity: 0.55;
 

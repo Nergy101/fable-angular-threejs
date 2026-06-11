@@ -48,12 +48,18 @@ Zipped `.gltf` archives are unpacked in-browser with `fflate` and fed to
 
 ### C — The Games Explorer (`/games`)
 
-Playable remakes built with the curriculum's own techniques. First on the shelf:
-**Blobby Volley** (2000) with classic rules — only the serving side scores, three
-touches per side, first to 15. Red plays A/D + W; blue plays arrows, or flip on the
-CPU opponent for single-player. The whole game is one component on the same
-`ThreeDemo` base class: delta-time physics, circle collision, zone-free keyboard
-input (`src/app/games/blobby-volley.ts`).
+Playable remakes built with the curriculum's own techniques, each one a single
+component on the `ThreeDemo` base class:
+
+- **Blobby Volley** (2000) — classic rules: only the serving side scores, three
+  touches per side, first to 15. Red plays A/D + W; blue plays arrows, or flip on
+  the CPU opponent for single-player. Delta-time physics, circle collision,
+  zone-free keyboard input (`src/app/games/blobby-volley.ts`).
+- **Tiny Legend** — a fan-made miniature in the spirit of the 1986 top-down
+  classic: four moonlit screens with NES-style edge transitions, sword combat,
+  chasing blobs that drop hearts and rupees, and a golden trishard to find in the
+  shrine. ASCII tilemaps, AABB tile collision, knockback and invulnerability
+  frames (`src/app/games/tiny-legend.ts`).
 
 ## Stack
 
