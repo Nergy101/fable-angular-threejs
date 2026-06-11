@@ -2,6 +2,9 @@ import { Component, computed, inject, input, signal, WritableSignal } from '@ang
 import { RouterLink } from '@angular/router';
 import * as THREE from 'three';
 import { GLTFLoader, GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
+import { KTX2Loader } from 'three/examples/jsm/loaders/KTX2Loader.js';
+import { MeshoptDecoder } from 'three/examples/jsm/libs/meshopt_decoder.module.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
 import { unzipSync } from 'fflate';
@@ -14,6 +17,98 @@ type Phase = 'token' | 'links' | 'downloading' | 'parsing' | 'ready' | 'error';
 interface ClipInfo {
   name: string;
   duration: number;
+}
+
+/** MIME types for the blob URLs we mint from zip entries — some browsers
+ *  refuse to decode images from typeless blobs. */
+const MIME: Record<string, string> = {
+  png: 'image/png',
+  jpg: 'image/jpeg',
+  jpeg: 'image/jpeg',
+  webp: 'image/webp',
+  ktx2: 'image/ktx2',
+  bin: 'application/octet-stream',
+};
+
+const SPEC_GLOSS = 'KHR_materials_pbrSpecularGlossiness';
+
+/**
+ * Older Sketchfab exports use the spec/gloss PBR extension, which modern
+ * three.js silently ignores — the classic "my model is plain white" bug.
+ * Rewrite those materials to metallic/roughness before parsing: diffuse
+ * becomes base color, glossiness inverts into roughness. Approximate, but
+ * textured-and-close beats white-and-wrong.
+ */
+function specGlossToMetalRough(json: {
+  materials?: Array<Record<string, unknown>>;
+  extensionsUsed?: string[];
+  extensionsRequired?: string[];
+}): boolean {
+  let changed = false;
+  for (const mat of json.materials ?? []) {
+    const extensions = mat['extensions'] as Record<string, unknown> | undefined;
+    const sg = extensions?.[SPEC_GLOSS] as
+      | {
+          diffuseFactor?: number[];
+          diffuseTexture?: unknown;
+          glossinessFactor?: number;
+        }
+      | undefined;
+    if (!sg) continue;
+    changed = true;
+    mat['pbrMetallicRoughness'] = {
+      ...(mat['pbrMetallicRoughness'] as object | undefined),
+      baseColorFactor: sg.diffuseFactor ?? [1, 1, 1, 1],
+      ...(sg.diffuseTexture ? { baseColorTexture: sg.diffuseTexture } : {}),
+      metallicFactor: 0,
+      roughnessFactor: sg.glossinessFactor != null ? 1 - sg.glossinessFactor : 1,
+    };
+    delete extensions![SPEC_GLOSS];
+    if (Object.keys(extensions!).length === 0) delete mat['extensions'];
+  }
+  if (changed) {
+    for (const key of ['extensionsUsed', 'extensionsRequired'] as const) {
+      const list = json[key];
+      if (Array.isArray(list)) {
+        json[key] = list.filter((e) => e !== SPEC_GLOSS);
+        if (json[key]!.length === 0) delete json[key];
+      }
+    }
+  }
+  return changed;
+}
+
+/** Apply a JSON transform inside a binary GLB container (header + chunks). */
+function rewriteGlbJson(
+  buffer: ArrayBuffer,
+  transform: (json: Record<string, unknown>) => boolean,
+): ArrayBuffer {
+  const dv = new DataView(buffer);
+  if (buffer.byteLength < 20 || dv.getUint32(0, true) !== 0x46546c67) return buffer; // 'glTF'
+  const jsonLen = dv.getUint32(12, true);
+  if (dv.getUint32(16, true) !== 0x4e4f534a) return buffer; // 'JSON'
+  const json = JSON.parse(new TextDecoder().decode(new Uint8Array(buffer, 20, jsonLen)));
+  if (!transform(json)) return buffer;
+
+  let jsonOut = new TextEncoder().encode(JSON.stringify(json));
+  const pad = (4 - (jsonOut.length % 4)) % 4;
+  if (pad) {
+    const padded = new Uint8Array(jsonOut.length + pad);
+    padded.set(jsonOut);
+    padded.fill(0x20, jsonOut.length); // spec: pad JSON chunks with spaces
+    jsonOut = padded;
+  }
+  const rest = new Uint8Array(buffer, 20 + jsonLen);
+  const result = new Uint8Array(20 + jsonOut.length + rest.length);
+  const rdv = new DataView(result.buffer);
+  rdv.setUint32(0, 0x46546c67, true);
+  rdv.setUint32(4, dv.getUint32(4, true), true);
+  rdv.setUint32(8, result.length, true);
+  rdv.setUint32(12, jsonOut.length, true);
+  rdv.setUint32(16, 0x4e4f534a, true);
+  result.set(jsonOut, 20);
+  result.set(rest, 20 + jsonOut.length);
+  return result.buffer;
 }
 
 /**
@@ -136,6 +231,8 @@ export class AtelierViewer extends ThreeDemo {
     if (this.keyupFn) window.removeEventListener('keyup', this.keyupFn);
     this.controls?.dispose();
     this.pmrem?.dispose();
+    this.dracoLoader?.dispose();
+    this.ktx2Loader?.dispose();
     for (const url of this.blobUrls) URL.revokeObjectURL(url);
   }
 
@@ -281,9 +378,29 @@ export class AtelierViewer extends ThreeDemo {
     return out.buffer;
   }
 
+  private dracoLoader?: DRACOLoader;
+  private ktx2Loader?: KTX2Loader;
+
+  /** A GLTFLoader with every common decoder wired up, so compressed
+   *  Sketchfab assets (DRACO geometry, KTX2/Basis textures, Meshopt)
+   *  load instead of failing or dropping textures. */
+  private buildLoader(manager?: THREE.LoadingManager): GLTFLoader {
+    this.dracoLoader ??= new DRACOLoader().setDecoderPath(
+      'https://www.gstatic.com/draco/versioned/decoders/1.5.7/',
+    );
+    this.ktx2Loader ??= new KTX2Loader()
+      .setTranscoderPath('https://cdn.jsdelivr.net/npm/three@0.184.0/examples/jsm/libs/basis/')
+      .detectSupport(this.renderer);
+    return new GLTFLoader(manager)
+      .setDRACOLoader(this.dracoLoader)
+      .setKTX2Loader(this.ktx2Loader)
+      .setMeshoptDecoder(MeshoptDecoder);
+  }
+
   private parseGlb(buffer: ArrayBuffer): Promise<GLTF> {
+    const fixed = rewriteGlbJson(buffer, specGlossToMetalRough);
     return new Promise((resolve, reject) => {
-      new GLTFLoader().parse(buffer, '', resolve, reject);
+      this.buildLoader().parse(fixed, '', resolve, reject);
     });
   }
 
@@ -291,25 +408,35 @@ export class AtelierViewer extends ThreeDemo {
   private parseGltfZip(buffer: ArrayBuffer): Promise<GLTF> {
     const files = unzipSync(new Uint8Array(buffer));
     const urlByPath = new Map<string, string>();
+    const urlByBasename = new Map<string, string>();
     for (const [path, data] of Object.entries(files)) {
-      const url = URL.createObjectURL(new Blob([data as BlobPart]));
+      const ext = path.split('.').pop()?.toLowerCase() ?? '';
+      const url = URL.createObjectURL(new Blob([data as BlobPart], { type: MIME[ext] ?? '' }));
       urlByPath.set(path, url);
+      urlByBasename.set(path.split('/').pop()!, url);
       this.blobUrls.push(url);
     }
 
     const gltfPath = Object.keys(files).find((p) => p.endsWith('.gltf'));
     if (!gltfPath) throw new Error('No .gltf found inside the archive.');
 
-    // resources are referenced relative to the .gltf — remap them to blob URLs
+    // resources are referenced relative to the .gltf — remap them to blob
+    // URLs, falling back to a basename match when folder prefixes disagree
     const manager = new THREE.LoadingManager();
     manager.setURLModifier((url) => {
+      if (url.startsWith('blob:') || url.startsWith('data:') || url.startsWith('http')) return url;
       const clean = decodeURIComponent(url).replace(/^\.\//, '');
-      return urlByPath.get(clean) ?? url;
+      return (
+        urlByPath.get(clean) ??
+        urlByBasename.get(clean.split('/').pop()!) ??
+        url
+      );
     });
 
-    const json = new TextDecoder().decode(files[gltfPath]);
+    const json = JSON.parse(new TextDecoder().decode(files[gltfPath]));
+    specGlossToMetalRough(json);
     return new Promise((resolve, reject) => {
-      new GLTFLoader(manager).parse(json, '', resolve, reject);
+      this.buildLoader(manager).parse(JSON.stringify(json), '', resolve, reject);
     });
   }
 
