@@ -2,13 +2,23 @@ import { Component, signal, WritableSignal, computed } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import * as THREE from 'three';
 import { ThreeDemo } from '../core/three/three-demo';
+import {
+  pixelTexture,
+  HERO_DOWN, HERO_UP, HERO_SIDE, SWORD,
+  OCTOROK, GUARD,
+  TREE, ROCK, GRASS, SAND, WATER_A, WATER_B, BRIDGE,
+  HEART, RUPEE, TRIFORCE,
+} from './pixel-sprites';
 
 type Phase = 'title' | 'play' | 'dead' | 'win';
 
 /* ---- world ---- */
 const COLS = 16;
 const ROWS = 11;
-const TILE = 1;
+
+/* the whole game renders into a 256×176 buffer — 16px tiles, like 1991 */
+const FRAME_W = COLS * 16;
+const FRAME_H = ROWS * 16;
 
 /*
  * Four screens in a 2×2 grid, NES-style: crossing an open edge swaps the
@@ -90,6 +100,9 @@ const ATTACK_TIME = 0.18;
 const ATTACK_COOLDOWN = 0.34;
 const INVULN_TIME = 1.2;
 
+/* draw order, top-down: everything is a flat quad at a different height */
+const LAYER = { ground: 0, deco: 0.02, drop: 0.04, enemy: 0.06, hero: 0.08, sword: 0.1 };
+
 interface Enemy {
   x: number;
   z: number;
@@ -107,14 +120,15 @@ interface Drop {
   x: number;
   z: number;
   kind: 'heart' | 'rupee' | 'trishard';
-  mesh: THREE.Object3D;
+  mesh: THREE.Mesh;
 }
 
 /**
  * Tiny Legend — a fan-made miniature in the spirit of the 1986 top-down
- * classic. One screen at a time, sword out, find the golden trishard.
- * All geometry procedural; mechanically it's lesson material end to end:
- * tile collision, screen transitions, timers, knockback, drops.
+ * classic, drawn the 1990 way: 16×16 code-painted sprites on a 256×176
+ * framebuffer, nearest-neighbor upscaled. Mechanically it's lesson
+ * material end to end: tile collision, screen transitions, timers,
+ * knockback, drops.
  */
 @Component({
   selector: 'app-tiny-legend',
@@ -137,61 +151,58 @@ export class TinyLegend extends ThreeDemo {
   private sx = 0;
   private sy = 0;
   private hero = { x: 2.5, z: 2.5, dirX: 0, dirZ: 1 };
+  private moving = false;
+  private walkClock = 0;
   private attackT = 0;
   private cooldownT = 0;
   private invulnT = 0;
+  private waterClock = 0;
   private solids: boolean[][] = [];
   private enemies: Enemy[] = [];
   private drops: Drop[] = [];
   private collected = new Set<string>();
   private screenGroup?: THREE.Group;
-  private heroGroup!: THREE.Group;
-  private sword!: THREE.Mesh;
-  private lantern!: THREE.PointLight;
-  private waterMats: THREE.MeshStandardMaterial[] = [];
-  private trishardPos?: { x: number; z: number };
+  private heroSprite!: THREE.Mesh;
+  private swordMesh!: THREE.Mesh;
+  private waterMat?: THREE.MeshBasicMaterial;
   private readonly keys = new Set<string>();
   private keydownFn?: (e: KeyboardEvent) => void;
   private keyupFn?: (e: KeyboardEvent) => void;
 
-  /* ---- shared assets (built once, reused across screen rebuilds) ---- */
-  private readonly geoFlat = new THREE.BoxGeometry(TILE, 0.1, TILE);
-  private readonly geoBlock = new THREE.BoxGeometry(TILE, 0.9, TILE);
-  private readonly geoCanopy = new THREE.ConeGeometry(0.52, 0.8, 6);
-  private readonly geoEnemy = new THREE.SphereGeometry(0.34, 20, 14);
-  private readonly mats = {
-    grass: new THREE.MeshStandardMaterial({ color: 0x2e5d33, roughness: 1 }),
-    sand: new THREE.MeshStandardMaterial({ color: 0x8a744c, roughness: 1 }),
-    water: null as unknown as THREE.MeshStandardMaterial, // per-screen animated clone
-    bridge: new THREE.MeshStandardMaterial({ color: 0x6b4a2e, roughness: 0.9 }),
-    trunk: new THREE.MeshStandardMaterial({ color: 0x3a2c1e, roughness: 1 }),
-    canopy: new THREE.MeshStandardMaterial({ color: 0x1f4424, roughness: 1 }),
-    rock: new THREE.MeshStandardMaterial({ color: 0x55596a, roughness: 0.95 }),
+  /* ---- pixel textures, painted once ---- */
+  private readonly tex = {
+    heroDown: pixelTexture(HERO_DOWN),
+    heroUp: pixelTexture(HERO_UP),
+    heroSide: pixelTexture(HERO_SIDE),
+    sword: pixelTexture(SWORD),
+    octorok: pixelTexture(OCTOROK),
+    guard: pixelTexture(GUARD),
+    tree: pixelTexture(TREE),
+    rock: pixelTexture(ROCK),
+    grass: pixelTexture(GRASS),
+    sand: pixelTexture(SAND),
+    waterA: pixelTexture(WATER_A),
+    waterB: pixelTexture(WATER_B),
+    bridge: pixelTexture(BRIDGE),
+    heart: pixelTexture(HEART),
+    rupee: pixelTexture(RUPEE),
+    triforce: pixelTexture(TRIFORCE),
   };
 
+  private readonly quad = new THREE.PlaneGeometry(1, 1);
+
   protected onInit(): void {
-    this.camera.fov = 42;
-    this.camera.position.set(COLS / 2, 14.5, ROWS / 2 + 5.2);
-    this.camera.lookAt(COLS / 2, 0, ROWS / 2 - 0.6);
-    this.camera.updateProjectionMatrix();
+    // a fixed-size orthographic window onto the tile grid: pure 2D
+    const cam = new THREE.OrthographicCamera(
+      -COLS / 2, COLS / 2, ROWS / 2, -ROWS / 2, 0.1, 50,
+    );
+    cam.position.set(COLS / 2, 10, ROWS / 2);
+    cam.up.set(0, 0, -1);
+    cam.lookAt(COLS / 2, 0, ROWS / 2);
+    this.camera = cam as unknown as THREE.PerspectiveCamera;
 
-    this.scene.background = new THREE.Color(0x0a0d12);
-    this.scene.fog = new THREE.Fog(0x0a0d12, 20, 38);
-
-    this.renderer.shadowMap.enabled = true;
-    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-
-    // moonlight + the hero's lantern
-    this.scene.add(new THREE.HemisphereLight(0x44507a, 0x14100c, 0.75));
-    const moon = new THREE.DirectionalLight(0x9fb4e8, 1.1);
-    moon.position.set(6, 14, 4);
-    moon.castShadow = true;
-    moon.shadow.mapSize.set(2048, 2048);
-    moon.shadow.camera.left = moon.shadow.camera.bottom = -12;
-    moon.shadow.camera.right = moon.shadow.camera.top = 12;
-    this.scene.add(moon);
-    this.lantern = new THREE.PointLight(0xffc878, 14, 9, 1.8);
-    this.scene.add(this.lantern);
+    this.renderer.setPixelRatio(1);
+    this.scene.background = new THREE.Color('#0f0f0f');
 
     this.buildHero();
     this.loadScreen(0, 0);
@@ -204,6 +215,12 @@ export class TinyLegend extends ThreeDemo {
     });
   }
 
+  /** Ignore the host size: the drawing buffer is always 256×176 and CSS
+   *  upscales it with image-rendering: pixelated. That IS the look. */
+  protected override onResize(): void {
+    this.renderer.setSize(FRAME_W, FRAME_H, false);
+  }
+
   protected override onDispose(): void {
     if (this.keydownFn) window.removeEventListener('keydown', this.keydownFn);
     if (this.keyupFn) window.removeEventListener('keyup', this.keyupFn);
@@ -211,39 +228,23 @@ export class TinyLegend extends ThreeDemo {
 
   /* ================= construction ================= */
 
+  private spriteMat(tex: THREE.Texture): THREE.MeshBasicMaterial {
+    return new THREE.MeshBasicMaterial({ map: tex, transparent: true, alphaTest: 0.5 });
+  }
+
+  private sprite(tex: THREE.Texture, size: number, layer: number): THREE.Mesh {
+    const mesh = new THREE.Mesh(this.quad, this.spriteMat(tex));
+    mesh.rotation.x = -Math.PI / 2;
+    mesh.scale.setScalar(size);
+    mesh.position.y = layer;
+    return mesh;
+  }
+
   private buildHero(): void {
-    this.heroGroup = new THREE.Group();
-    const tunic = new THREE.Mesh(
-      new THREE.BoxGeometry(0.52, 0.5, 0.38),
-      new THREE.MeshStandardMaterial({ color: 0x45d07b, roughness: 0.7 }),
-    );
-    tunic.position.y = 0.35;
-    tunic.castShadow = true;
-    const head = new THREE.Mesh(
-      new THREE.BoxGeometry(0.36, 0.3, 0.32),
-      new THREE.MeshStandardMaterial({ color: 0xe8b88a, roughness: 0.8 }),
-    );
-    head.position.y = 0.76;
-    head.castShadow = true;
-    const cap = new THREE.Mesh(
-      new THREE.ConeGeometry(0.24, 0.34, 4),
-      new THREE.MeshStandardMaterial({ color: 0x2f9e58, roughness: 0.7 }),
-    );
-    cap.position.y = 1.02;
-    cap.rotation.y = Math.PI / 4;
-    this.sword = new THREE.Mesh(
-      new THREE.BoxGeometry(0.09, 0.06, 0.85),
-      new THREE.MeshStandardMaterial({
-        color: 0xdfe6f5,
-        roughness: 0.2,
-        metalness: 0.9,
-        emissive: 0x3a4a6a,
-      }),
-    );
-    this.sword.position.set(0.22, 0.4, 0.65);
-    this.sword.visible = false;
-    this.heroGroup.add(tunic, head, cap, this.sword);
-    this.scene.add(this.heroGroup);
+    this.heroSprite = this.sprite(this.tex.heroDown, 0.95, LAYER.hero);
+    this.swordMesh = this.sprite(this.tex.sword, 1, LAYER.sword);
+    this.swordMesh.visible = false;
+    this.scene.add(this.heroSprite, this.swordMesh);
   }
 
   private loadScreen(sx: number, sy: number): void {
@@ -257,16 +258,11 @@ export class TinyLegend extends ThreeDemo {
     this.scene.add(this.screenGroup);
     this.enemies = [];
     this.drops = [];
-    this.waterMats = [];
-    this.trishardPos = undefined;
 
-    // animated water material is per-screen so disposal stays simple
-    const water = new THREE.MeshStandardMaterial({
-      color: 0x1d3f6e,
-      roughness: 0.3,
-      emissive: 0x10294a,
-    });
-    this.waterMats.push(water);
+    this.waterMat = new THREE.MeshBasicMaterial({ map: this.tex.waterA });
+    const grassMat = new THREE.MeshBasicMaterial({ map: this.tex.grass });
+    const sandMat = new THREE.MeshBasicMaterial({ map: this.tex.sand });
+    const bridgeMat = new THREE.MeshBasicMaterial({ map: this.tex.bridge });
 
     this.solids = Array.from({ length: ROWS }, () => Array(COLS).fill(false));
 
@@ -277,27 +273,21 @@ export class TinyLegend extends ThreeDemo {
         const z = r + 0.5;
         this.solids[r][c] = SOLID.has(ch);
 
-        // ground under everything
         const groundMat =
-          ch === ',' ? this.mats.sand : ch === '~' ? water : ch === '=' ? this.mats.bridge : this.mats.grass;
-        const ground = new THREE.Mesh(this.geoFlat, groundMat);
-        ground.position.set(x, ch === '~' ? -0.06 : -0.05, z);
-        ground.receiveShadow = true;
+          ch === ',' ? sandMat : ch === '~' ? this.waterMat : ch === '=' ? bridgeMat : grassMat;
+        const ground = new THREE.Mesh(this.quad, groundMat);
+        ground.rotation.x = -Math.PI / 2;
+        ground.position.set(x, LAYER.ground, z);
+        if ((c + r) % 2 === 1) ground.scale.x = -1; // mirror alternate tiles for variety
         this.screenGroup.add(ground);
 
         if (ch === '#') {
-          const trunk = new THREE.Mesh(this.geoBlock, this.mats.trunk);
-          trunk.scale.set(0.32, 0.6, 0.32);
-          trunk.position.set(x, 0.25, z);
-          const canopy = new THREE.Mesh(this.geoCanopy, this.mats.canopy);
-          canopy.position.set(x, 0.95, z);
-          canopy.castShadow = true;
-          this.screenGroup.add(trunk, canopy);
+          const tree = this.sprite(this.tex.tree, 1.06, LAYER.deco);
+          tree.position.set(x, LAYER.deco, z);
+          this.screenGroup.add(tree);
         } else if (ch === 'R') {
-          const rock = new THREE.Mesh(this.geoBlock, this.mats.rock);
-          rock.scale.set(0.92, 0.62, 0.92);
-          rock.position.set(x, 0.27, z);
-          rock.castShadow = true;
+          const rock = this.sprite(this.tex.rock, 1, LAYER.deco);
+          rock.position.set(x, LAYER.deco, z);
           this.screenGroup.add(rock);
         } else if (ch === 'E') {
           this.spawnEnemy(x, z, sx + sy === 2);
@@ -307,7 +297,6 @@ export class TinyLegend extends ThreeDemo {
             this.addDrop(x, z, ch === 'H' ? 'heart' : 'rupee', id);
           }
         } else if (ch === 'T') {
-          this.trishardPos = { x, z };
           this.addDrop(x, z, 'trishard', `${sx},${sy},${c},${r}`);
         }
       }
@@ -315,16 +304,8 @@ export class TinyLegend extends ThreeDemo {
   }
 
   private spawnEnemy(x: number, z: number, guard: boolean): void {
-    const mesh = new THREE.Mesh(
-      this.geoEnemy,
-      new THREE.MeshStandardMaterial({
-        color: guard ? 0x8a5cff : 0xff5566,
-        roughness: 0.5,
-      }),
-    );
-    mesh.scale.y = 0.78;
-    mesh.castShadow = true;
-    mesh.position.set(x, 0.27, z);
+    const mesh = this.sprite(guard ? this.tex.guard : this.tex.octorok, 0.9, LAYER.enemy);
+    mesh.position.set(x, LAYER.enemy, z);
     this.screenGroup!.add(mesh);
     this.enemies.push({
       x, z,
@@ -338,40 +319,10 @@ export class TinyLegend extends ThreeDemo {
   }
 
   private addDrop(x: number, z: number, kind: Drop['kind'], id: string): void {
-    let mesh: THREE.Object3D;
-    if (kind === 'heart') {
-      mesh = new THREE.Mesh(
-        new THREE.OctahedronGeometry(0.2),
-        new THREE.MeshStandardMaterial({ color: 0xff4455, emissive: 0x701018, roughness: 0.4 }),
-      );
-    } else if (kind === 'rupee') {
-      mesh = new THREE.Mesh(
-        new THREE.OctahedronGeometry(0.17),
-        new THREE.MeshStandardMaterial({ color: 0x3fe0c0, emissive: 0x0c5a4a, roughness: 0.3 }),
-      );
-      mesh.scale.y = 1.7;
-    } else {
-      // the trishard: three golden tetrahedra in formation
-      const tri = new THREE.Group();
-      const gold = new THREE.MeshStandardMaterial({
-        color: 0xffd75e,
-        emissive: 0x8a6a10,
-        metalness: 0.8,
-        roughness: 0.25,
-      });
-      const positions = [
-        [0, 0.5, 0],
-        [-0.22, 0.12, 0],
-        [0.22, 0.12, 0],
-      ];
-      for (const [px, py, pz] of positions) {
-        const t = new THREE.Mesh(new THREE.TetrahedronGeometry(0.19), gold);
-        t.position.set(px, py, pz);
-        tri.add(t);
-      }
-      mesh = tri;
-    }
-    mesh.position.set(x, 0.45, z);
+    const tex =
+      kind === 'heart' ? this.tex.heart : kind === 'rupee' ? this.tex.rupee : this.tex.triforce;
+    const mesh = this.sprite(tex, kind === 'trishard' ? 1.05 : 0.7, LAYER.drop);
+    mesh.position.set(x, LAYER.drop, z);
     this.screenGroup!.add(mesh);
     this.drops.push({ id, x, z, kind, mesh });
   }
@@ -418,18 +369,20 @@ export class TinyLegend extends ThreeDemo {
   /* ================= simulation ================= */
 
   protected override onFrame(dt: number, t: number): void {
-    // ambient motion runs even on menus
-    for (const mat of this.waterMats) {
-      mat.emissiveIntensity = 0.7 + Math.sin(t * 1.8) * 0.3;
+    // ambient animation runs even on menus
+    this.waterClock += dt;
+    if (this.waterMat) {
+      this.waterMat.map =
+        Math.floor(this.waterClock / 0.45) % 2 === 0 ? this.tex.waterA : this.tex.waterB;
     }
     for (const d of this.drops) {
-      d.mesh.rotation.y += dt * (d.kind === 'trishard' ? 1.2 : 2.2);
-      d.mesh.position.y = 0.45 + Math.sin(t * 2.5 + d.x) * 0.06;
+      const base = d.kind === 'trishard' ? 1.05 : 0.7;
+      d.mesh.scale.setScalar(base * (1 + Math.sin(t * 4 + d.x) * 0.07));
     }
 
     if (this.phase() === 'play') {
       this.stepHero(dt);
-      this.stepEnemies(dt);
+      this.stepEnemies(dt, t);
       this.checkPickups();
     }
 
@@ -442,11 +395,39 @@ export class TinyLegend extends ThreeDemo {
       phase: this.phase(),
     };
 
-    this.heroGroup.position.set(this.hero.x, 0, this.hero.z);
-    this.heroGroup.rotation.y = Math.atan2(this.hero.dirX, this.hero.dirZ);
-    this.heroGroup.visible = this.invulnT <= 0 || Math.floor(this.invulnT * 12) % 2 === 0;
-    this.sword.visible = this.attackT > 0;
-    this.lantern.position.set(this.hero.x, 1.6, this.hero.z + 0.4);
+    this.presentHero(dt);
+  }
+
+  private presentHero(dt: number): void {
+    this.walkClock = this.moving ? this.walkClock + dt : 0;
+    const frame = Math.floor(this.walkClock / 0.13) % 2;
+
+    const mat = this.heroSprite.material as THREE.MeshBasicMaterial;
+    let flip = 1;
+    if (this.hero.dirX !== 0 && Math.abs(this.hero.dirX) >= Math.abs(this.hero.dirZ)) {
+      mat.map = this.tex.heroSide;
+      flip = this.hero.dirX > 0 ? 1 : -1;
+      this.heroSprite.scale.y = 0.95 * (frame ? 0.93 : 1); // little step-bob
+      this.heroSprite.scale.x = 0.95 * flip;
+    } else {
+      mat.map = this.hero.dirZ < 0 ? this.tex.heroUp : this.tex.heroDown;
+      // the 1986 trick: walk animation is just mirroring the sprite
+      this.heroSprite.scale.x = 0.95 * (frame ? -1 : 1);
+      this.heroSprite.scale.y = 0.95;
+    }
+
+    this.heroSprite.position.set(this.hero.x, LAYER.hero, this.hero.z);
+    this.heroSprite.visible = this.invulnT <= 0 || Math.floor(this.invulnT * 12) % 2 === 0;
+
+    this.swordMesh.visible = this.attackT > 0;
+    if (this.swordMesh.visible) {
+      this.swordMesh.position.set(
+        this.hero.x + this.hero.dirX * 0.75,
+        LAYER.sword,
+        this.hero.z + this.hero.dirZ * 0.75,
+      );
+      this.swordMesh.rotation.set(-Math.PI / 2, 0, Math.atan2(-this.hero.dirX, -this.hero.dirZ));
+    }
   }
 
   private stepHero(dt: number): void {
@@ -458,7 +439,8 @@ export class TinyLegend extends ThreeDemo {
            - (this.keys.has('KeyA') || this.keys.has('ArrowLeft') ? 1 : 0);
     let mz = (this.keys.has('KeyS') || this.keys.has('ArrowDown') ? 1 : 0)
            - (this.keys.has('KeyW') || this.keys.has('ArrowUp') ? 1 : 0);
-    if (mx !== 0 || mz !== 0) {
+    this.moving = mx !== 0 || mz !== 0;
+    if (this.moving) {
       const len = Math.hypot(mx, mz);
       mx /= len;
       mz /= len;
@@ -498,12 +480,10 @@ export class TinyLegend extends ThreeDemo {
     }
   }
 
-  private stepEnemies(dt: number): void {
+  private stepEnemies(dt: number, t: number): void {
     for (const e of this.enemies) {
       if (e.hp <= 0) continue;
       e.flash = Math.max(0, e.flash - dt);
-      const mat = e.mesh.material as THREE.MeshStandardMaterial;
-      mat.emissive.setScalar(e.flash > 0 ? 0.9 : 0);
 
       e.dirTimer -= dt;
       if (e.dirTimer <= 0) {
@@ -525,7 +505,11 @@ export class TinyLegend extends ThreeDemo {
         }
       }
       this.moveWithCollision(e, e.dirX * e.speed * dt, e.dirZ * e.speed * dt, 0.3);
-      e.mesh.position.set(e.x, 0.27 + Math.abs(Math.sin(performance.now() / 180)) * 0.06, e.z);
+
+      // sprite presentation: waddle by mirroring, blink while hit
+      e.mesh.position.set(e.x, LAYER.enemy, e.z);
+      e.mesh.scale.x = 0.9 * (Math.floor(t / 0.24 + e.dirTimer) % 2 === 0 ? 1 : -1);
+      e.mesh.visible = e.flash <= 0 || Math.floor(e.flash * 30) % 2 === 0;
 
       // contact damage
       if (this.invulnT <= 0 && Math.hypot(e.x - this.hero.x, e.z - this.hero.z) < 0.62) {

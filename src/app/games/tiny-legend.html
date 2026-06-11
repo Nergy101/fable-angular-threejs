@@ -1,40 +1,40 @@
 <div class="game">
-  <div class="canvas-host"><canvas #canvas></canvas></div>
-
-  <header class="hud hud-top">
-    <a routerLink="/games" class="back">← games</a>
-
-    <div class="status">
-      <span class="hearts">
+  <div class="cab">
+    <header class="hud-bar">
+      <a routerLink="/games" class="back">&lt; GAMES</a>
+      <span class="life">
+        -LIFE-
         @for (full of hearts(); track $index) {
-          <i [class.full]="full">{{ full ? '♥' : '♡' }}</i>
+          <i [class.full]="full">♥</i>
         }
       </span>
-      <span class="rupees">◆ {{ rupees() }}</span>
+      <span class="rupees">◆×{{ rupees() }}</span>
+      <span class="area">{{ area() }}</span>
+    </header>
+
+    <div class="frame">
+      <canvas #canvas></canvas>
+      <div class="scanlines" aria-hidden="true"></div>
+
+      @if (message()) {
+        <div class="banner" [class.win]="phase() === 'win'">
+          @if (phase() === 'title') {
+            <h1>TINY LEGEND</h1>
+            <p class="sub">A FAN-MADE MINIATURE · 1986-ish</p>
+            <p class="quest">FIND THE GOLDEN TRISHARD<br />HIDDEN IN THE SHRINE</p>
+          }
+          <p class="msg">{{ message() }}</p>
+          @if (phase() === 'win' || phase() === 'dead') {
+            <p class="hint">SPACE — PLAY AGAIN</p>
+          }
+        </div>
+      }
     </div>
 
-    <span class="area">{{ area() }}</span>
-  </header>
-
-  @if (message()) {
-    <div class="banner" [class.big]="phase() !== 'play'">
-      @if (phase() === 'title') {
-        <h1>Tiny Legend</h1>
-        <p class="sub">a fan-made miniature · in the spirit of 1986</p>
-      }
-      <p class="msg" [class.gold]="phase() === 'win'">{{ message() }}</p>
-      @if (phase() === 'title') {
-        <p class="hint">find the golden trishard in the shrine</p>
-      }
-      @if (phase() === 'win' || phase() === 'dead') {
-        <p class="hint">space — play again</p>
-      }
-    </div>
-  }
-
-  <footer class="hud hud-bottom">
-    <span class="legend">WASD / arrows — move</span>
-    <span class="rules">walk off open edges to change screens · enemies drop loot</span>
-    <span class="legend">SPACE / J — sword · R — reset</span>
-  </footer>
+    <footer class="help-bar">
+      <span>WASD/ARROWS MOVE</span>
+      <span>SPACE/J SWORD</span>
+      <span>R RESET</span>
+    </footer>
+  </div>
 </div>

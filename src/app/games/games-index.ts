@@ -55,8 +55,8 @@ import { RouterLink } from '@angular/router';
             <span class="year">in the spirit of 1986</span>
             <h2>Tiny Legend</h2>
             <p>
-              A fan-made miniature of the top-down classic. Four moonlit screens, a sword,
-              octorok-ish blobs — find the golden trishard hidden in the shrine.
+              A fan-made miniature of the top-down classic, in genuine 16×16 pixel art on a
+              256×176 screen. Four screens, a sword, octoroks — find the golden trishard.
             </p>
             <span class="tags">
               <code>1 player</code><code>keyboard</code><code>screen-scroll world</code>
