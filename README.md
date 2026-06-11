@@ -46,6 +46,12 @@ Sketchfab API token: free with any account, under
 Zipped `.gltf` archives are unpacked in-browser with `fflate` and fed to
 `GLTFLoader` through blob-URL remapping — see `src/app/viewer/atelier-viewer.ts`.
 
+The viewer flies: orbit/pan/zoom on the mouse plus WASD/arrow-key flight (Q/E for
+down/up, Shift to sprint) that trucks the camera and its orbit pivot together.
+Animated models get a mixer desk — play/pause, speed, timeline scrubbing, and
+per-clip weight sliders that blend animations into each other in real time. It
+also accepts any direct glTF URL: `/viewer/demo?src=<url-to-glb>`.
+
 ### C — The Games Explorer (`/games`)
 
 Playable remakes built with the curriculum's own techniques, each one a single

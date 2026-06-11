@@ -1,4 +1,4 @@
-import { Component, computed, inject, input, signal } from '@angular/core';
+import { Component, computed, inject, input, signal, WritableSignal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import * as THREE from 'three';
 import { GLTFLoader, GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
@@ -11,12 +11,22 @@ import { SketchfabModel } from '../core/sketchfab/sketchfab.types';
 
 type Phase = 'token' | 'links' | 'downloading' | 'parsing' | 'ready' | 'error';
 
+interface ClipInfo {
+  name: string;
+  duration: number;
+}
+
 /**
  * The capstone of the curriculum: a real glTF viewer built from the same
  * ThreeDemo base class as every lesson. It asks Sketchfab for the model's
  * archive (glb preferred, zipped glTF as fallback — unzipped in-browser
  * with fflate), parses it with GLTFLoader, frames it with Box3, and lights
  * it with a PMREM'd RoomEnvironment.
+ *
+ * Navigation is two-handed: orbit/pan/zoom on the mouse (OrbitControls)
+ * plus WASD/arrow fly-through that trucks the camera AND its orbit pivot.
+ * Animated models get a mixer desk: scrub, speed, and per-clip weight
+ * blending via THREE.AnimationMixer.
  */
 @Component({
   selector: 'app-atelier-viewer',
@@ -26,6 +36,8 @@ type Phase = 'token' | 'links' | 'downloading' | 'parsing' | 'ready' | 'error';
 })
 export class AtelierViewer extends ThreeDemo {
   readonly uid = input.required<string>();
+  /** Optional ?src= query param: load any glTF/GLB URL directly, no token. */
+  readonly src = input<string>();
 
   private readonly api = inject(SketchfabService);
 
@@ -35,20 +47,40 @@ export class AtelierViewer extends ThreeDemo {
   protected readonly errorMsg = signal('');
   protected readonly tokenDraft = signal('');
   protected readonly hasToken = computed(() => !!this.api.token());
+  protected readonly directName = signal('');
 
   protected readonly wireframe = signal(false);
   protected readonly autoRotate = signal(true);
   protected readonly showGrid = signal(true);
   protected readonly exposure = signal(1);
   protected readonly triCount = signal(0);
-  protected readonly animCount = signal(0);
+
+  /* ---- animation desk ---- */
+  protected readonly clips = signal<ClipInfo[]>([]);
+  protected readonly animOpen = signal(false);
+  protected readonly animPlaying = signal(true);
+  protected readonly animSpeed = signal(1);
+  protected readonly animProgress = signal(0); // 0..1 of the primary clip
+  protected readonly animTime = signal('0.0s');
+  protected readonly weights = signal<number[]>([]);
+  protected readonly primaryClip = computed(() => {
+    const w = this.weights();
+    let best = 0;
+    for (let i = 1; i < w.length; i++) if (w[i] > w[best]) best = i;
+    return best;
+  });
 
   private controls!: OrbitControls;
   private pmrem?: THREE.PMREMGenerator;
   private grid!: THREE.GridHelper;
   private loaded?: THREE.Object3D;
   private mixer?: THREE.AnimationMixer;
+  private actions: THREE.AnimationAction[] = [];
+  private hudClock = 0;
   private readonly blobUrls: string[] = [];
+  private readonly keys = new Set<string>();
+  private keydownFn?: (e: KeyboardEvent) => void;
+  private keyupFn?: (e: KeyboardEvent) => void;
 
   protected onInit(): void {
     this.camera.position.set(3, 2, 4);
@@ -65,25 +97,114 @@ export class AtelierViewer extends ThreeDemo {
     this.zone.runOutsideAngular(() => {
       this.controls = new OrbitControls(this.camera, this.canvas);
       this.controls.enableDamping = true;
+      this.controls.enablePan = true;
       this.controls.autoRotate = this.autoRotate();
       this.controls.autoRotateSpeed = 1.2;
+
+      // fly keys live on window so they work without clicking the canvas first
+      this.keydownFn = (e) => this.onKey(e, true);
+      this.keyupFn = (e) => this.onKey(e, false);
+      window.addEventListener('keydown', this.keydownFn);
+      window.addEventListener('keyup', this.keyupFn);
     });
 
     void this.begin();
   }
 
   protected override onFrame(dt: number): void {
+    this.flyCamera(dt);
     this.controls?.update();
-    this.mixer?.update(dt);
+
+    if (this.mixer && this.animPlaying()) {
+      this.mixer.update(dt * this.animSpeed());
+    }
+
+    // publish the timeline to the HUD at ~10Hz, not 60
+    this.hudClock += dt;
+    if (this.hudClock > 0.1 && this.actions.length > 0) {
+      this.hudClock = 0;
+      const action = this.actions[this.primaryClip()];
+      const dur = action.getClip().duration || 1;
+      const t = action.time % dur;
+      this.publish(this.animProgress, t / dur);
+      this.publish(this.animTime, t.toFixed(1) + 's');
+    }
   }
 
   protected override onDispose(): void {
+    if (this.keydownFn) window.removeEventListener('keydown', this.keydownFn);
+    if (this.keyupFn) window.removeEventListener('keyup', this.keyupFn);
     this.controls?.dispose();
     this.pmrem?.dispose();
     for (const url of this.blobUrls) URL.revokeObjectURL(url);
   }
 
+  /* ================= fly navigation ================= */
+
+  private onKey(e: KeyboardEvent, down: boolean): void {
+    // never steal keys from form fields (the token input)
+    if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+    const handled = [
+      'KeyW', 'KeyA', 'KeyS', 'KeyD', 'KeyQ', 'KeyE',
+      'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight',
+      'ShiftLeft', 'ShiftRight',
+    ];
+    if (!handled.includes(e.code)) return;
+    e.preventDefault();
+    if (down) this.keys.add(e.code);
+    else this.keys.delete(e.code);
+  }
+
+  /**
+   * Truck the camera and its orbit pivot together: W/S along the view
+   * direction, A/D strafe, Q/E world up/down. Shift sprints. Because the
+   * target moves too, mouse orbiting keeps working from wherever you fly.
+   */
+  private flyCamera(dt: number): void {
+    if (this.keys.size === 0 || !this.controls) return;
+    const k = this.keys;
+    const fwd = (k.has('KeyW') || k.has('ArrowUp') ? 1 : 0)
+              - (k.has('KeyS') || k.has('ArrowDown') ? 1 : 0);
+    const strafe = (k.has('KeyD') || k.has('ArrowRight') ? 1 : 0)
+                 - (k.has('KeyA') || k.has('ArrowLeft') ? 1 : 0);
+    const lift = (k.has('KeyE') ? 1 : 0) - (k.has('KeyQ') ? 1 : 0);
+    if (fwd === 0 && strafe === 0 && lift === 0) return;
+
+    const speed = (k.has('ShiftLeft') || k.has('ShiftRight') ? 9 : 3.2) * dt;
+    const dir = new THREE.Vector3();
+    this.camera.getWorldDirection(dir);
+    const right = new THREE.Vector3().crossVectors(dir, this.camera.up).normalize();
+    const delta = new THREE.Vector3()
+      .addScaledVector(dir, fwd * speed)
+      .addScaledVector(right, strafe * speed)
+      .addScaledVector(new THREE.Vector3(0, 1, 0), lift * speed);
+
+    this.camera.position.add(delta);
+    this.controls.target.add(delta);
+  }
+
+  /* ================= loading ================= */
+
   private async begin(): Promise<void> {
+    const direct = this.src();
+    if (direct) {
+      // demo / power-user mode: any CORS-reachable glTF URL
+      this.directName.set(decodeURIComponent(direct.split('/').pop() ?? 'model'));
+      try {
+        this.set(() => this.phase.set('downloading'));
+        const buffer = await this.fetchWithProgress(direct, 0);
+        this.set(() => this.phase.set('parsing'));
+        this.placeInScene(await this.parseGlb(buffer));
+        this.set(() => this.phase.set('ready'));
+      } catch (err) {
+        this.set(() => {
+          this.errorMsg.set(err instanceof Error ? err.message : 'load error');
+          this.phase.set('error');
+        });
+      }
+      return;
+    }
+
     this.api.getModel(this.uid()).then(
       (m) => this.zone.run(() => this.model.set(m)),
       () => undefined,
@@ -218,18 +339,71 @@ export class AtelierViewer extends ThreeDemo {
     this.camera.position.set(3.4, 2.2, 3.4);
     this.controls.target.set(0, 1.1, 0);
 
+    // build the animation desk: every clip gets a running action whose
+    // weight you can mix — clip 0 starts at full strength
     if (gltf.animations.length > 0) {
       this.mixer = new THREE.AnimationMixer(gltf.scene);
-      this.mixer.clipAction(gltf.animations[0]).play();
+      this.actions = gltf.animations.map((clip, i) => {
+        const action = this.mixer!.clipAction(clip);
+        action.setEffectiveWeight(i === 0 ? 1 : 0);
+        action.play();
+        return action;
+      });
+      const infos = gltf.animations.map((c, i) => ({
+        name: c.name?.trim() || `clip ${i + 1}`,
+        duration: c.duration,
+      }));
+      this.set(() => {
+        this.clips.set(infos);
+        this.weights.set(infos.map((_, i) => (i === 0 ? 1 : 0)));
+      });
     }
 
-    this.set(() => {
-      this.triCount.set(Math.round(tris));
-      this.animCount.set(gltf.animations.length);
-    });
+    this.set(() => this.triCount.set(Math.round(tris)));
   }
 
-  /* ---- toolbar ---- */
+  /* ================= animation desk ================= */
+
+  protected toggleAnimPanel(): void {
+    this.animOpen.set(!this.animOpen());
+  }
+
+  protected togglePlay(): void {
+    this.animPlaying.set(!this.animPlaying());
+  }
+
+  protected setSpeed(v: number): void {
+    this.animSpeed.set(v);
+  }
+
+  /** Scrub every clip to the same normalized position (0..1). */
+  protected scrub(frac: number): void {
+    for (const action of this.actions) {
+      action.time = frac * action.getClip().duration;
+    }
+    this.mixer?.update(0); // apply the pose even while paused
+    const action = this.actions[this.primaryClip()];
+    if (action) {
+      const dur = action.getClip().duration || 1;
+      this.animProgress.set(frac);
+      this.animTime.set((frac * dur).toFixed(1) + 's');
+    }
+  }
+
+  protected setWeight(i: number, w: number): void {
+    this.actions[i]?.setEffectiveWeight(w);
+    this.weights.update((list) => list.map((old, j) => (j === i ? w : old)));
+    if (!this.animPlaying()) this.mixer?.update(0);
+  }
+
+  /** Solo one clip: full weight for it, zero for the rest. */
+  protected solo(i: number): void {
+    this.actions.forEach((a, j) => a.setEffectiveWeight(j === i ? 1 : 0));
+    this.weights.set(this.actions.map((_, j) => (j === i ? 1 : 0)));
+    if (!this.animPlaying()) this.mixer?.update(0);
+  }
+
+  /* ================= toolbar ================= */
 
   protected toggleWireframe(): void {
     this.wireframe.set(!this.wireframe());
@@ -262,8 +436,16 @@ export class AtelierViewer extends ThreeDemo {
     void this.loadModel();
   }
 
+  protected fmtDur(s: number): string {
+    return s.toFixed(1) + 's';
+  }
+
   /** Publish state from possibly-zone-free async code paths. */
   private set(fn: () => void): void {
     this.zone.run(fn);
+  }
+
+  private publish<T>(sig: WritableSignal<T>, value: T): void {
+    if (sig() !== value) this.zone.run(() => sig.set(value));
   }
 }

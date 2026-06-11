@@ -2,20 +2,70 @@
   <div class="canvas-host"><canvas #canvas></canvas></div>
 
   <header class="hud hud-top">
-    <a [routerLink]="['/explorer', uid()]" class="back">← model page</a>
+    @if (src()) {
+      <a routerLink="/explorer" class="back">← explorer</a>
+    } @else {
+      <a [routerLink]="['/explorer', uid()]" class="back">← model page</a>
+    }
     <div class="title">
       <span class="kicker"><span class="tick">▸</span> atelier viewer</span>
-      <h1>{{ model()?.name ?? '…' }}</h1>
+      <h1>{{ src() ? directName() : (model()?.name ?? '…') }}</h1>
     </div>
     @if (phase() === 'ready') {
       <div class="stats">
         <span>{{ triCount().toLocaleString() }} tris</span>
-        @if (animCount() > 0) {
-          <span>{{ animCount() }} animation{{ animCount() === 1 ? '' : 's' }} ▶</span>
+        @if (clips().length > 0) {
+          <button class="anim-chip" [class.on]="animOpen()" (click)="toggleAnimPanel()">
+            ▶ {{ clips().length }} animation{{ clips().length === 1 ? '' : 's' }}
+            <i>{{ animOpen() ? '▴' : '▾' }}</i>
+          </button>
         }
       </div>
     }
   </header>
+
+  @if (animOpen() && phase() === 'ready' && clips().length > 0) {
+    <aside class="anim-panel">
+      <header class="ap-head">
+        <button class="ap-play" (click)="togglePlay()">
+          {{ animPlaying() ? '❚❚' : '▶' }}
+        </button>
+        <div class="ap-speed">
+          <label>speed <span class="val">{{ animSpeed() }}×</span></label>
+          <input type="range" min="0" max="2.5" step="0.05" [value]="animSpeed()"
+            (input)="setSpeed(+$any($event.target).value)" />
+        </div>
+      </header>
+
+      <div class="ap-scrub">
+        <input type="range" min="0" max="1000" [value]="animProgress() * 1000"
+          (input)="scrub(+$any($event.target).value / 1000)" />
+        <span class="ap-time">{{ animTime() }} / {{ fmtDur(clips()[primaryClip()].duration) }}</span>
+      </div>
+
+      <div class="ap-clips">
+        @for (clip of clips(); track $index) {
+          <div class="ap-clip" [class.live]="weights()[$index] > 0">
+            <button class="ap-solo" (click)="solo($index)"
+              [title]="'solo ' + clip.name">●</button>
+            <div class="ap-clip-body">
+              <span class="ap-name">{{ clip.name }} <em>{{ fmtDur(clip.duration) }}</em></span>
+              <input type="range" min="0" max="1" step="0.01" [value]="weights()[$index]"
+                (input)="setWeight($index, +$any($event.target).value)" />
+            </div>
+            <span class="ap-w">{{ (weights()[$index] * 100).toFixed(0) }}%</span>
+          </div>
+        }
+      </div>
+
+      @if (clips().length > 1) {
+        <p class="ap-tip">
+          weights blend — pour two clips together and the mixer interpolates the skeleton
+          between them in real time
+        </p>
+      }
+    </aside>
+  }
 
   @switch (phase()) {
     @case ('token') {
@@ -81,6 +131,10 @@
     <button class="chip" [class.on]="autoRotate()" (click)="toggleRotate()">turntable</button>
     <button class="chip" [class.on]="wireframe()" (click)="toggleWireframe()">wireframe</button>
     <button class="chip" [class.on]="showGrid()" (click)="toggleGrid()">grid</button>
+    <span class="nav-help">
+      drag orbit · right-drag pan · scroll zoom · <b>WASD</b>/arrows fly ·
+      <b>Q</b>/<b>E</b> down/up · <b>⇧</b> sprint
+    </span>
     <div class="exposure">
       <span>exposure</span>
       <input type="range" min="0.2" max="2.5" step="0.05" [value]="exposure()"
