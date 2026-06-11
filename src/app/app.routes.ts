@@ -18,6 +18,14 @@ export const routes: Routes = [
     loadComponent: () => import('./explorer/explorer').then((m) => m.Explorer),
   },
   {
+    path: 'games',
+    loadComponent: () => import('./games/games-index').then((m) => m.GamesIndex),
+  },
+  {
+    path: 'games/blobby-volley',
+    loadComponent: () => import('./games/blobby-volley').then((m) => m.BlobbyVolley),
+  },
+  {
     path: 'explorer/:uid',
     loadComponent: () => import('./explorer/model-detail').then((m) => m.ModelDetail),
   },

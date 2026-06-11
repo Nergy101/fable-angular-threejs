@@ -46,6 +46,15 @@ Sketchfab API token: free with any account, under
 Zipped `.gltf` archives are unpacked in-browser with `fflate` and fed to
 `GLTFLoader` through blob-URL remapping — see `src/app/viewer/atelier-viewer.ts`.
 
+### C — The Games Explorer (`/games`)
+
+Playable remakes built with the curriculum's own techniques. First on the shelf:
+**Blobby Volley** (2000) with classic rules — only the serving side scores, three
+touches per side, first to 15. Red plays A/D + W; blue plays arrows, or flip on the
+CPU opponent for single-player. The whole game is one component on the same
+`ThreeDemo` base class: delta-time physics, circle collision, zone-free keyboard
+input (`src/app/games/blobby-volley.ts`).
+
 ## Stack
 
 Angular 22 (standalone, signals, zone-based) · three 0.184 · fflate · SCSS, no UI

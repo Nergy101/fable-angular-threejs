@@ -68,7 +68,7 @@
 
 .halves {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   border-bottom: 1px solid var(--line);
 }
 
@@ -137,6 +137,9 @@
 
   &.rail-x {
     background: linear-gradient(90deg, var(--axis-x), var(--acc));
+  }
+  &.rail-y {
+    background: linear-gradient(90deg, var(--axis-y), var(--acc));
   }
   &.rail-z {
     background: linear-gradient(90deg, var(--axis-z), var(--acc));

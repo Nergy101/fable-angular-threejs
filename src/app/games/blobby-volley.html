@@ -1,0 +1,49 @@
+<div class="game">
+  <div class="canvas-host"><canvas #canvas></canvas></div>
+
+  <header class="hud hud-top">
+    <a routerLink="/games" class="back">← games</a>
+
+    <div class="scoreboard">
+      <span class="side side-l" [class.serving]="server() === 'L'">
+        <i class="serve-dot"></i> red
+      </span>
+      <span class="score">{{ scoreL() }} · {{ scoreR() }}</span>
+      <span class="side side-r" [class.serving]="server() === 'R'">
+        blue <i class="serve-dot"></i>
+      </span>
+    </div>
+
+    <div class="hud-actions">
+      <button class="chip" [class.on]="cpu()" (click)="toggleCpu()">cpu opponent</button>
+      <button class="chip" [class.on]="paused()" (click)="togglePause()">
+        {{ paused() ? 'resume' : 'pause' }}
+      </button>
+    </div>
+  </header>
+
+  @if (message()) {
+    <div class="banner" [class.big]="phase() === 'idle' || phase() === 'over'">
+      @if (phase() === 'idle') {
+        <h1>Blobby Volley</h1>
+        <p class="sub">est. 2000 · remade in three.js</p>
+      }
+      <p class="msg">{{ message() }}</p>
+      @if (phase() === 'idle' || phase() === 'over') {
+        <p class="hint">space — {{ phase() === 'over' ? 'rematch' : 'start' }}</p>
+      }
+    </div>
+  }
+
+  @if (paused()) {
+    <div class="banner big"><p class="msg">paused</p></div>
+  }
+
+  <footer class="hud hud-bottom">
+    <span class="legend legend-l"><b>red</b> A / D move · W jump</span>
+    <span class="rules">server scores · 3 touches · first to 15 · P pause · R reset</span>
+    <span class="legend legend-r">
+      <b>blue</b> {{ cpu() ? 'cpu' : '◀ / ▶ move · ▲ jump' }}
+    </span>
+  </footer>
+</div>
