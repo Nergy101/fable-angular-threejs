@@ -1,0 +1,58 @@
+<div class="hero">
+  <div class="hero-canvas"><canvas #canvas></canvas></div>
+
+  <div class="hero-copy page">
+    <p class="kicker"><span class="tick">▸▸</span> a field guide for angular developers</p>
+    <h1>
+      Three.js,<br />
+      <em>minus the mystery.</em>
+    </h1>
+    <p class="lede">
+      You already think in components, signals and change detection. This atelier maps that
+      mental model onto scenes, meshes and render loops — eight hands-on lessons, every demo
+      live on a real <code>&lt;canvas&gt;</code>, every pattern written the Angular way.
+    </p>
+    <div class="hero-actions">
+      <a routerLink="/learn/the-stage" class="btn btn-acc">Start lesson 01 →</a>
+      <a routerLink="/explorer" class="btn btn-ghost">Browse free 3D models</a>
+    </div>
+  </div>
+</div>
+
+<section class="halves">
+  <a routerLink="/learn" class="half">
+    <span class="half-num">A</span>
+    <h2>The Curriculum</h2>
+    <p>
+      Eight lessons from “what even is a renderer” to loading glTF worlds. Each one pairs a
+      live, tweakable scene with the code behind it — plus the Angular integration notes
+      (zones, signals, lifecycle) nobody else writes down.
+    </p>
+    <span class="half-cta">8 lessons · ~1.5 hours →</span>
+    <span class="half-rail rail-x"></span>
+  </a>
+  <a routerLink="/explorer" class="half">
+    <span class="half-num">B</span>
+    <h2>The Model Explorer</h2>
+    <p>
+      Search Sketchfab’s library of free, downloadable models. Preview them in place, check
+      the license, grab the glTF — or open them straight inside this app’s own three.js
+      viewer, built with everything lesson 08 teaches.
+    </p>
+    <span class="half-cta">powered by the Sketchfab API →</span>
+    <span class="half-rail rail-z"></span>
+  </a>
+</section>
+
+<section class="syllabus">
+  <p class="kicker"><span class="tick">▸</span> Syllabus</p>
+  <div class="syllabus-grid">
+    @for (lesson of lessons; track lesson.slug) {
+      <a [routerLink]="['/learn', lesson.slug]" class="syl-card" [class]="'ax-' + lesson.axis">
+        <span class="syl-num">{{ lesson.num }}</span>
+        <span class="syl-title">{{ lesson.title }}</span>
+        <span class="syl-sub">{{ lesson.subtitle }}</span>
+      </a>
+    }
+  </div>
+</section>

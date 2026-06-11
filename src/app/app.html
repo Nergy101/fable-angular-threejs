@@ -1,0 +1,46 @@
+<div class="shell">
+  <aside class="sidebar">
+    <a routerLink="/" class="brand">
+      <span class="brand-mark">
+        <i class="bx bx-1"></i><i class="bx bx-2"></i><i class="bx bx-3"></i>
+      </span>
+      <span class="brand-name">Vector<br />Atelier</span>
+    </a>
+
+    <nav class="nav">
+      <span class="nav-head">Studio</span>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <span class="nav-glyph">◆</span> Overview
+      </a>
+      <a routerLink="/explorer" routerLinkActive="active">
+        <span class="nav-glyph">❖</span> Model Explorer
+      </a>
+
+      <span class="nav-head">Curriculum</span>
+      <a routerLink="/learn" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <span class="nav-glyph">☰</span> All lessons
+      </a>
+      @for (lesson of lessons; track lesson.slug) {
+        <a
+          class="nav-lesson"
+          [routerLink]="['/learn', lesson.slug]"
+          routerLinkActive="active"
+          [class.axis-x]="lesson.axis === 'x'"
+          [class.axis-y]="lesson.axis === 'y'"
+          [class.axis-z]="lesson.axis === 'z'"
+        >
+          <span class="lesson-num">{{ lesson.num }}</span>
+          <span class="lesson-title">{{ lesson.title }}</span>
+        </a>
+      }
+    </nav>
+
+    <footer class="side-foot">
+      <span class="kicker"><span class="tick">▸</span> three.js × angular</span>
+    </footer>
+  </aside>
+
+  <main class="content">
+    <router-outlet />
+  </main>
+</div>

@@ -1,0 +1,89 @@
+<div class="page wrap">
+  <header class="head">
+    <div>
+      <p class="kicker"><span class="tick">▸</span> Sketchfab · free &amp; downloadable only</p>
+      <h1>Model Explorer</h1>
+      <p class="lede">
+        Every result here is licensed for free download. Preview any model, check its
+        license, grab the glTF — or open it straight in the Atelier's own three.js viewer.
+      </p>
+    </div>
+    <div class="token-state" [class.ok]="hasToken()">
+      <span class="token-dot"></span>
+      {{ hasToken() ? 'API token set — downloads enabled' : 'no API token — preview only' }}
+    </div>
+  </header>
+
+  <div class="controls">
+    <input
+      type="search"
+      class="search"
+      placeholder="Search free models… try “spaceship”, “chair”, “robot”"
+      [value]="q()"
+      (input)="onQuery($any($event.target).value)"
+    />
+    <select [value]="sort()" (change)="setSort($any($event.target).value)">
+      <option value="-likeCount">most liked</option>
+      <option value="-viewCount">most viewed</option>
+      <option value="-publishedAt">newest</option>
+      <option value="relevance">relevance</option>
+    </select>
+    <button class="chip" [class.on]="staffPicked()" (click)="toggleStaffPicked()">
+      ★ staff picks
+    </button>
+    <button class="chip" [class.on]="animated()" (click)="toggleAnimated()">
+      ▶ animated
+    </button>
+  </div>
+
+  <div class="cats">
+    @for (cat of categories; track cat.slug) {
+      <button class="chip" [class.on]="category() === cat.slug" (click)="setCategory(cat.slug)">
+        {{ cat.name }}
+      </button>
+    }
+  </div>
+
+  @if (error()) {
+    <div class="error-box">
+      <strong>Sketchfab said no:</strong> {{ error() }}
+      <button class="btn" (click)="runSearch()">retry</button>
+    </div>
+  }
+
+  @if (loading()) {
+    <div class="grid">
+      @for (i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]; track i) {
+        <div class="card skeleton"></div>
+      }
+    </div>
+  } @else {
+    <div class="grid">
+      @for (model of results(); track model.uid) {
+        <a class="card" [routerLink]="['/explorer', model.uid]">
+          <div class="card-img">
+            <img [src]="thumb(model)" [alt]="model.name" loading="lazy" />
+            <span class="card-tris">{{ fmt(model.faceCount) }} tris</span>
+          </div>
+          <div class="card-body">
+            <span class="card-name">{{ model.name }}</span>
+            <span class="card-meta">
+              <span class="card-author">{{ model.user.displayName }}</span>
+              <span class="card-stats">♥ {{ fmt(model.likeCount) }}</span>
+            </span>
+          </div>
+        </a>
+      } @empty {
+        <p class="empty">Nothing found — try a broader search.</p>
+      }
+    </div>
+
+    @if (nextUrl()) {
+      <div class="more">
+        <button class="btn" (click)="loadMore()" [disabled]="loadingMore()">
+          {{ loadingMore() ? 'loading…' : 'load more ↓' }}
+        </button>
+      </div>
+    }
+  }
+</div>

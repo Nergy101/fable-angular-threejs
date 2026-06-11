@@ -1,0 +1,115 @@
+<div class="page wrap">
+  <a routerLink="/explorer" class="back">← back to explorer</a>
+
+  @if (error()) {
+    <div class="error-box">{{ error() }}</div>
+  } @else if (model(); as m) {
+    <div class="layout">
+      <div class="stage-col">
+        <div class="embed">
+          @if (embedUrl(); as url) {
+            <iframe
+              [src]="url"
+              [title]="m.name"
+              allow="autoplay; fullscreen; xr-spatial-tracking; accelerometer; gyroscope"
+              allowfullscreen
+            ></iframe>
+          }
+        </div>
+        <p class="embed-note">
+          Official Sketchfab preview · or
+          <a [routerLink]="['/viewer', m.uid]" class="viewer-link">
+            open in the Atelier viewer ⤴
+          </a>
+          (our own three.js — needs token)
+        </p>
+      </div>
+
+      <aside class="meta-col">
+        <p class="kicker"><span class="tick">▸</span> {{ m.user.displayName }}</p>
+        <h1>{{ m.name }}</h1>
+
+        <dl class="stats">
+          <div><dt>triangles</dt><dd>{{ fmt(m.faceCount) }}</dd></div>
+          <div><dt>vertices</dt><dd>{{ fmt(m.vertexCount) }}</dd></div>
+          <div><dt>likes</dt><dd>{{ fmt(m.likeCount) }}</dd></div>
+          <div><dt>views</dt><dd>{{ fmt(m.viewCount) }}</dd></div>
+        </dl>
+
+        @if (m.license; as lic) {
+          <div class="license">
+            <span class="lic-label">{{ lic.label }}</span>
+            @if (lic.requirements) {
+              <p>{{ lic.requirements }}</p>
+            }
+          </div>
+        }
+
+        <section class="dl">
+          <h3>Download</h3>
+
+          @if (!hasToken()) {
+            <p class="dl-hint">
+              Downloads use your personal Sketchfab API token — free with any account, found
+              under
+              <a href="https://sketchfab.com/settings/password" target="_blank" rel="noopener">
+                Settings → Password &amp; API</a>. It's stored only in this browser.
+            </p>
+            <div class="token-row">
+              <input
+                type="password"
+                placeholder="paste API token"
+                [value]="tokenDraft()"
+                (input)="tokenDraft.set($any($event.target).value)"
+                (keydown.enter)="saveToken()"
+              />
+              <button class="btn btn-acc" (click)="saveToken()" [disabled]="!tokenDraft()">
+                save
+              </button>
+            </div>
+          } @else if (!downloads()) {
+            <button class="btn btn-acc" (click)="fetchLinks()" [disabled]="fetchingLinks()">
+              {{ fetchingLinks() ? 'asking sketchfab…' : 'get download links' }}
+            </button>
+            <button class="btn btn-ghost forget" (click)="clearToken()">forget token</button>
+          } @else if (downloads(); as dl) {
+            <div class="dl-list">
+              @if (dl.glb; as glb) {
+                <a class="btn btn-acc" [href]="glb.url" download>
+                  ⬇ .glb — {{ mb(glb.size) }}
+                </a>
+              }
+              @if (dl.gltf; as gltf) {
+                <a class="btn" [href]="gltf.url" download>⬇ .gltf zip — {{ mb(gltf.size) }}</a>
+              }
+              @if (dl.usdz; as usdz) {
+                <a class="btn" [href]="usdz.url" download>⬇ .usdz — {{ mb(usdz.size) }}</a>
+              }
+              <a class="btn btn-ghost" [routerLink]="['/viewer', m.uid]">
+                open in atelier viewer →
+              </a>
+            </div>
+            <p class="dl-hint">Links are temporary — Sketchfab expires them after a while.</p>
+          }
+
+          @if (downloadError()) {
+            <p class="dl-error">{{ downloadError() }}</p>
+          }
+        </section>
+
+        @if (m.description) {
+          <section class="desc">
+            <h3>About</h3>
+            <p>{{ m.description }}</p>
+          </section>
+        }
+
+        <a class="sf-link" [href]="m.viewerUrl" target="_blank" rel="noopener">
+          view on sketchfab.com ⤴
+        </a>
+      </aside>
+    </div>
+  } @else {
+    <div class="loading">loading model…</div>
+  }
+</div>

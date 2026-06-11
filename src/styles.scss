@@ -1,0 +1,544 @@
+/* ============================================================
+   VECTOR ATELIER — design system
+   A dark "3D viewport" aesthetic: graphite surfaces, drafting
+   grid, chartreuse signal accent, and the X/Y/Z axis triad
+   (red / green / blue) as a recurring motif.
+   ============================================================ */
+
+:root {
+  /* surfaces */
+  --bg: #0a0b0e;
+  --bg-raise: #101218;
+  --panel: #14161d;
+  --panel-2: #191c24;
+  --line: #262a35;
+  --line-soft: #1d212b;
+
+  /* type */
+  --ink: #e9ebf1;
+  --ink-dim: #9aa1b4;
+  --ink-faint: #5d6478;
+
+  /* signal accent */
+  --acc: #d7ff3e;
+  --acc-ink: #0a0b0e;
+  --acc-dim: rgba(215, 255, 62, 0.14);
+
+  /* the axis triad (three.js convention: X red, Y green, Z blue) */
+  --axis-x: #ff5566;
+  --axis-y: #45d07b;
+  --axis-z: #4d9fff;
+
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Spline Sans', sans-serif;
+  --font-mono: 'Spline Sans Mono', monospace;
+
+  --radius: 10px;
+  --radius-lg: 16px;
+
+  --sidebar-w: 264px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  /* drafting-grid atmosphere */
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(77, 159, 255, 0.07), transparent),
+    radial-gradient(circle at 1px 1px, rgba(233, 235, 241, 0.045) 1px, transparent 0);
+  background-size:
+    100% 100%,
+    28px 28px;
+  background-attachment: fixed;
+}
+
+::selection {
+  background: var(--acc);
+  color: var(--acc-ink);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+code,
+pre,
+kbd {
+  font-family: var(--font-mono);
+}
+
+p code,
+li code,
+td code {
+  background: var(--panel-2);
+  border: 1px solid var(--line-soft);
+  border-radius: 5px;
+  padding: 0.1em 0.4em;
+  font-size: 0.86em;
+  color: #ffd28a;
+  white-space: nowrap;
+}
+
+/* ---- scrollbars ---- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 5px;
+  border: 2px solid var(--bg);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ============================================================
+   Shared primitives used across pages
+   ============================================================ */
+
+/* monospace overline label, e.g. "LESSON 03 — SCENE GRAPH" */
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+
+  .tick {
+    color: var(--acc);
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    border-color 0.18s ease,
+    background 0.18s ease,
+    transform 0.12s ease,
+    color 0.18s ease;
+
+  &:hover {
+    border-color: var(--ink-faint);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  &.btn-acc {
+    background: var(--acc);
+    border-color: var(--acc);
+    color: var(--acc-ink);
+    font-weight: 600;
+
+    &:hover {
+      filter: brightness(1.08);
+    }
+  }
+
+  &.btn-ghost {
+    background: transparent;
+  }
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink-dim);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+
+  &:hover {
+    border-color: var(--ink-faint);
+    color: var(--ink);
+  }
+
+  &.on {
+    background: var(--acc-dim);
+    border-color: var(--acc);
+    color: var(--acc);
+  }
+}
+
+input[type='text'],
+input[type='search'],
+input[type='password'],
+select {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 14px;
+  padding: 10px 14px;
+  outline: none;
+  transition: border-color 0.15s ease;
+
+  &:focus {
+    border-color: var(--acc);
+  }
+
+  &::placeholder {
+    color: var(--ink-faint);
+  }
+}
+
+select {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+/* range sliders, used heavily by lesson demo controls */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--line);
+  outline: none;
+  cursor: pointer;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--acc);
+    border: 3px solid var(--bg);
+    box-shadow: 0 0 0 1px var(--acc);
+    transition: transform 0.12s ease;
+  }
+
+  &::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+  }
+
+  &::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--acc);
+    border: 3px solid var(--bg);
+    box-shadow: 0 0 0 1px var(--acc);
+  }
+}
+
+input[type='checkbox'] {
+  accent-color: var(--acc);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+/* ============================================================
+   Lesson article typography
+   ============================================================ */
+
+.article {
+  max-width: 760px;
+
+  h2 {
+    font-size: 26px;
+    margin: 56px 0 16px;
+    scroll-margin-top: 24px;
+
+    &::before {
+      content: '// ';
+      color: var(--acc);
+      font-family: var(--font-mono);
+      font-size: 0.7em;
+      font-weight: 600;
+      vertical-align: 2px;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    margin: 36px 0 12px;
+  }
+
+  p,
+  ul,
+  ol {
+    color: var(--ink-dim);
+    margin: 0 0 16px;
+  }
+
+  li {
+    margin-bottom: 6px;
+  }
+
+  strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  em {
+    color: var(--ink);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 13.5px;
+
+    th {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-align: left;
+      padding: 8px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    td {
+      padding: 9px 14px;
+      border-bottom: 1px solid var(--line-soft);
+      color: var(--ink-dim);
+      vertical-align: top;
+    }
+
+    td:first-child {
+      white-space: nowrap;
+    }
+  }
+}
+
+/* callout box: "the Angular angle" */
+.ng-note {
+  position: relative;
+  margin: 28px 0;
+  padding: 18px 22px 18px 26px;
+  background: linear-gradient(135deg, rgba(255, 85, 102, 0.07), rgba(77, 159, 255, 0.05));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--axis-x), var(--axis-z));
+  }
+
+  .ng-note-tag {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--axis-x);
+    margin-bottom: 6px;
+  }
+
+  p {
+    margin: 0;
+    color: var(--ink-dim);
+    font-size: 14px;
+  }
+
+  p + p {
+    margin-top: 10px;
+  }
+}
+
+/* ============================================================
+   Demo stage (live three.js canvas) + control rack
+   ============================================================ */
+
+.demo {
+  margin: 28px 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-raise);
+}
+
+.demo-stage {
+  position: relative;
+  height: 420px;
+  background:
+    radial-gradient(ellipse 70% 80% at 50% 30%, #14171f 0%, #0b0c10 100%);
+
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+  }
+
+  .stage-tag {
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    pointer-events: none;
+    user-select: none;
+
+    .dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--acc);
+      margin-right: 7px;
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.demo-rack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+  padding: 16px 20px;
+  border-top: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.ctl {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 150px;
+  flex: 1 1 150px;
+  max-width: 230px;
+
+  label {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+
+    .val {
+      color: var(--acc);
+      font-size: 11px;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+  }
+
+  &.ctl-row {
+    flex-direction: row;
+    align-items: center;
+    gap: 9px;
+    min-width: 0;
+    flex: 0 0 auto;
+
+    label {
+      cursor: pointer;
+      color: var(--ink-dim);
+    }
+  }
+}
+
+/* page entrance */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.page {
+  animation: rise 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
