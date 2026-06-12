@@ -7,7 +7,7 @@ const TASTE_KEY = 'vector-atelier.music-taste';
 
 /** Neutral tuning shown before any taste is picked: graphite field, accent peaks. */
 const IDLE = {
-  field: { speed: 1.6, swell: 2.0, spike: 0.9 },
+  field: { speed: 0.7, swell: 1.6, spike: 0.6 },
   palette: { lo: '#182030', hi: '#d7ff3e', spark: '#9fb6c8' },
 };
 
@@ -197,8 +197,8 @@ export class Music extends ThreeDemo {
     this.dustMat.color.copy(this.curSpark);
 
     this.pulseT += dt;
-    const pulseR = this.pulseT * 26;
-    const pulseAmp = Math.exp(-this.pulseT * 1.7);
+    const pulseR = this.pulseT * 14;
+    const pulseAmp = Math.exp(-this.pulseT * 2.4);
 
     const sp = this.cur.speed;
     let i = 0;
@@ -211,12 +211,12 @@ export class Music extends ThreeDemo {
         const w2 = Math.sin((x + z) * 0.16 + t * sp * 0.5);
         let h = 1.1 + this.cur.swell * (1.05 + 0.75 * w1 + 0.55 * w2);
 
-        const s = Math.sin(x * 1.27 + t * sp * 1.9) * Math.sin(z * 1.61 - t * sp * 1.35);
-        h += this.cur.spike * Math.pow(Math.max(0, s), 6) * 4.2;
+        const s = Math.sin(x * 0.9 + t * sp * 1.1) * Math.sin(z * 1.1 - t * sp * 0.85);
+        h += this.cur.spike * Math.pow(Math.max(0, s), 6) * 2.8;
 
         if (pulseAmp > 0.01) {
           const d = Math.hypot(x, z) - pulseR;
-          h += Math.exp(-(d * d) / 7) * pulseAmp * 6;
+          h += Math.exp(-(d * d) / 7) * pulseAmp * 3.5;
         }
 
         this.dummy.position.set(x, 0, z);
@@ -244,8 +244,8 @@ export class Music extends ThreeDemo {
     pos.needsUpdate = true;
 
     // slow camera sway, like nodding along
-    this.camera.position.x = Math.sin(t * 0.07) * 5;
-    this.camera.position.y = 12 + Math.sin(t * 0.05) * 1.2;
+    this.camera.position.x = Math.sin(t * 0.05) * 2.5;
+    this.camera.position.y = 12 + Math.sin(t * 0.035) * 0.6;
     this.camera.lookAt(0, 2.5, 0);
   }
 
