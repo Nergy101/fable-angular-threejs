@@ -22,6 +22,11 @@ interface EventVm {
   venue: string;
   city: string;
   url: string;
+  image: string | null;
+  /** first genre's hi/lo colors drive the card accent & flyer fallback */
+  accent: string;
+  phA: string;
+  initial: string;
   dow: string;
   dom: string;
   mon: string;
@@ -56,19 +61,26 @@ export class Music extends ThreeDemo {
     const gen = this.generation();
     return (this.programme() ?? [])
       .filter((e) => sel.size === 0 || e.genres.some((g) => sel.has(g)))
-      .map((e) => ({
-        key: `${e.id}·${gen}`,
-        kind: e.kind,
-        name: e.name,
-        venue: e.venue,
-        city: e.city,
-        url: e.url,
-        ...dateParts(e.date),
-        tags: e.genres
-          .map((id) => GENRES.find((g) => g.id === id))
-          .filter((g): g is MusicGenre => !!g)
-          .map((g) => ({ label: g.label, color: g.palette.hi })),
-      }));
+      .map((e) => {
+        const first = GENRES.find((g) => g.id === e.genres[0]);
+        return {
+          key: `${e.id}·${gen}`,
+          kind: e.kind,
+          name: e.name,
+          venue: e.venue,
+          city: e.city,
+          url: e.url,
+          image: e.image && flyerUrl(e.image),
+          accent: first?.palette.hi ?? '#d7ff3e',
+          phA: first?.palette.lo ?? '#14161d',
+          initial: e.name.trim().charAt(0).toUpperCase(),
+          ...dateParts(e.date),
+          tags: e.genres
+            .map((id) => GENRES.find((g) => g.id === id))
+            .filter((g): g is MusicGenre => !!g)
+            .map((g) => ({ label: g.label, color: g.palette.hi })),
+        };
+      });
   });
 
   /** Fetch the scraped agenda and keep what falls in the coming month. */
@@ -267,6 +279,15 @@ function blendColors(out: THREE.Color, hexes: string[]): void {
     out.g += c.g / hexes.length;
     out.b += c.b / hexes.length;
   }
+}
+
+/**
+ * partyflock serves flyers with Cross-Origin-Resource-Policy: same-site, so
+ * browsers refuse to embed them directly. wsrv.nl is an image-proxy/CDN built
+ * for exactly this; it caches at its edge, sparing partyflock the traffic.
+ */
+function flyerUrl(src: string): string {
+  return `https://wsrv.nl/?url=${encodeURIComponent(src)}&w=640&output=webp&q=78`;
 }
 
 function dateParts(iso: string): { dow: string; dom: string; mon: string } {

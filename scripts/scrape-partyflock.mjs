@@ -10,9 +10,10 @@
  * The deploy workflow runs this daily; on failure the committed JSON stays.
  */
 
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 
 const OUT = new URL('../public/partyflock-events.json', import.meta.url);
+const FLYER_WIDTH = 640;
 const UA = 'vector-atelier-music/1.0 (personal learning project; contact: github.com/Nergy101)';
 const WINDOW_DAYS = 35;
 const DELAY_MS = 400;
@@ -137,6 +138,46 @@ for (const [genre, slugs] of Object.entries(SLUGS)) {
   }
 }
 
+/* ---- flyer images ----
+ * The agenda rows carry no flyers; each party page's og:image does. Partyflock's
+ * image server resizes on demand via the _WxH_ URL segment, so we store a
+ * ~640px variant. Images already in the committed JSON are reused, so a daily
+ * run only fetches detail pages for events new to the window. */
+
+const imageCache = new Map();
+try {
+  const prev = JSON.parse(readFileSync(OUT, 'utf8'));
+  for (const ev of prev.events ?? []) {
+    if (ev.image !== undefined) imageCache.set(ev.id, ev.image);
+  }
+} catch {
+  /* first run — no cache yet */
+}
+
+function shrinkFlyer(url) {
+  return url.replace(/_(\d+)x(\d+)_/, (m, w, h) => {
+    if (Number(w) <= FLYER_WIDTH) return m;
+    return `_${FLYER_WIDTH}x${Math.round((Number(h) * FLYER_WIDTH) / Number(w))}_`;
+  });
+}
+
+const needImage = [...byId.values()].filter((ev) => !imageCache.has(ev.id));
+console.log(`\nfetching flyers for ${needImage.length} new events (${imageCache.size} cached)`);
+for (const ev of needImage) {
+  try {
+    const res = await fetch(ev.url ?? `https://partyflock.nl/party/${ev.id}`, {
+      headers: { 'User-Agent': UA },
+    });
+    const og = res.ok
+      ? (await res.text()).match(/property="og:image" content="([^"]+\/images\/party\/[^"]+)"/)?.[1]
+      : null;
+    imageCache.set(ev.id, og ? shrinkFlyer(og) : null);
+  } catch {
+    imageCache.set(ev.id, null);
+  }
+  await sleep(DELAY_MS);
+}
+
 const events = [...byId.values()]
   .sort((a, b) => Date.parse(a.start) - Date.parse(b.start))
   .map((ev) => ({
@@ -148,6 +189,7 @@ const events = [...byId.values()]
     city: ev.city,
     genres: ev.genres,
     url: ev.url ?? `https://partyflock.nl/party/${ev.id}`,
+    image: imageCache.get(ev.id) ?? null,
   }));
 
 if (events.length === 0) {

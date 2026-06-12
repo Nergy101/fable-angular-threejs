@@ -47,24 +47,38 @@
 
     <ol class="bill">
       @for (e of events(); track e.key; let i = $index) {
-        <li class="event" [style.--i]="i" [attr.data-kind]="e.kind">
-          <div class="when">
-            <span class="dow">{{ e.dow }}</span>
-            <span class="dom">{{ e.dom }}</span>
-            <span class="mon">{{ e.mon }}</span>
-          </div>
-          <div class="what">
-            <div class="meta">
-              <span class="kind">{{ e.kind }}</span>
-              @for (tag of e.tags; track tag.label) {
-                <span class="gtag"><i [style.background]="tag.color"></i>{{ tag.label }}</span>
+        <li class="card" [style.--i]="i" [style.--g]="e.accent" [attr.data-kind]="e.kind">
+          <a [href]="e.url" target="_blank" rel="noopener">
+            <div class="flyer" [style.--ph]="e.phA">
+              <div class="ph"><span>{{ e.initial }}</span></div>
+              @if (e.image) {
+                <img
+                  [src]="e.image"
+                  [alt]="e.name"
+                  loading="lazy"
+                  decoding="async"
+                  referrerpolicy="no-referrer"
+                  (error)="$any($event.target).style.display = 'none'"
+                />
               }
+              <div class="scrim"></div>
+              <span class="date">
+                <b>{{ e.dom }}</b>
+                <span class="mon">{{ e.mon }}</span>
+                <span class="dow">{{ e.dow }}</span>
+              </span>
+              <span class="kind">{{ e.kind }}</span>
             </div>
-            <h3>
-              <a [href]="e.url" target="_blank" rel="noopener">{{ e.name }}</a>
-            </h3>
-            <p class="where">{{ e.venue }} · {{ e.city }}</p>
-          </div>
+            <div class="label">
+              <h3>{{ e.name }}</h3>
+              <p class="where">{{ e.venue }} · {{ e.city }}</p>
+              <div class="tags">
+                @for (tag of e.tags; track tag.label) {
+                  <span class="gtag"><i [style.background]="tag.color"></i>{{ tag.label }}</span>
+                }
+              </div>
+            </div>
+          </a>
         </li>
       } @empty {
         <li class="silence">

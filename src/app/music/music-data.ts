@@ -21,6 +21,8 @@ export interface MusicEvent {
   city: string;
   genres: string[];
   url: string;
+  /** ~640px flyer from the party page's og:image; null when partyflock has none */
+  image: string | null;
 }
 
 export interface MusicGenre {
