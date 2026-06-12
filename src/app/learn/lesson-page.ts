@@ -9,6 +9,7 @@ import { Lesson05Cameras } from './lessons/lesson-05-cameras';
 import { Lesson06Loop } from './lessons/lesson-06-loop';
 import { Lesson07Raycasting } from './lessons/lesson-07-raycasting';
 import { Lesson08Gltf } from './lessons/lesson-08-gltf';
+import { Lesson09Terrain } from './lessons/lesson-09-terrain';
 
 @Component({
   selector: 'app-lesson-page',
@@ -22,13 +23,14 @@ import { Lesson08Gltf } from './lessons/lesson-08-gltf';
     Lesson06Loop,
     Lesson07Raycasting,
     Lesson08Gltf,
+    Lesson09Terrain,
   ],
   template: `
     @if (lesson(); as l) {
       <div class="page wrap">
         <header class="head" [class]="'ax-' + l.axis">
           <p class="kicker">
-            <span class="tick">▸</span> Lesson {{ l.num }} / 08 · ~{{ l.minutes }} min
+            <span class="tick">▸</span> Lesson {{ l.num }} / 09 · ~{{ l.minutes }} min
           </p>
           <h1>{{ l.title }}</h1>
           <p class="sub">{{ l.subtitle }}</p>
@@ -43,6 +45,7 @@ import { Lesson08Gltf } from './lessons/lesson-08-gltf';
           @case ('render-loop') { <app-lesson-06 /> }
           @case ('raycasting') { <app-lesson-07 /> }
           @case ('gltf') { <app-lesson-08 /> }
+          @case ('terrain') { <app-lesson-09 /> }
         }
 
         <nav class="pager">

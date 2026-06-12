@@ -82,6 +82,15 @@ export const LESSONS: LessonMeta[] = [
     minutes: 14,
     concepts: ['GLTFLoader', 'async loading', 'traverse', 'Box3 framing', 'Sketchfab'],
   },
+  {
+    slug: 'terrain',
+    num: '09',
+    title: 'Procedural Terrain',
+    subtitle: 'Height fields, noise functions and vertex displacement — building landscapes from math',
+    axis: 'z',
+    minutes: 15,
+    concepts: ['PlaneGeometry', 'BufferAttribute', 'vertex displacement', 'fBm noise', 'computeVertexNormals', 'vertexColors'],
+  },
 ];
 
 export const lessonBySlug = (slug: string) => LESSONS.find((l) => l.slug === slug);
