@@ -1,0 +1,81 @@
+<div class="page map-studio">
+
+  <section class="studio-hero">
+    <p class="kicker"><span class="tick">▸</span> Creative · the map room</p>
+    <h1>Map Studio</h1>
+    <p class="lede">
+      Pick a tile from the palette and paint your own RPG town — or seed the generator
+      and let it conjure one for you. Click &amp; drag on the canvas to paint.
+    </p>
+  </section>
+
+  <section class="studio-body">
+
+    <!-- MAP CANVAS -->
+    <div class="canvas-frame">
+      <canvas #mapCanvas></canvas>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <!-- PALETTE -->
+      <div class="palette">
+        @for (group of groups; track group) {
+          <p class="group-label">{{ group }}</p>
+          <div class="tile-row">
+            @for (tile of paletteByGroup(group); track tile.id) {
+              <button
+                class="tile-btn"
+                [class.active]="selected() === tile.id"
+                (click)="selected.set(tile.id)"
+                [title]="tile.label"
+              >
+                @if (thumbs()[tile.id]; as url) {
+                  <img [src]="url" [alt]="tile.label" width="38" height="38" />
+                }
+                <span class="tile-label">{{ tile.label }}</span>
+              </button>
+            }
+          </div>
+        }
+      </div>
+
+      <!-- CONTROLS -->
+      <div class="controls">
+        <p class="ctrl-head">Generate</p>
+
+        <div class="ctl">
+          <label for="seed-in">Seed</label>
+          <input
+            id="seed-in"
+            type="number"
+            min="0"
+            max="99999"
+            [value]="seedInput()"
+            (input)="seedInput.set(+$any($event.target).value)"
+          />
+        </div>
+
+        <button class="btn btn-accent" (click)="generate()">↺ Generate town</button>
+        <button class="btn btn-ghost"  (click)="randomSeed()">🎲 Random seed</button>
+        <button class="btn btn-ghost"  (click)="clearMap()">✕ Clear</button>
+        <button class="btn btn-ghost"  (click)="exportPng()">↓ Export PNG</button>
+
+        <div class="ctl ctl-row">
+          <input type="checkbox" id="grid-toggle"
+            [checked]="showGrid()"
+            (change)="showGrid.set(!showGrid())" />
+          <label for="grid-toggle">Show grid</label>
+        </div>
+
+        <p class="hint">
+          Left-click or drag to paint.<br />
+          Right-click resets to grass.
+        </p>
+      </div>
+
+    </aside>
+  </section>
+
+</div>

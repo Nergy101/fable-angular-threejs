@@ -26,6 +26,10 @@ export const routes: Routes = [
     loadComponent: () => import('./music/music').then((m) => m.Music),
   },
   {
+    path: 'map',
+    loadComponent: () => import('./map/map').then((m) => m.MapStudio),
+  },
+  {
     path: 'games/blobby-volley',
     loadComponent: () => import('./games/blobby-volley').then((m) => m.BlobbyVolley),
   },
