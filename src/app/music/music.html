@@ -1,0 +1,80 @@
+<div class="page music">
+  <section class="hero">
+    <canvas #canvas></canvas>
+    <div class="hero-scrim"></div>
+
+    <div class="hero-inner">
+      <p class="kicker"><span class="tick">▸</span> Studio · the listening room</p>
+      <h1>Music</h1>
+      <p class="lede">
+        Pick the frequencies you live on. The field retunes itself — and so does the
+        programme: every festival, concert and club night on your wavelength for the
+        coming month.
+      </p>
+
+      <div class="tastes">
+        @for (g of genres; track g.id) {
+          <button
+            type="button"
+            class="taste"
+            [class.on]="isOn(g.id)"
+            (click)="toggle(g.id)"
+            [style.--g]="g.palette.hi"
+          >
+            <span class="eq"><i></i><i></i><i></i></span>
+            {{ g.label }}
+          </button>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="agenda">
+    <header class="agenda-head">
+      <div>
+        <h2>On your wavelength</h2>
+        <p class="sub">
+          {{ events().length }} events ·
+          @if (selected().size > 0) {
+            tuned to {{ selected().size }} taste{{ selected().size === 1 ? '' : 's' }}
+          } @else {
+            all frequencies
+          }
+        </p>
+      </div>
+      <span class="range">{{ rangeLabel }}</span>
+    </header>
+
+    <ol class="bill">
+      @for (e of events(); track e.key; let i = $index) {
+        <li class="event" [style.--i]="i" [attr.data-kind]="e.kind">
+          <div class="when">
+            <span class="dow">{{ e.dow }}</span>
+            <span class="dom">{{ e.dom }}</span>
+            <span class="mon">{{ e.mon }}</span>
+          </div>
+          <div class="what">
+            <div class="meta">
+              <span class="kind">{{ e.kind }}</span>
+              @for (tag of e.tags; track tag.label) {
+                <span class="gtag"><i [style.background]="tag.color"></i>{{ tag.label }}</span>
+              }
+            </div>
+            <h3>{{ e.name }}</h3>
+            <p class="where">{{ e.venue }} · {{ e.city }}</p>
+          </div>
+          <p class="note">{{ e.note }}</p>
+        </li>
+      } @empty {
+        <li class="silence">
+          <p>Nothing on these frequencies this month — try widening your taste.</p>
+        </li>
+      }
+    </ol>
+
+    <p class="foot kicker">
+      <span class="tick">▸</span> a fictional programme, regenerated against today's date —
+      the page is wired so a real events api can drop straight in
+    </p>
+  </section>
+</div>

@@ -22,6 +22,10 @@ export const routes: Routes = [
     loadComponent: () => import('./games/games-index').then((m) => m.GamesIndex),
   },
   {
+    path: 'music',
+    loadComponent: () => import('./music/music').then((m) => m.Music),
+  },
+  {
     path: 'games/blobby-volley',
     loadComponent: () => import('./games/blobby-volley').then((m) => m.BlobbyVolley),
   },
