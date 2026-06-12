@@ -1,13 +1,27 @@
 /**
- * The Music section's programme.
+ * The Music section's taste chips.
  *
- * There is no key-free public events API (Ticketmaster / Bandsintown both
- * want credentials), so the agenda is a curated fictional programme whose
- * dates are generated relative to "today" — it always shows the next month.
- * Swap `EVENTS` for an API call later; the page only consumes the shapes below.
+ * The agenda itself is real: scripts/scrape-partyflock.mjs scrapes the
+ * partyflock.nl genre agendas into public/partyflock-events.json (the deploy
+ * workflow refreshes it daily), and the page filters that to the next month.
+ * Each chip folds several partyflock genre slugs together — the mapping
+ * lives in the scraper.
  */
 
 export type EventKind = 'festival' | 'concert' | 'party';
+
+/** one scraped partyflock event, as found in partyflock-events.json */
+export interface MusicEvent {
+  id: string;
+  /** ISO start datetime */
+  date: string;
+  kind: EventKind;
+  name: string;
+  venue: string;
+  city: string;
+  genres: string[];
+  url: string;
+}
 
 export interface MusicGenre {
   id: string;
@@ -16,18 +30,6 @@ export interface MusicGenre {
   palette: { lo: string; hi: string; spark: string };
   /** the field's musical personality: tempo, groundswell, transient spikes */
   field: { speed: number; swell: number; spike: number };
-}
-
-export interface MusicEvent {
-  id: string;
-  /** days from today, 1..30 */
-  day: number;
-  kind: EventKind;
-  name: string;
-  venue: string;
-  city: string;
-  genres: string[];
-  note: string;
 }
 
 export const GENRES: MusicGenre[] = [
@@ -44,6 +46,18 @@ export const GENRES: MusicGenre[] = [
     field: { speed: 4.1, swell: 1.5, spike: 2.6 },
   },
   {
+    id: 'gabber',
+    label: 'Hardcore & Gabber',
+    palette: { lo: '#230606', hi: '#ff3d2e', spark: '#ff8a7a' },
+    field: { speed: 5.2, swell: 1.3, spike: 3.4 },
+  },
+  {
+    id: 'hardstyle',
+    label: 'Hardstyle & Raw',
+    palette: { lo: '#211c05', hi: '#ffe23a', spark: '#fff0a0' },
+    field: { speed: 3.2, swell: 1.9, spike: 2.0 },
+  },
+  {
     id: 'hiphop',
     label: 'Hip-Hop & R&B',
     palette: { lo: '#2b1304', hi: '#ffb347', spark: '#ffd9a0' },
@@ -51,9 +65,33 @@ export const GENRES: MusicGenre[] = [
   },
   {
     id: 'rock',
-    label: 'Rock & Metal',
+    label: 'Rock',
     palette: { lo: '#2b0a0c', hi: '#ff5566', spark: '#ff9aa4' },
     field: { speed: 2.3, swell: 1.7, spike: 3.1 },
+  },
+  {
+    id: 'thrash',
+    label: 'Thrash & Heavy Metal',
+    palette: { lo: '#181c22', hi: '#d6dde6', spark: '#eef3f8' },
+    field: { speed: 3.5, swell: 1.6, spike: 2.8 },
+  },
+  {
+    id: 'death',
+    label: 'Death & Black Metal',
+    palette: { lo: '#0c0e14', hi: '#a9c7d8', spark: '#d4e6f2' },
+    field: { speed: 2.9, swell: 1.8, spike: 2.4 },
+  },
+  {
+    id: 'doom',
+    label: 'Doom & Sludge',
+    palette: { lo: '#150f08', hi: '#c97f3f', spark: '#e6b27a' },
+    field: { speed: 0.45, swell: 3.3, spike: 0.4 },
+  },
+  {
+    id: 'metalcore',
+    label: 'Metalcore & Punk',
+    palette: { lo: '#190d2b', hi: '#b07aff', spark: '#d3b3ff' },
+    field: { speed: 3.0, swell: 2.0, spike: 2.2 },
   },
   {
     id: 'indie',
@@ -84,318 +122,5 @@ export const GENRES: MusicGenre[] = [
     label: 'Latin & Afro',
     palette: { lo: '#16290b', hi: '#c5ff4a', spark: '#e2ffa3' },
     field: { speed: 2.4, swell: 2.4, spike: 1.3 },
-  },
-];
-
-export const EVENTS: MusicEvent[] = [
-  {
-    id: 'system-check',
-    day: 1,
-    kind: 'party',
-    name: 'System Check',
-    venue: 'Club Vesta',
-    city: 'Amsterdam',
-    genres: ['techno'],
-    note: 'Atelier warm-up · minimal & dub techno · 23:00 till late',
-  },
-  {
-    id: 'voltage',
-    day: 2,
-    kind: 'party',
-    name: 'Voltage: Open Circuit',
-    venue: 'Warehouse Oost',
-    city: 'Amsterdam',
-    genres: ['techno'],
-    note: 'Modular live sets until sunrise · 23:00–08:00',
-  },
-  {
-    id: 'hollow-pines',
-    day: 3,
-    kind: 'concert',
-    name: 'The Hollow Pines',
-    venue: 'Zaal Astra',
-    city: 'Utrecht',
-    genres: ['indie'],
-    note: 'Dream-folk quartet · album release night',
-  },
-  {
-    id: 'low-end',
-    day: 4,
-    kind: 'party',
-    name: 'Low End Theory Club',
-    venue: 'Bastion 9',
-    city: 'Rotterdam',
-    genres: ['hiphop'],
-    note: 'Boom-bap basement session · open decks after 02:00',
-  },
-  {
-    id: 'mahler-5',
-    day: 5,
-    kind: 'concert',
-    name: 'Aurora Philharmonic: Mahler 5',
-    venue: 'Concertzaal Aurora',
-    city: 'Amsterdam',
-    genres: ['classical'],
-    note: 'The Adagietto, played the slow way · 20:15',
-  },
-  {
-    id: 'greenfield',
-    day: 6,
-    kind: 'festival',
-    name: 'Greenfield Sessions',
-    venue: 'Stadspark Zuid',
-    city: 'Eindhoven',
-    genres: ['indie', 'pop'],
-    note: 'Two stages, one food court, zero rain guarantee · 13:00–23:00',
-  },
-  {
-    id: 'jungle-physics',
-    day: 7,
-    kind: 'party',
-    name: 'Jungle Physics',
-    venue: 'Dockyard Noord',
-    city: 'Rotterdam',
-    genres: ['dnb'],
-    note: '170 BPM all night · bring earplugs, seriously',
-  },
-  {
-    id: 'marrow',
-    day: 8,
-    kind: 'concert',
-    name: 'Marrow',
-    venue: 'Pakhuis Vier',
-    city: 'Antwerp',
-    genres: ['rock'],
-    note: 'Post-metal trio · support: Cinder Veil',
-  },
-  {
-    id: 'salsa-social',
-    day: 9,
-    kind: 'party',
-    name: 'Salsa Caliente Social',
-    venue: 'Sala Mango',
-    city: 'Utrecht',
-    genres: ['latin'],
-    note: 'Beginner class at 20:00 · social dancing till late',
-  },
-  {
-    id: 'circuit-bloom',
-    day: 10,
-    kind: 'festival',
-    name: 'Circuit Bloom',
-    venue: 'Hangar 12',
-    city: 'Berlin',
-    genres: ['techno', 'dnb'],
-    note: '14 hours, 3 floors, 1 fog machine budget overrun',
-  },
-  {
-    id: 'nina-solano',
-    day: 11,
-    kind: 'concert',
-    name: 'Nina Solano',
-    venue: 'Theater Lumen',
-    city: 'Amsterdam',
-    genres: ['jazz'],
-    note: 'Velvet-voiced neo-soul with a live horn section',
-  },
-  {
-    id: 'mirrorball',
-    day: 12,
-    kind: 'party',
-    name: 'Mirrorball',
-    venue: 'Club Vesta',
-    city: 'Amsterdam',
-    genres: ['pop'],
-    note: 'Pure pop pleasures, zero guilt · dress shiny',
-  },
-  {
-    id: 'static-bloom',
-    day: 13,
-    kind: 'concert',
-    name: 'Static Bloom',
-    venue: 'Podium Helix',
-    city: 'Eindhoven',
-    genres: ['indie', 'rock'],
-    note: 'Shoegaze wall-of-sound · earplugs included with ticket',
-  },
-  {
-    id: 'cypher-night',
-    day: 13,
-    kind: 'party',
-    name: 'Cypher Night',
-    venue: 'Bastion 9',
-    city: 'Rotterdam',
-    genres: ['hiphop'],
-    note: 'Open-mic cypher · beats by DJ Parallax',
-  },
-  {
-    id: 'stonefield',
-    day: 14,
-    kind: 'festival',
-    name: 'Stonefield',
-    venue: 'Landgoed Ravenhorst',
-    city: 'Arnhem',
-    genres: ['rock'],
-    note: 'Camping weekender · 40 bands across three days',
-  },
-  {
-    id: 'kasimir',
-    day: 15,
-    kind: 'concert',
-    name: 'Kasimir Quartet by Candlelight',
-    venue: 'Kapel Sint-Joris',
-    city: 'Utrecht',
-    genres: ['classical'],
-    note: 'Schubert & Pärt in a 14th-century chapel · 21:00',
-  },
-  {
-    id: 'tape-deck',
-    day: 16,
-    kind: 'party',
-    name: 'Afterhours: Tape Deck',
-    venue: 'De Kelder',
-    city: 'Amsterdam',
-    genres: ['hiphop', 'jazz'],
-    note: 'Lo-fi beats & rare grooves on actual cassettes',
-  },
-  {
-    id: 'bassline-harbour',
-    day: 17,
-    kind: 'festival',
-    name: 'Bassline Harbour',
-    venue: 'Maaspier',
-    city: 'Rotterdam',
-    genres: ['dnb'],
-    note: 'Harbour-side soundsystems · day & night programme',
-  },
-  {
-    id: 'liv-marlowe',
-    day: 18,
-    kind: 'concert',
-    name: 'Liv Marlowe: Afterglow Tour',
-    venue: 'Arena Oost',
-    city: 'Amsterdam',
-    genres: ['pop'],
-    note: 'Arena production with the drone-swarm finale',
-  },
-  {
-    id: 'tropical-pressure',
-    day: 19,
-    kind: 'party',
-    name: 'Tropical Pressure',
-    venue: 'Strandbar Costa',
-    city: 'Scheveningen',
-    genres: ['latin'],
-    note: 'Beach party · reggaeton, baile funk & afrobeats',
-  },
-  {
-    id: 'coal-copper',
-    day: 20,
-    kind: 'concert',
-    name: 'Coal & Copper',
-    venue: 'Het Fort',
-    city: 'Nijmegen',
-    genres: ['rock'],
-    note: 'Desert-rock riffs in a Napoleonic fortress',
-  },
-  {
-    id: 'open-air-aurora',
-    day: 21,
-    kind: 'festival',
-    name: 'Open Air Aurora',
-    venue: 'Park De Wende',
-    city: 'Amsterdam',
-    genres: ['techno'],
-    note: 'Sunrise-to-sunset open air · melodic & deep house',
-  },
-  {
-    id: 'blue-hour',
-    day: 22,
-    kind: 'concert',
-    name: 'Blue Hour Big Band',
-    venue: 'Jazzhuis Dertien',
-    city: 'Den Haag',
-    genres: ['jazz'],
-    note: 'Seventeen players, one very tired sound engineer',
-  },
-  {
-    id: 'neon-cathedral',
-    day: 23,
-    kind: 'party',
-    name: 'Neon Cathedral',
-    venue: 'Halle K',
-    city: 'Köln',
-    genres: ['techno', 'pop'],
-    note: 'Italo, trance edits & lasers in a former tram depot',
-  },
-  {
-    id: 'wildflower',
-    day: 24,
-    kind: 'festival',
-    name: 'Wildflower Weekender',
-    venue: 'Kamp Heide',
-    city: 'Veluwe',
-    genres: ['indie', 'jazz'],
-    note: 'Boutique camping festival · 1,500 tickets only',
-  },
-  {
-    id: 'symfonie-ij',
-    day: 25,
-    kind: 'concert',
-    name: 'Symfonie aan het Water',
-    venue: 'Kade 1',
-    city: 'Amsterdam',
-    genres: ['classical'],
-    note: 'Open-air waterfront orchestra · bring a blanket',
-  },
-  {
-    id: 'full-spectrum',
-    day: 26,
-    kind: 'party',
-    name: 'Full Spectrum',
-    venue: 'Loods 6',
-    city: 'Rotterdam',
-    genres: ['dnb'],
-    note: 'Holographic stage design — rendered in WebGL, naturally',
-  },
-  {
-    id: 'vantablack',
-    day: 27,
-    kind: 'concert',
-    name: 'MC Vantablack',
-    venue: 'Poppodium Orbit',
-    city: 'Groningen',
-    genres: ['hiphop'],
-    note: 'Album tour · support from the Lowlight Collective',
-  },
-  {
-    id: 'solstice-sound',
-    day: 28,
-    kind: 'festival',
-    name: 'Solstice Sound',
-    venue: 'Duinpark West',
-    city: 'Den Haag',
-    genres: ['pop', 'latin'],
-    note: 'Midsummer city festival across the dunes · 5 stages',
-  },
-  {
-    id: 'waltz-noir',
-    day: 29,
-    kind: 'party',
-    name: 'Waltz Noir',
-    venue: 'Salon Aurelia',
-    city: 'Antwerp',
-    genres: ['classical'],
-    note: 'Strauss after dark — a ballroom rave, dress code black',
-  },
-  {
-    id: 'velvet-statics',
-    day: 30,
-    kind: 'concert',
-    name: 'The Velvet Statics',
-    venue: 'De Veerpont',
-    city: 'Utrecht',
-    genres: ['indie'],
-    note: 'Farewell show on a converted ferry · two sets',
   },
 ];

@@ -1,7 +1,7 @@
 import { Component, computed, signal } from '@angular/core';
 import * as THREE from 'three';
 import { ThreeDemo } from '../core/three/three-demo';
-import { EVENTS, GENRES, MusicGenre } from './music-data';
+import { GENRES, MusicEvent, MusicGenre } from './music-data';
 
 const TASTE_KEY = 'vector-atelier.music-taste';
 
@@ -21,7 +21,7 @@ interface EventVm {
   name: string;
   venue: string;
   city: string;
-  note: string;
+  url: string;
   dow: string;
   dom: string;
   mon: string;
@@ -41,26 +41,57 @@ export class Music extends ThreeDemo {
 
   readonly rangeLabel = rangeLabel();
 
+  /** the scraped partyflock programme; null while loading */
+  private readonly programme = signal<MusicEvent[] | null>(null);
+  readonly scrapedAt = signal('');
+  readonly loaded = computed(() => this.programme() !== null);
+
+  constructor() {
+    super();
+    this.loadProgramme();
+  }
+
   readonly events = computed<EventVm[]>(() => {
     const sel = this.selected();
     const gen = this.generation();
-    return EVENTS.filter((e) => sel.size === 0 || e.genres.some((g) => sel.has(g)))
-      .slice()
-      .sort((a, b) => a.day - b.day)
+    return (this.programme() ?? [])
+      .filter((e) => sel.size === 0 || e.genres.some((g) => sel.has(g)))
       .map((e) => ({
         key: `${e.id}·${gen}`,
         kind: e.kind,
         name: e.name,
         venue: e.venue,
         city: e.city,
-        note: e.note,
-        ...dateParts(e.day),
+        url: e.url,
+        ...dateParts(e.date),
         tags: e.genres
           .map((id) => GENRES.find((g) => g.id === id))
           .filter((g): g is MusicGenre => !!g)
           .map((g) => ({ label: g.label, color: g.palette.hi })),
       }));
   });
+
+  /** Fetch the scraped agenda and keep what falls in the coming month. */
+  private async loadProgramme(): Promise<void> {
+    try {
+      const res = await fetch(new URL('partyflock-events.json', document.baseURI));
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = (await res.json()) as { scrapedAt: string; events: MusicEvent[] };
+      const from = new Date().setHours(0, 0, 0, 0);
+      const to = from + 30 * 864e5;
+      this.scrapedAt.set(data.scrapedAt.slice(0, 10));
+      this.programme.set(
+        data.events
+          .filter((e) => {
+            const t = Date.parse(e.date);
+            return t >= from && t <= to;
+          })
+          .sort((a, b) => Date.parse(a.date) - Date.parse(b.date)),
+      );
+    } catch {
+      this.programme.set([]); // the template shows the silence state
+    }
+  }
 
   isOn(id: string): boolean {
     return this.selected().has(id);
@@ -238,10 +269,8 @@ function blendColors(out: THREE.Color, hexes: string[]): void {
   }
 }
 
-function dateParts(dayOffset: number): { dow: string; dom: string; mon: string } {
-  const d = new Date();
-  d.setHours(12, 0, 0, 0);
-  d.setDate(d.getDate() + dayOffset);
+function dateParts(iso: string): { dow: string; dom: string; mon: string } {
+  const d = new Date(iso);
   return {
     dow: d.toLocaleDateString('en-GB', { weekday: 'short' }),
     dom: String(d.getDate()),
@@ -252,7 +281,6 @@ function dateParts(dayOffset: number): { dow: string; dom: string; mon: string }
 function rangeLabel(): string {
   const fmt = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
   const from = new Date();
-  from.setDate(from.getDate() + 1);
   const to = new Date();
   to.setDate(to.getDate() + 30);
   return `${fmt(from)} — ${fmt(to)}`;

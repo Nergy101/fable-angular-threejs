@@ -1,0 +1,5834 @@
+{
+ "scrapedAt": "2026-06-12T09:26:38.105Z",
+ "events": [
+  {
+   "id": "495241",
+   "date": "2026-06-12T17:00:00+02:00",
+   "kind": "party",
+   "name": "Watermelon 10 years",
+   "venue": "Sunseabar Beach",
+   "city": "Barcelona",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495241:Watermelon-10-years"
+  },
+  {
+   "id": "488448",
+   "date": "2026-06-12T18:30:00+02:00",
+   "kind": "party",
+   "name": "Good Times Rotterdam",
+   "venue": "Kralingse Bos",
+   "city": "Rotterdam",
+   "genres": [
+    "techno",
+    "hiphop",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/488448:Good-Times-Rotterdam"
+  },
+  {
+   "id": "493833",
+   "date": "2026-06-12T19:00:00+02:00",
+   "kind": "party",
+   "name": "The Cuckoo's Nest",
+   "venue": "Colorado Charlie",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493833:The-Cuckoos-Nest"
+  },
+  {
+   "id": "481286",
+   "date": "2026-06-12T19:00:00+02:00",
+   "kind": "party",
+   "name": "Central Park",
+   "venue": "Park Transwijk",
+   "city": "Utrecht",
+   "genres": [
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/481286:Central-Park"
+  },
+  {
+   "id": "494383",
+   "date": "2026-06-12T19:30:00+02:00",
+   "kind": "concert",
+   "name": "HipFest",
+   "venue": "Poppodium aan Zee",
+   "city": "Scheveningen",
+   "genres": [
+    "rock",
+    "indie",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/494383:HipFest"
+  },
+  {
+   "id": "495288",
+   "date": "2026-06-12T20:00:00+02:00",
+   "kind": "party",
+   "name": "The Rocketman",
+   "venue": "Boomerang Beach",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495288:The-Rocketman"
+  },
+  {
+   "id": "490946",
+   "date": "2026-06-12T21:30:00+02:00",
+   "kind": "party",
+   "name": "VroegZat",
+   "venue": "MEZZ",
+   "city": "Breda",
+   "genres": [
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/490946:VroegZat"
+  },
+  {
+   "id": "494809",
+   "date": "2026-06-12T22:00:00+02:00",
+   "kind": "party",
+   "name": "Seinstoring",
+   "venue": "Backstage",
+   "city": "Hoorn",
+   "genres": [
+    "techno",
+    "dnb"
+   ],
+   "url": "https://partyflock.nl/party/494809:Seinstoring"
+  },
+  {
+   "id": "493316",
+   "date": "2026-06-12T22:00:00+02:00",
+   "kind": "party",
+   "name": "BE4AM.",
+   "venue": "Waalhalla",
+   "city": "Nijmegen",
+   "genres": [
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/493316:BE4AM"
+  },
+  {
+   "id": "493317",
+   "date": "2026-06-12T22:00:00+02:00",
+   "kind": "party",
+   "name": "BE4AM.",
+   "venue": "Effenaar",
+   "city": "Eindhoven",
+   "genres": [
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/493317:BE4AM"
+  },
+  {
+   "id": "493486",
+   "date": "2026-06-12T23:00:00+02:00",
+   "kind": "party",
+   "name": "Club Leidse",
+   "venue": "Leidse",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/493486:Club-Leidse"
+  },
+  {
+   "id": "494414",
+   "date": "2026-06-13T00:00:00+02:00",
+   "kind": "party",
+   "name": "HARD SMILE",
+   "venue": "Garagen",
+   "city": "Keulen",
+   "genres": [
+    "gabber"
+   ],
+   "url": "https://partyflock.nl/party/494414:HARD-SMILE"
+  },
+  {
+   "id": "495168",
+   "date": "2026-06-13T00:00:00+02:00",
+   "kind": "party",
+   "name": "Urban Friday",
+   "venue": "Twenty Two",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495168:Urban-Friday"
+  },
+  {
+   "id": "489068",
+   "date": "2026-06-13T00:00:00+02:00",
+   "kind": "party",
+   "name": "Latin Night",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489068:Latin-Night"
+  },
+  {
+   "id": "495201",
+   "date": "2026-06-13T01:00:00+02:00",
+   "kind": "party",
+   "name": "Amaliah • D Stone",
+   "venue": "Radio Radio",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495201:Amaliah-o-D-Stone"
+  },
+  {
+   "id": "494747",
+   "date": "2026-06-13T01:00:00+02:00",
+   "kind": "party",
+   "name": "Basis",
+   "venue": "BASIS",
+   "city": "Utrecht",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494747:Basis"
+  },
+  {
+   "id": "494232",
+   "date": "2026-06-13T01:00:00+02:00",
+   "kind": "party",
+   "name": "Shelter",
+   "venue": "Shelter",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494232:Shelter"
+  },
+  {
+   "id": "495220",
+   "date": "2026-06-13T01:00:00+02:00",
+   "kind": "party",
+   "name": "SPECTRA × DuysteR",
+   "venue": "Plak",
+   "city": "Nijmegen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495220:SPECTRA-x-DuysteR"
+  },
+  {
+   "id": "494866",
+   "date": "2026-06-13T01:00:00+02:00",
+   "kind": "party",
+   "name": "Gouwe Ouwe",
+   "venue": "MUNCH",
+   "city": "Rotterdam",
+   "genres": [
+    "techno",
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/494866:Gouwe-Ouwe"
+  },
+  {
+   "id": "494035",
+   "date": "2026-06-13T01:00:00+02:00",
+   "kind": "party",
+   "name": "Het Sieraad",
+   "venue": "Het Sieraad",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494035:Het-Sieraad"
+  },
+  {
+   "id": "494368",
+   "date": "2026-06-13T01:00:00+02:00",
+   "kind": "party",
+   "name": "Toffler",
+   "venue": "Toffler",
+   "city": "Rotterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494368:Toffler"
+  },
+  {
+   "id": "495463",
+   "date": "2026-06-13T01:00:00+02:00",
+   "kind": "party",
+   "name": "Less Is More",
+   "venue": "The Tequila Club",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/495463:Less-Is-More"
+  },
+  {
+   "id": "495573",
+   "date": "2026-06-13T01:55:00+02:00",
+   "kind": "party",
+   "name": "Tunnel Presents",
+   "venue": "Bikini Club",
+   "city": "Barcelona",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495573:Tunnel-Presents"
+  },
+  {
+   "id": "495464",
+   "date": "2026-06-13T01:55:00+02:00",
+   "kind": "party",
+   "name": "Fiesta Macumba",
+   "venue": "Luxor Live",
+   "city": "Arnhem",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495464:Fiesta-Macumba"
+  },
+  {
+   "id": "486392",
+   "date": "2026-06-13T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Bosburcht Festival",
+   "venue": "De Berckt",
+   "city": "Baarlo",
+   "genres": [
+    "techno",
+    "dnb"
+   ],
+   "url": "https://partyflock.nl/party/486392:Bosburcht-Festival"
+  },
+  {
+   "id": "481282",
+   "date": "2026-06-13T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Best Kept Secret",
+   "venue": "Beekse Bergen",
+   "city": "Hilvarenbeek",
+   "genres": [
+    "techno",
+    "rock",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/481282:Best-Kept-Secret"
+  },
+  {
+   "id": "484846",
+   "date": "2026-06-13T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Legacy Festival",
+   "venue": "Zilvermeer",
+   "city": "Mol",
+   "genres": [
+    "techno",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/484846:Legacy-Festival"
+  },
+  {
+   "id": "481730",
+   "date": "2026-06-13T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Kamping Kitsch Club Holland",
+   "venue": "Berkendonk",
+   "city": "Helmond",
+   "genres": [
+    "gabber",
+    "hardstyle",
+    "hiphop",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/481730:Kamping-Kitsch-Club-Holland"
+  },
+  {
+   "id": "489365",
+   "date": "2026-06-13T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Retrock",
+   "venue": "Evenementen Terrein",
+   "city": "Waalwijk",
+   "genres": [
+    "rock"
+   ],
+   "url": "https://partyflock.nl/party/489365:Retrock"
+  },
+  {
+   "id": "495295",
+   "date": "2026-06-13T15:00:00+02:00",
+   "kind": "festival",
+   "name": "Intercell × Interplanetary Criminal × Main Phase",
+   "venue": "Balkenhaven",
+   "city": "Zaandam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495295:Intercell-x-Interplanetary-Criminal-x-Main-Phase"
+  },
+  {
+   "id": "490709",
+   "date": "2026-06-13T15:00:00+02:00",
+   "kind": "festival",
+   "name": "TAPT Festival",
+   "venue": "Park Zypendaal",
+   "city": "Arnhem",
+   "genres": [
+    "techno",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/490709:TAPT-Festival"
+  },
+  {
+   "id": "490348",
+   "date": "2026-06-13T15:00:00+02:00",
+   "kind": "festival",
+   "name": "Thuishaven",
+   "venue": "Thuishaven terrein",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/490348:Thuishaven"
+  },
+  {
+   "id": "493388",
+   "date": "2026-06-13T16:00:00+02:00",
+   "kind": "party",
+   "name": "Cybersex All Day Long",
+   "venue": "BRET",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493388:Cybersex-All-Day-Long"
+  },
+  {
+   "id": "493524",
+   "date": "2026-06-13T16:00:00+02:00",
+   "kind": "party",
+   "name": "Unmuted",
+   "venue": "MAX",
+   "city": "Alphen aan den Rijn",
+   "genres": [
+    "techno",
+    "gabber"
+   ],
+   "url": "https://partyflock.nl/party/493524:Unmuted"
+  },
+  {
+   "id": "495233",
+   "date": "2026-06-13T16:00:00+02:00",
+   "kind": "party",
+   "name": "Time Machine",
+   "venue": "KULT Club",
+   "city": "Helsinki",
+   "genres": [
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/495233:Time-Machine"
+  },
+  {
+   "id": "487624",
+   "date": "2026-06-13T16:00:00+02:00",
+   "kind": "festival",
+   "name": "Into The Grave",
+   "venue": "Oldehoofsterkerkhof",
+   "city": "Leeuwarden",
+   "genres": [
+    "thrash",
+    "death",
+    "doom"
+   ],
+   "url": "https://partyflock.nl/party/487624:Into-The-Grave"
+  },
+  {
+   "id": "494925",
+   "date": "2026-06-13T17:00:00+02:00",
+   "kind": "party",
+   "name": "Einstation",
+   "venue": "Fik Garden",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494925:Einstation"
+  },
+  {
+   "id": "494050",
+   "date": "2026-06-13T18:00:00+02:00",
+   "kind": "party",
+   "name": "Sub Ctrl",
+   "venue": "Broere",
+   "city": "IJsselstein",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494050:Sub-Ctrl"
+  },
+  {
+   "id": "494850",
+   "date": "2026-06-13T18:00:00+02:00",
+   "kind": "party",
+   "name": "Amajoyo",
+   "venue": "Four Seasons",
+   "city": "Leusden",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494850:Amajoyo"
+  },
+  {
+   "id": "487857",
+   "date": "2026-06-13T18:00:00+02:00",
+   "kind": "party",
+   "name": "Delight Outside",
+   "venue": "Rutgers",
+   "city": "Lathum",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/487857:Delight-Outside"
+  },
+  {
+   "id": "495623",
+   "date": "2026-06-13T18:00:00+02:00",
+   "kind": "party",
+   "name": "Fête De La Musique",
+   "venue": "Mondi",
+   "city": "Badhoevedorp",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495623:Fete-De-La-Musique"
+  },
+  {
+   "id": "494652",
+   "date": "2026-06-13T18:00:00+02:00",
+   "kind": "festival",
+   "name": "Old But Gold Ü30 Hip Hop Open Air + Aftershowparty",
+   "venue": "Metropolinks Commissary",
+   "city": "Heidelberg",
+   "genres": [
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/494652:Old-But-Gold-U30-Hip-Hop-Open-Air-Aftershowparty"
+  },
+  {
+   "id": "491837",
+   "date": "2026-06-13T18:00:00+02:00",
+   "kind": "party",
+   "name": "Summer Beach Party",
+   "venue": "Nederzandt",
+   "city": "Noordwijk aan Zee",
+   "genres": [
+    "pop",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/491837:Summer-Beach-Party"
+  },
+  {
+   "id": "492637",
+   "date": "2026-06-13T19:00:00+02:00",
+   "kind": "party",
+   "name": "Colorado Charlie × Lost Miracle",
+   "venue": "Colorado Charlie",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/492637:Colorado-Charlie-x-Lost-Miracle"
+  },
+  {
+   "id": "493309",
+   "date": "2026-06-13T19:00:00+02:00",
+   "kind": "party",
+   "name": "Midzomer",
+   "venue": "WTC",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493309:Midzomer"
+  },
+  {
+   "id": "488226",
+   "date": "2026-06-13T19:00:00+02:00",
+   "kind": "party",
+   "name": "ADATP Presents",
+   "venue": "Later aan Zee",
+   "city": "Bloemendaal aan zee",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/488226:ADATP-Presents"
+  },
+  {
+   "id": "492502",
+   "date": "2026-06-13T20:00:00+02:00",
+   "kind": "party",
+   "name": "Boomerang Beach",
+   "venue": "Boomerang Beach",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/492502:Boomerang-Beach"
+  },
+  {
+   "id": "491996",
+   "date": "2026-06-13T20:00:00+02:00",
+   "kind": "party",
+   "name": "Kraantje Pappie",
+   "venue": "Drafbaan Stadspark",
+   "city": "Groningen",
+   "genres": [
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/491996:Kraantje-Pappie"
+  },
+  {
+   "id": "490246",
+   "date": "2026-06-13T21:00:00+02:00",
+   "kind": "party",
+   "name": "Club Hard",
+   "venue": "'t Slik",
+   "city": "Bergen op Zoom",
+   "genres": [
+    "gabber",
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/490246:Club-Hard"
+  },
+  {
+   "id": "495452",
+   "date": "2026-06-13T21:30:00+02:00",
+   "kind": "party",
+   "name": "The Ultimate Dance Floor Classics",
+   "venue": "Skate Fever",
+   "city": "Capelle aan den IJssel",
+   "genres": [
+    "pop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495452:The-Ultimate-Dance-Floor-Classics"
+  },
+  {
+   "id": "494211",
+   "date": "2026-06-13T22:00:00+02:00",
+   "kind": "party",
+   "name": "LET'S BREAK PROTOCOL",
+   "venue": "Toekomstmuziek",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494211:LETS-BREAK-PROTOCOL"
+  },
+  {
+   "id": "488093",
+   "date": "2026-06-13T22:00:00+02:00",
+   "kind": "party",
+   "name": "Kinky On The Beach",
+   "venue": "DS party- en eventcenter",
+   "city": "Culemborg",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/488093:Kinky-On-The-Beach"
+  },
+  {
+   "id": "494948",
+   "date": "2026-06-13T23:00:00+02:00",
+   "kind": "party",
+   "name": "Gabber Funeral Services",
+   "venue": "Toekomstmuziek",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494948:Gabber-Funeral-Services"
+  },
+  {
+   "id": "494476",
+   "date": "2026-06-13T23:00:00+02:00",
+   "kind": "party",
+   "name": "Massief",
+   "venue": "OT301",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "dnb"
+   ],
+   "url": "https://partyflock.nl/party/494476:Massief"
+  },
+  {
+   "id": "493159",
+   "date": "2026-06-13T23:00:00+02:00",
+   "kind": "party",
+   "name": "TAUB!?",
+   "venue": "Zig-Zag",
+   "city": "Weert",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493159:TAUB"
+  },
+  {
+   "id": "493487",
+   "date": "2026-06-13T23:00:00+02:00",
+   "kind": "party",
+   "name": "Club Leidse",
+   "venue": "Leidse",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/493487:Club-Leidse"
+  },
+  {
+   "id": "495169",
+   "date": "2026-06-14T00:00:00+02:00",
+   "kind": "party",
+   "name": "Go Wild",
+   "venue": "Twenty Two",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495169:Go-Wild"
+  },
+  {
+   "id": "494286",
+   "date": "2026-06-14T00:00:00+02:00",
+   "kind": "party",
+   "name": "UMAH",
+   "venue": "Clubkade",
+   "city": "'s-Hertogenbosch",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494286:UMAH"
+  },
+  {
+   "id": "492738",
+   "date": "2026-06-14T00:00:00+02:00",
+   "kind": "party",
+   "name": "Hardcore Heroes",
+   "venue": "Rodenburg",
+   "city": "Beesd",
+   "genres": [
+    "gabber"
+   ],
+   "url": "https://partyflock.nl/party/492738:Hardcore-Heroes"
+  },
+  {
+   "id": "489188",
+   "date": "2026-06-14T00:00:00+02:00",
+   "kind": "party",
+   "name": "Rumba Latina",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489188:Rumba-Latina"
+  },
+  {
+   "id": "494327",
+   "date": "2026-06-14T00:30:00+02:00",
+   "kind": "party",
+   "name": "Ghosttown",
+   "venue": "Number One",
+   "city": "Corte Franca",
+   "genres": [
+    "gabber"
+   ],
+   "url": "https://partyflock.nl/party/494327:Ghosttown"
+  },
+  {
+   "id": "494439",
+   "date": "2026-06-14T01:00:00+02:00",
+   "kind": "party",
+   "name": "Agents Of Time",
+   "venue": "Lofi",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494439:Agents-Of-Time"
+  },
+  {
+   "id": "494446",
+   "date": "2026-06-14T01:00:00+02:00",
+   "kind": "party",
+   "name": "BASIS",
+   "venue": "BASIS",
+   "city": "Utrecht",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494446:BASIS"
+  },
+  {
+   "id": "495202",
+   "date": "2026-06-14T01:00:00+02:00",
+   "kind": "party",
+   "name": "Bella Sarris • Kyra Khaldi",
+   "venue": "Radio Radio",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495202:Bella-Sarris-o-Kyra-Khaldi"
+  },
+  {
+   "id": "494993",
+   "date": "2026-06-14T01:00:00+02:00",
+   "kind": "party",
+   "name": "Bret",
+   "venue": "BRET",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494993:Bret"
+  },
+  {
+   "id": "494837",
+   "date": "2026-06-14T01:00:00+02:00",
+   "kind": "party",
+   "name": "Club Roto",
+   "venue": "Paradiso",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494837:Club-Roto"
+  },
+  {
+   "id": "494859",
+   "date": "2026-06-14T01:00:00+02:00",
+   "kind": "party",
+   "name": "Clubnacht",
+   "venue": "NAR",
+   "city": "Utrecht",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494859:Clubnacht"
+  },
+  {
+   "id": "494440",
+   "date": "2026-06-14T01:00:00+02:00",
+   "kind": "party",
+   "name": "Quelza",
+   "venue": "Lofi",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494440:Quelza"
+  },
+  {
+   "id": "494233",
+   "date": "2026-06-14T01:00:00+02:00",
+   "kind": "party",
+   "name": "Shelter",
+   "venue": "Shelter",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494233:Shelter"
+  },
+  {
+   "id": "494369",
+   "date": "2026-06-14T01:00:00+02:00",
+   "kind": "party",
+   "name": "Toffler",
+   "venue": "Toffler",
+   "city": "Rotterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494369:Toffler"
+  },
+  {
+   "id": "494180",
+   "date": "2026-06-14T01:00:00+02:00",
+   "kind": "party",
+   "name": "Tropikali Afterparty",
+   "venue": "Parallel",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494180:Tropikali-Afterparty"
+  },
+  {
+   "id": "494334",
+   "date": "2026-06-14T01:00:00+02:00",
+   "kind": "party",
+   "name": "Boothstock × MAAS Afterparty",
+   "venue": "Now&Wow",
+   "city": "Rotterdam",
+   "genres": [
+    "techno",
+    "dnb",
+    "gabber"
+   ],
+   "url": "https://partyflock.nl/party/494334:Boothstock-x-MAAS-Afterparty"
+  },
+  {
+   "id": "494936",
+   "date": "2026-06-14T01:00:00+02:00",
+   "kind": "party",
+   "name": "Eros Society",
+   "venue": "Sahara",
+   "city": "Rotterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494936:Eros-Society"
+  },
+  {
+   "id": "494829",
+   "date": "2026-06-14T01:00:00+02:00",
+   "kind": "party",
+   "name": "Motion",
+   "venue": "BIRD",
+   "city": "Rotterdam",
+   "genres": [
+    "techno",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/494829:Motion"
+  },
+  {
+   "id": "494221",
+   "date": "2026-06-14T01:00:00+02:00",
+   "kind": "party",
+   "name": "Soirée",
+   "venue": "Oliva",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/494221:Soiree"
+  },
+  {
+   "id": "494867",
+   "date": "2026-06-14T01:00:00+02:00",
+   "kind": "party",
+   "name": "Super Rich Kids",
+   "venue": "MUNCH",
+   "city": "Rotterdam",
+   "genres": [
+    "techno",
+    "hiphop",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/494867:Super-Rich-Kids"
+  },
+  {
+   "id": "495451",
+   "date": "2026-06-14T01:30:00+02:00",
+   "kind": "party",
+   "name": "Afterlight",
+   "venue": "Poema",
+   "city": "Utrecht",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495451:Afterlight"
+  },
+  {
+   "id": "495724",
+   "date": "2026-06-14T01:59:59+02:00",
+   "kind": "party",
+   "name": "Back To Base",
+   "venue": "Wibar",
+   "city": "Leiden",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495724:Back-To-Base"
+  },
+  {
+   "id": "492109",
+   "date": "2026-06-14T01:59:59+02:00",
+   "kind": "party",
+   "name": "Hush",
+   "venue": "TivoliVredenburg",
+   "city": "Utrecht",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/492109:Hush"
+  },
+  {
+   "id": "481283",
+   "date": "2026-06-14T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Best Kept Secret",
+   "venue": "Beekse Bergen",
+   "city": "Hilvarenbeek",
+   "genres": [
+    "techno",
+    "hiphop",
+    "rock",
+    "indie",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/481283:Best-Kept-Secret"
+  },
+  {
+   "id": "486393",
+   "date": "2026-06-14T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Bosburcht Festival",
+   "venue": "De Berckt",
+   "city": "Baarlo",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/486393:Bosburcht-Festival"
+  },
+  {
+   "id": "491605",
+   "date": "2026-06-14T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Kiesgrube",
+   "venue": "Kiesgrube",
+   "city": "Neuss",
+   "genres": [
+    "techno",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/491605:Kiesgrube"
+  },
+  {
+   "id": "481606",
+   "date": "2026-06-14T14:00:00+02:00",
+   "kind": "party",
+   "name": "Central Park",
+   "venue": "Park Transwijk",
+   "city": "Utrecht",
+   "genres": [
+    "hardstyle",
+    "hiphop",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/481606:Central-Park"
+  },
+  {
+   "id": "492657",
+   "date": "2026-06-14T15:00:00+02:00",
+   "kind": "festival",
+   "name": "Thuishaven",
+   "venue": "Thuishaven terrein",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/492657:Thuishaven"
+  },
+  {
+   "id": "487801",
+   "date": "2026-06-14T15:00:00+02:00",
+   "kind": "festival",
+   "name": "Magnus Festival",
+   "venue": "Natuurijsschaatsbaan Schagen",
+   "city": "Schagen",
+   "genres": [
+    "hiphop",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/487801:Magnus-Festival"
+  },
+  {
+   "id": "490546",
+   "date": "2026-06-14T15:00:00+02:00",
+   "kind": "concert",
+   "name": "Iron Maiden",
+   "venue": "Park 360",
+   "city": "Hradec Kralove",
+   "genres": [
+    "thrash"
+   ],
+   "url": "https://partyflock.nl/party/490546:Iron-Maiden"
+  },
+  {
+   "id": "487625",
+   "date": "2026-06-14T16:00:00+02:00",
+   "kind": "festival",
+   "name": "Into The Grave",
+   "venue": "Oldehoofsterkerkhof",
+   "city": "Leeuwarden",
+   "genres": [
+    "thrash",
+    "death"
+   ],
+   "url": "https://partyflock.nl/party/487625:Into-The-Grave"
+  },
+  {
+   "id": "493506",
+   "date": "2026-06-14T17:00:00+02:00",
+   "kind": "party",
+   "name": "Azure Day Party",
+   "venue": "LuminAir",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493506:Azure-Day-Party"
+  },
+  {
+   "id": "495466",
+   "date": "2026-06-14T17:45:00+02:00",
+   "kind": "party",
+   "name": "Fiesta Macumba",
+   "venue": "unspecified boat",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495466:Fiesta-Macumba"
+  },
+  {
+   "id": "495587",
+   "date": "2026-06-14T19:00:00+02:00",
+   "kind": "party",
+   "name": "Alocasia TV",
+   "venue": "onbekende locatie",
+   "city": "Barcelona",
+   "genres": [
+    "techno",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/495587:Alocasia-TV"
+  },
+  {
+   "id": "491792",
+   "date": "2026-06-14T20:00:00+02:00",
+   "kind": "party",
+   "name": "Rotterdam Rave",
+   "venue": "Boomerang Beach",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/491792:Rotterdam-Rave"
+  },
+  {
+   "id": "495203",
+   "date": "2026-06-14T21:00:00+02:00",
+   "kind": "party",
+   "name": "FERMI",
+   "venue": "Radio Radio",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "gabber",
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/495203:FERMI"
+  },
+  {
+   "id": "495010",
+   "date": "2026-06-14T22:00:00+02:00",
+   "kind": "party",
+   "name": "The Tequila Club",
+   "venue": "The Tequila Club",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495010:The-Tequila-Club"
+  },
+  {
+   "id": "495216",
+   "date": "2026-06-15T00:00:00+02:00",
+   "kind": "party",
+   "name": "SAOKO",
+   "venue": "Supper Club",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495216:SAOKO"
+  },
+  {
+   "id": "489005",
+   "date": "2026-06-15T00:00:00+02:00",
+   "kind": "party",
+   "name": "El Vacilon de Los Domingos",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489005:El-Vacilon-de-Los-Domingos"
+  },
+  {
+   "id": "494996",
+   "date": "2026-06-15T00:30:00+02:00",
+   "kind": "party",
+   "name": "Daycare",
+   "venue": "BRET",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494996:Daycare"
+  },
+  {
+   "id": "494509",
+   "date": "2026-06-15T01:00:00+02:00",
+   "kind": "party",
+   "name": "No Sunday Without Techno",
+   "venue": "John Doe",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494509:No-Sunday-Without-Techno"
+  },
+  {
+   "id": "492576",
+   "date": "2026-06-16T21:30:00+02:00",
+   "kind": "concert",
+   "name": "Knocked Loose",
+   "venue": "Doornroosje",
+   "city": "Nijmegen",
+   "genres": [
+    "metalcore"
+   ],
+   "url": "https://partyflock.nl/party/492576:Knocked-Loose"
+  },
+  {
+   "id": "495237",
+   "date": "2026-06-16T22:30:00+02:00",
+   "kind": "concert",
+   "name": "RŪDA Music & Flowers",
+   "venue": "Universitat de Barcelona",
+   "city": "Barcelona",
+   "genres": [
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/495237:RUDA-Music-and-Flowers"
+  },
+  {
+   "id": "495160",
+   "date": "2026-06-17T00:00:00+02:00",
+   "kind": "party",
+   "name": "TIPSY TUESDAY",
+   "venue": "Twenty Two",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495160:TIPSY-TUESDAY"
+  },
+  {
+   "id": "494518",
+   "date": "2026-06-17T01:00:00+02:00",
+   "kind": "party",
+   "name": "Phantom",
+   "venue": "John Doe",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494518:Phantom"
+  },
+  {
+   "id": "494093",
+   "date": "2026-06-17T22:00:00+02:00",
+   "kind": "party",
+   "name": "Overbruggen",
+   "venue": "LaTerrrazza",
+   "city": "Barcelona",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494093:Overbruggen"
+  },
+  {
+   "id": "495425",
+   "date": "2026-06-17T22:00:00+02:00",
+   "kind": "party",
+   "name": "Tone Zone",
+   "venue": "Undertone Studio",
+   "city": "Leiden",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495425:Tone-Zone"
+  },
+  {
+   "id": "495455",
+   "date": "2026-06-18T00:00:00+02:00",
+   "kind": "party",
+   "name": "Groove Society",
+   "venue": "The Tequila Club",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495455:Groove-Society"
+  },
+  {
+   "id": "495174",
+   "date": "2026-06-18T00:00:00+02:00",
+   "kind": "party",
+   "name": "SOJU WEDNESDAYS",
+   "venue": "Twenty Two",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495174:SOJU-WEDNESDAYS"
+  },
+  {
+   "id": "489241",
+   "date": "2026-06-18T00:00:00+02:00",
+   "kind": "party",
+   "name": "Latin Wednesday",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489241:Latin-Wednesday"
+  },
+  {
+   "id": "495251",
+   "date": "2026-06-18T01:00:00+02:00",
+   "kind": "party",
+   "name": "Off Barcelona",
+   "venue": "BORIS Club",
+   "city": "Barcelona",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495251:Off-Barcelona"
+  },
+  {
+   "id": "494527",
+   "date": "2026-06-18T01:00:00+02:00",
+   "kind": "party",
+   "name": "Raveland",
+   "venue": "John Doe",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494527:Raveland"
+  },
+  {
+   "id": "495265",
+   "date": "2026-06-18T15:00:00+02:00",
+   "kind": "party",
+   "name": "Output",
+   "venue": "Bosc Tancat / Diverbosc",
+   "city": "Cerdanyola del Vallès",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495265:Output"
+  },
+  {
+   "id": "495316",
+   "date": "2026-06-18T16:00:00+02:00",
+   "kind": "festival",
+   "name": "Loud-Contact pres",
+   "venue": "onbekende locatie",
+   "city": "Barcelona",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495316:Loud-Contact-pres"
+  },
+  {
+   "id": "494629",
+   "date": "2026-06-18T19:00:00+02:00",
+   "kind": "party",
+   "name": "Chef'Special & Jack and the Weatherman",
+   "venue": "Kasteel Cannenburch",
+   "city": "Vaassen",
+   "genres": [
+    "hiphop",
+    "rock",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/494629:ChefSpecial-and-Jack-and-the-Weatherman"
+  },
+  {
+   "id": "486296",
+   "date": "2026-06-18T20:00:00+02:00",
+   "kind": "concert",
+   "name": "Guns N' Roses",
+   "venue": "Ziggo Dome",
+   "city": "Amsterdam",
+   "genres": [
+    "rock"
+   ],
+   "url": "https://partyflock.nl/party/486296:Guns-N-Roses"
+  },
+  {
+   "id": "493442",
+   "date": "2026-06-18T21:30:00+02:00",
+   "kind": "concert",
+   "name": "Death Lens + Captain Kaiser",
+   "venue": "The Jack",
+   "city": "Eindhoven",
+   "genres": [
+    "metalcore"
+   ],
+   "url": "https://partyflock.nl/party/493442:Death-Lens-Captain-Kaiser"
+  },
+  {
+   "id": "488559",
+   "date": "2026-06-18T22:00:00+02:00",
+   "kind": "concert",
+   "name": "Mosa Jazz Collective",
+   "venue": "Muziekgieterij",
+   "city": "Maastricht",
+   "genres": [
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/488559:Mosa-Jazz-Collective"
+  },
+  {
+   "id": "495204",
+   "date": "2026-06-19T00:00:00+02:00",
+   "kind": "party",
+   "name": "Elevate",
+   "venue": "Radio Radio",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495204:Elevate"
+  },
+  {
+   "id": "495458",
+   "date": "2026-06-19T00:00:00+02:00",
+   "kind": "party",
+   "name": "Club Mirage",
+   "venue": "The Tequila Club",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495458:Club-Mirage"
+  },
+  {
+   "id": "489316",
+   "date": "2026-06-19T00:00:00+02:00",
+   "kind": "party",
+   "name": "Latin Thursday",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489316:Latin-Thursday"
+  },
+  {
+   "id": "495178",
+   "date": "2026-06-19T00:00:00+02:00",
+   "kind": "party",
+   "name": "THIRSTY THURSDAYS",
+   "venue": "Twenty Two",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495178:THIRSTY-THURSDAYS"
+  },
+  {
+   "id": "494546",
+   "date": "2026-06-19T01:00:00+02:00",
+   "kind": "party",
+   "name": "Techno Sessions",
+   "venue": "John Doe",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494546:Techno-Sessions"
+  },
+  {
+   "id": "485304",
+   "date": "2026-06-19T12:00:00+02:00",
+   "kind": "festival",
+   "name": "Graspop Metal Meeting",
+   "venue": "Stenehei",
+   "city": "Dessel",
+   "genres": [
+    "rock",
+    "death"
+   ],
+   "url": "https://partyflock.nl/party/485304:Graspop-Metal-Meeting"
+  },
+  {
+   "id": "434505",
+   "date": "2026-06-19T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Southside Festival",
+   "venue": "Take-off GewerbePark",
+   "city": "Neuhausen ob Eck",
+   "genres": [
+    "rock",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/434505:Southside-Festival"
+  },
+  {
+   "id": "494919",
+   "date": "2026-06-19T16:00:00+02:00",
+   "kind": "festival",
+   "name": "Burning Beach",
+   "venue": "Allmansdorf Sandstrand Brombachsee",
+   "city": "Georgsmarienhütte",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494919:Burning-Beach"
+  },
+  {
+   "id": "495591",
+   "date": "2026-06-19T16:00:00+02:00",
+   "kind": "festival",
+   "name": "MAD RADIO × SNRS OFF EDITION",
+   "venue": "Almar Beach Club",
+   "city": "Barcelona",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495591:MAD-RADIO-x-SNRS-OFF-EDITION"
+  },
+  {
+   "id": "495428",
+   "date": "2026-06-19T17:00:00+02:00",
+   "kind": "party",
+   "name": "Paradigm × CNW",
+   "venue": "Paradigm",
+   "city": "Groningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495428:Paradigm-x-CNW"
+  },
+  {
+   "id": "490710",
+   "date": "2026-06-19T18:00:00+02:00",
+   "kind": "festival",
+   "name": "TAPT Festival",
+   "venue": "Oosterplas",
+   "city": "'s-Hertogenbosch",
+   "genres": [
+    "techno",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/490710:TAPT-Festival"
+  },
+  {
+   "id": "494091",
+   "date": "2026-06-19T19:00:00+02:00",
+   "kind": "party",
+   "name": "Overbruggen",
+   "venue": "Colorado Charlie",
+   "city": "Scheveningen",
+   "genres": [
+    "techno",
+    "dnb"
+   ],
+   "url": "https://partyflock.nl/party/494091:Overbruggen"
+  },
+  {
+   "id": "494630",
+   "date": "2026-06-19T19:00:00+02:00",
+   "kind": "concert",
+   "name": "Danny Vera & Marlon Pichel",
+   "venue": "Kasteel Cannenburch",
+   "city": "Vaassen",
+   "genres": [
+    "rock",
+    "pop",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/494630:Danny-Vera-and-Marlon-Pichel"
+  },
+  {
+   "id": "494281",
+   "date": "2026-06-19T20:00:00+02:00",
+   "kind": "party",
+   "name": "Fenrick <3 U",
+   "venue": "OLT Rivierenhof",
+   "city": "Deurne",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494281:Fenrick-3-U"
+  },
+  {
+   "id": "494917",
+   "date": "2026-06-19T21:00:00+02:00",
+   "kind": "party",
+   "name": "AFZIEN",
+   "venue": "De Avenue",
+   "city": "Breda",
+   "genres": [
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/494917:AFZIEN"
+  },
+  {
+   "id": "492041",
+   "date": "2026-06-19T21:00:00+02:00",
+   "kind": "party",
+   "name": "Fresku",
+   "venue": "Podium Victorie",
+   "city": "Alkmaar",
+   "genres": [
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/492041:Fresku"
+  },
+  {
+   "id": "493443",
+   "date": "2026-06-19T21:00:00+02:00",
+   "kind": "party",
+   "name": "POM",
+   "venue": "Effenaar",
+   "city": "Eindhoven",
+   "genres": [
+    "metalcore",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/493443:POM"
+  },
+  {
+   "id": "494437",
+   "date": "2026-06-19T22:00:00+02:00",
+   "kind": "party",
+   "name": "Early Night With",
+   "venue": "Basement",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494437:Early-Night-With"
+  },
+  {
+   "id": "495034",
+   "date": "2026-06-19T22:30:00+02:00",
+   "kind": "party",
+   "name": "Toppers in Concert",
+   "venue": "Johan Cruijff ArenA",
+   "city": "Amsterdam",
+   "genres": [
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/495034:Toppers-in-Concert"
+  },
+  {
+   "id": "495142",
+   "date": "2026-06-19T23:00:00+02:00",
+   "kind": "party",
+   "name": "House of Revolt",
+   "venue": "Whitehouse",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495142:House-of-Revolt"
+  },
+  {
+   "id": "494827",
+   "date": "2026-06-19T23:00:00+02:00",
+   "kind": "party",
+   "name": "Wavemakers",
+   "venue": "Veronicaschip",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494827:Wavemakers"
+  },
+  {
+   "id": "493488",
+   "date": "2026-06-19T23:00:00+02:00",
+   "kind": "party",
+   "name": "Club Leidse",
+   "venue": "Leidse",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/493488:Club-Leidse"
+  },
+  {
+   "id": "494995",
+   "date": "2026-06-20T00:00:00+02:00",
+   "kind": "party",
+   "name": "Bret",
+   "venue": "BRET",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494995:Bret"
+  },
+  {
+   "id": "494685",
+   "date": "2026-06-20T00:00:00+02:00",
+   "kind": "party",
+   "name": "Tram 10",
+   "venue": "Panama",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494685:Tram-10"
+  },
+  {
+   "id": "494301",
+   "date": "2026-06-20T00:00:00+02:00",
+   "kind": "party",
+   "name": "UNWIND × Dark Frequency",
+   "venue": "Levenslang",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494301:UNWIND-x-Dark-Frequency"
+  },
+  {
+   "id": "495182",
+   "date": "2026-06-20T00:00:00+02:00",
+   "kind": "party",
+   "name": "Urban Friday",
+   "venue": "Twenty Two",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495182:Urban-Friday"
+  },
+  {
+   "id": "489069",
+   "date": "2026-06-20T00:00:00+02:00",
+   "kind": "party",
+   "name": "Latin Night",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489069:Latin-Night"
+  },
+  {
+   "id": "494882",
+   "date": "2026-06-20T01:00:00+02:00",
+   "kind": "party",
+   "name": "Basis",
+   "venue": "BASIS",
+   "city": "Utrecht",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494882:Basis"
+  },
+  {
+   "id": "494234",
+   "date": "2026-06-20T01:00:00+02:00",
+   "kind": "party",
+   "name": "Shelter",
+   "venue": "Shelter",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494234:Shelter"
+  },
+  {
+   "id": "494370",
+   "date": "2026-06-20T01:00:00+02:00",
+   "kind": "party",
+   "name": "Toffler",
+   "venue": "Toffler",
+   "city": "Rotterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494370:Toffler"
+  },
+  {
+   "id": "495205",
+   "date": "2026-06-20T01:00:00+02:00",
+   "kind": "party",
+   "name": "Cinnaman b2b MALLAURY & Nino Henning",
+   "venue": "Radio Radio",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/495205:Cinnaman-b2b-MALLAURY-and-Nino-Henning"
+  },
+  {
+   "id": "495113",
+   "date": "2026-06-20T01:00:00+02:00",
+   "kind": "party",
+   "name": "Built 2 Break Tour",
+   "venue": "Bootshaus",
+   "city": "Keulen",
+   "genres": [
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/495113:Built-2-Break-Tour"
+  },
+  {
+   "id": "495467",
+   "date": "2026-06-20T01:55:00+02:00",
+   "kind": "party",
+   "name": "Fiesta Macumba",
+   "venue": "TivoliVredenburg",
+   "city": "Utrecht",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495467:Fiesta-Macumba"
+  },
+  {
+   "id": "494738",
+   "date": "2026-06-20T11:30:00+02:00",
+   "kind": "festival",
+   "name": "Beach Event",
+   "venue": "d'Ekkerplein",
+   "city": "Veldhoven",
+   "genres": [
+    "techno",
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/494738:Beach-Event"
+  },
+  {
+   "id": "485305",
+   "date": "2026-06-20T12:00:00+02:00",
+   "kind": "festival",
+   "name": "Graspop Metal Meeting",
+   "venue": "Stenehei",
+   "city": "Dessel",
+   "genres": [
+    "rock",
+    "death",
+    "doom",
+    "metalcore"
+   ],
+   "url": "https://partyflock.nl/party/485305:Graspop-Metal-Meeting"
+  },
+  {
+   "id": "492452",
+   "date": "2026-06-20T13:00:00+02:00",
+   "kind": "festival",
+   "name": "Kaap",
+   "venue": "Kaap Oost",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/492452:Kaap"
+  },
+  {
+   "id": "486267",
+   "date": "2026-06-20T13:00:00+02:00",
+   "kind": "festival",
+   "name": "Pinkpop",
+   "venue": "Megaland",
+   "city": "Schaesberg",
+   "genres": [
+    "techno",
+    "hiphop",
+    "rock",
+    "indie",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/486267:Pinkpop"
+  },
+  {
+   "id": "491606",
+   "date": "2026-06-20T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Kiesgrube",
+   "venue": "Kiesgrube",
+   "city": "Neuss",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/491606:Kiesgrube"
+  },
+  {
+   "id": "490711",
+   "date": "2026-06-20T15:00:00+02:00",
+   "kind": "festival",
+   "name": "TAPT Festival",
+   "venue": "Oosterplas",
+   "city": "'s-Hertogenbosch",
+   "genres": [
+    "techno",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/490711:TAPT-Festival"
+  },
+  {
+   "id": "491765",
+   "date": "2026-06-20T15:00:00+02:00",
+   "kind": "festival",
+   "name": "Thuishaven",
+   "venue": "Thuishaven terrein",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/491765:Thuishaven"
+  },
+  {
+   "id": "488222",
+   "date": "2026-06-20T15:00:00+02:00",
+   "kind": "concert",
+   "name": "Waogstock",
+   "venue": "Festival Terrein",
+   "city": "Neer",
+   "genres": [
+    "rock"
+   ],
+   "url": "https://partyflock.nl/party/488222:Waogstock"
+  },
+  {
+   "id": "494088",
+   "date": "2026-06-20T16:00:00+02:00",
+   "kind": "party",
+   "name": "A Summer Jam",
+   "venue": "Beton-T",
+   "city": "Utrecht",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494088:A-Summer-Jam"
+  },
+  {
+   "id": "494441",
+   "date": "2026-06-20T16:00:00+02:00",
+   "kind": "festival",
+   "name": "Agrio Club X Ritmo Fatale",
+   "venue": "Lofi",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494441:Agrio-Club-X-Ritmo-Fatale"
+  },
+  {
+   "id": "492736",
+   "date": "2026-06-20T16:00:00+02:00",
+   "kind": "festival",
+   "name": "Hard Attack Summerfest",
+   "venue": "Fik Garden",
+   "city": "Amsterdam",
+   "genres": [
+    "gabber"
+   ],
+   "url": "https://partyflock.nl/party/492736:Hard-Attack-Summerfest"
+  },
+  {
+   "id": "493285",
+   "date": "2026-06-20T17:00:00+02:00",
+   "kind": "festival",
+   "name": "Dubrising",
+   "venue": "SkateCafé",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "dnb"
+   ],
+   "url": "https://partyflock.nl/party/493285:Dubrising"
+  },
+  {
+   "id": "487571",
+   "date": "2026-06-20T17:00:00+02:00",
+   "kind": "festival",
+   "name": "Feest In Het Park Festival",
+   "venue": "Reeshofpark",
+   "city": "Tilburg",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/487571:Feest-In-Het-Park-Festival"
+  },
+  {
+   "id": "490072",
+   "date": "2026-06-20T19:00:00+02:00",
+   "kind": "party",
+   "name": "Happy Feelings",
+   "venue": "Colorado Charlie",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/490072:Happy-Feelings"
+  },
+  {
+   "id": "487913",
+   "date": "2026-06-20T19:00:00+02:00",
+   "kind": "festival",
+   "name": "AJOC Festival",
+   "venue": "Molenland",
+   "city": "Mijdrecht",
+   "genres": [
+    "hardstyle",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/487913:AJOC-Festival"
+  },
+  {
+   "id": "494631",
+   "date": "2026-06-20T19:00:00+02:00",
+   "kind": "party",
+   "name": "Ilse DeLange & Douwe Bob",
+   "venue": "Kasteel Cannenburch",
+   "city": "Vaassen",
+   "genres": [
+    "rock",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/494631:Ilse-DeLange-and-Douwe-Bob"
+  },
+  {
+   "id": "494830",
+   "date": "2026-06-20T20:00:00+02:00",
+   "kind": "party",
+   "name": "CUSH",
+   "venue": "Het Dorp",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494830:CUSH"
+  },
+  {
+   "id": "492758",
+   "date": "2026-06-20T20:00:00+02:00",
+   "kind": "party",
+   "name": "hush.",
+   "venue": "Boomerang Beach",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/492758:hush"
+  },
+  {
+   "id": "486297",
+   "date": "2026-06-20T20:00:00+02:00",
+   "kind": "concert",
+   "name": "Guns N' Roses",
+   "venue": "Ziggo Dome",
+   "city": "Amsterdam",
+   "genres": [
+    "rock"
+   ],
+   "url": "https://partyflock.nl/party/486297:Guns-N-Roses"
+  },
+  {
+   "id": "488629",
+   "date": "2026-06-20T20:00:00+02:00",
+   "kind": "party",
+   "name": "Foute Party",
+   "venue": "Philips Stadion",
+   "city": "Eindhoven",
+   "genres": [
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/488629:Foute-Party"
+  },
+  {
+   "id": "494364",
+   "date": "2026-06-20T21:00:00+02:00",
+   "kind": "party",
+   "name": "Realm of Demolition",
+   "venue": "Elektra",
+   "city": "Sliedrecht",
+   "genres": [
+    "gabber",
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/494364:Realm-of-Demolition"
+  },
+  {
+   "id": "494886",
+   "date": "2026-06-20T22:00:00+02:00",
+   "kind": "party",
+   "name": "Disco Tropicana",
+   "venue": "Azorra Beachclub",
+   "city": "Scheveningen",
+   "genres": [
+    "techno",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/494886:Disco-Tropicana"
+  },
+  {
+   "id": "492930",
+   "date": "2026-06-20T22:00:00+02:00",
+   "kind": "party",
+   "name": "Vroeg Pieken",
+   "venue": "Plein Publiek",
+   "city": "Antwerpen",
+   "genres": [
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/492930:Vroeg-Pieken"
+  },
+  {
+   "id": "493489",
+   "date": "2026-06-20T23:00:00+02:00",
+   "kind": "party",
+   "name": "Club Leidse",
+   "venue": "Leidse",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/493489:Club-Leidse"
+  },
+  {
+   "id": "494764",
+   "date": "2026-06-21T00:00:00+02:00",
+   "kind": "party",
+   "name": "Bukkin",
+   "venue": "The Basement",
+   "city": "Eindhoven",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494764:Bukkin"
+  },
+  {
+   "id": "492917",
+   "date": "2026-06-21T00:00:00+02:00",
+   "kind": "party",
+   "name": "Fiesta Musica Electronica",
+   "venue": "Laxx",
+   "city": "Rotterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/492917:Fiesta-Musica-Electronica"
+  },
+  {
+   "id": "495341",
+   "date": "2026-06-21T00:00:00+02:00",
+   "kind": "party",
+   "name": "SIMONE DE KUNOVICH, THEO KOTTIS, ANDY LUFF & IDILAY",
+   "venue": "BRET",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495341:SIMONE-DE-KUNOVICH-THEO-KOTTIS-ANDY-LUFF-and-IDILAY"
+  },
+  {
+   "id": "495186",
+   "date": "2026-06-21T00:00:00+02:00",
+   "kind": "party",
+   "name": "GO WILD",
+   "venue": "Twenty Two",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495186:GO-WILD"
+  },
+  {
+   "id": "495512",
+   "date": "2026-06-21T00:00:00+02:00",
+   "kind": "party",
+   "name": "Nachtje New Wave",
+   "venue": "Pinky",
+   "city": "Renesse",
+   "genres": [
+    "techno",
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495512:Nachtje-New-Wave"
+  },
+  {
+   "id": "495459",
+   "date": "2026-06-21T00:00:00+02:00",
+   "kind": "party",
+   "name": "TRNDSTTRS",
+   "venue": "The Tequila Club",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/495459:TRNDSTTRS"
+  },
+  {
+   "id": "492556",
+   "date": "2026-06-21T00:00:00+02:00",
+   "kind": "party",
+   "name": "10 Years Oldschool Nostalgia",
+   "venue": "Aura",
+   "city": "Antwerpen",
+   "genres": [
+    "gabber"
+   ],
+   "url": "https://partyflock.nl/party/492556:10-Years-Oldschool-Nostalgia"
+  },
+  {
+   "id": "490282",
+   "date": "2026-06-21T00:00:00+02:00",
+   "kind": "party",
+   "name": "Vinyl Freaks",
+   "venue": "So What!",
+   "city": "Gouda",
+   "genres": [
+    "gabber"
+   ],
+   "url": "https://partyflock.nl/party/490282:Vinyl-Freaks"
+  },
+  {
+   "id": "489189",
+   "date": "2026-06-21T00:00:00+02:00",
+   "kind": "party",
+   "name": "Rumba Latina",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489189:Rumba-Latina"
+  },
+  {
+   "id": "494860",
+   "date": "2026-06-21T01:00:00+02:00",
+   "kind": "party",
+   "name": "Clubnacht",
+   "venue": "NAR",
+   "city": "Utrecht",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494860:Clubnacht"
+  },
+  {
+   "id": "493643",
+   "date": "2026-06-21T01:00:00+02:00",
+   "kind": "party",
+   "name": "Nachtcollege",
+   "venue": "Effenaar",
+   "city": "Eindhoven",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493643:Nachtcollege"
+  },
+  {
+   "id": "494235",
+   "date": "2026-06-21T01:00:00+02:00",
+   "kind": "party",
+   "name": "Shelter",
+   "venue": "Shelter",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494235:Shelter"
+  },
+  {
+   "id": "490836",
+   "date": "2026-06-21T01:00:00+02:00",
+   "kind": "party",
+   "name": "TITI",
+   "venue": "Now&Wow",
+   "city": "Rotterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/490836:TITI"
+  },
+  {
+   "id": "494448",
+   "date": "2026-06-21T01:00:00+02:00",
+   "kind": "party",
+   "name": "JØASE ALL NIGHT LONG",
+   "venue": "Paard",
+   "city": "Den Haag",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494448:JOASE-ALL-NIGHT-LONG"
+  },
+  {
+   "id": "495206",
+   "date": "2026-06-21T01:00:00+02:00",
+   "kind": "party",
+   "name": "PAURRO • BELLA",
+   "venue": "Radio Radio",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495206:PAURRO-o-BELLA"
+  },
+  {
+   "id": "494868",
+   "date": "2026-06-21T01:00:00+02:00",
+   "kind": "party",
+   "name": "Super Rich Kids",
+   "venue": "MUNCH",
+   "city": "Rotterdam",
+   "genres": [
+    "techno",
+    "hiphop",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/494868:Super-Rich-Kids"
+  },
+  {
+   "id": "494371",
+   "date": "2026-06-21T01:00:00+02:00",
+   "kind": "party",
+   "name": "Toffler",
+   "venue": "Toffler",
+   "city": "Rotterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494371:Toffler"
+  },
+  {
+   "id": "485306",
+   "date": "2026-06-21T12:00:00+02:00",
+   "kind": "festival",
+   "name": "Graspop Metal Meeting",
+   "venue": "Stenehei",
+   "city": "Dessel",
+   "genres": [
+    "rock",
+    "thrash",
+    "death",
+    "indie"
+   ],
+   "url": "https://partyflock.nl/party/485306:Graspop-Metal-Meeting"
+  },
+  {
+   "id": "486268",
+   "date": "2026-06-21T13:00:00+02:00",
+   "kind": "festival",
+   "name": "Pinkpop",
+   "venue": "Megaland",
+   "city": "Schaesberg",
+   "genres": [
+    "techno",
+    "rock",
+    "indie",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/486268:Pinkpop"
+  },
+  {
+   "id": "491607",
+   "date": "2026-06-21T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Kiesgrube",
+   "venue": "Kiesgrube",
+   "city": "Neuss",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/491607:Kiesgrube"
+  },
+  {
+   "id": "494836",
+   "date": "2026-06-21T14:00:00+02:00",
+   "kind": "festival",
+   "name": "KÁRMÁN × SBVRS",
+   "venue": "Fik Garden",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494836:KARMAN-x-SBVRS"
+  },
+  {
+   "id": "487914",
+   "date": "2026-06-21T14:00:00+02:00",
+   "kind": "festival",
+   "name": "AJOC Festival",
+   "venue": "Molenland",
+   "city": "Mijdrecht",
+   "genres": [
+    "hardstyle",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/487914:AJOC-Festival"
+  },
+  {
+   "id": "492302",
+   "date": "2026-06-21T15:00:00+02:00",
+   "kind": "festival",
+   "name": "Thuishaven",
+   "venue": "Thuishaven terrein",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/492302:Thuishaven"
+  },
+  {
+   "id": "495524",
+   "date": "2026-06-21T16:00:00+02:00",
+   "kind": "party",
+   "name": "John Summit",
+   "venue": "Lofi",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495524:John-Summit"
+  },
+  {
+   "id": "492363",
+   "date": "2026-06-21T16:00:00+02:00",
+   "kind": "party",
+   "name": "Iduna Park",
+   "venue": "Thalenpark",
+   "city": "Drachten",
+   "genres": [
+    "hiphop",
+    "rock",
+    "pop",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/492363:Iduna-Park"
+  },
+  {
+   "id": "495342",
+   "date": "2026-06-21T17:00:00+02:00",
+   "kind": "party",
+   "name": "LOBSTER INVITES",
+   "venue": "BRET",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495342:LOBSTER-INVITES"
+  },
+  {
+   "id": "494816",
+   "date": "2026-06-21T18:30:00+02:00",
+   "kind": "party",
+   "name": "Lasse Top",
+   "venue": "Four Elements Hotel",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494816:Lasse-Top"
+  },
+  {
+   "id": "493526",
+   "date": "2026-06-21T19:00:00+02:00",
+   "kind": "party",
+   "name": "Colorado Charlie",
+   "venue": "Colorado Charlie",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493526:Colorado-Charlie"
+  },
+  {
+   "id": "494632",
+   "date": "2026-06-21T19:00:00+02:00",
+   "kind": "party",
+   "name": "Snelle & Jaap Reesema",
+   "venue": "Kasteel Cannenburch",
+   "city": "Vaassen",
+   "genres": [
+    "hiphop",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/494632:Snelle-and-Jaap-Reesema"
+  },
+  {
+   "id": "495217",
+   "date": "2026-06-22T00:00:00+02:00",
+   "kind": "party",
+   "name": "SAOKO",
+   "venue": "Supper Club",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495217:SAOKO"
+  },
+  {
+   "id": "489006",
+   "date": "2026-06-22T00:00:00+02:00",
+   "kind": "party",
+   "name": "El Vacilon de Los Domingos",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489006:El-Vacilon-de-Los-Domingos"
+  },
+  {
+   "id": "494510",
+   "date": "2026-06-22T01:00:00+02:00",
+   "kind": "party",
+   "name": "No Sunday Without Techno",
+   "venue": "John Doe",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494510:No-Sunday-Without-Techno"
+  },
+  {
+   "id": "493444",
+   "date": "2026-06-23T22:00:00+02:00",
+   "kind": "concert",
+   "name": "Ocean Sleeper",
+   "venue": "The Jack",
+   "city": "Eindhoven",
+   "genres": [
+    "metalcore"
+   ],
+   "url": "https://partyflock.nl/party/493444:Ocean-Sleeper"
+  },
+  {
+   "id": "488802",
+   "date": "2026-06-23T22:00:00+02:00",
+   "kind": "party",
+   "name": "Bad Bunny",
+   "venue": "GelreDome",
+   "city": "Arnhem",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/488802:Bad-Bunny"
+  },
+  {
+   "id": "495172",
+   "date": "2026-06-24T00:00:00+02:00",
+   "kind": "party",
+   "name": "TIPSY TUESDAY",
+   "venue": "Twenty Two",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495172:TIPSY-TUESDAY"
+  },
+  {
+   "id": "494520",
+   "date": "2026-06-24T01:00:00+02:00",
+   "kind": "party",
+   "name": "Phantom",
+   "venue": "John Doe",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494520:Phantom"
+  },
+  {
+   "id": "488803",
+   "date": "2026-06-24T22:00:00+02:00",
+   "kind": "party",
+   "name": "Bad Bunny",
+   "venue": "GelreDome",
+   "city": "Arnhem",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/488803:Bad-Bunny"
+  },
+  {
+   "id": "495456",
+   "date": "2026-06-25T00:00:00+02:00",
+   "kind": "party",
+   "name": "Groove Society",
+   "venue": "The Tequila Club",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495456:Groove-Society"
+  },
+  {
+   "id": "495176",
+   "date": "2026-06-25T00:00:00+02:00",
+   "kind": "party",
+   "name": "SOJU WEDNESDAYS",
+   "venue": "Twenty Two",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495176:SOJU-WEDNESDAYS"
+  },
+  {
+   "id": "489242",
+   "date": "2026-06-25T00:00:00+02:00",
+   "kind": "party",
+   "name": "Latin Wednesday",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489242:Latin-Wednesday"
+  },
+  {
+   "id": "494528",
+   "date": "2026-06-25T01:00:00+02:00",
+   "kind": "party",
+   "name": "Raveland",
+   "venue": "John Doe",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494528:Raveland"
+  },
+  {
+   "id": "481632",
+   "date": "2026-06-25T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Concert at SEA",
+   "venue": "Brouwersdam",
+   "city": "Scharendijke",
+   "genres": [
+    "hiphop",
+    "rock",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/481632:Concert-at-SEA"
+  },
+  {
+   "id": "482674",
+   "date": "2026-06-25T20:00:00+02:00",
+   "kind": "party",
+   "name": "Defqon.1",
+   "venue": "Walibi Holland",
+   "city": "Biddinghuizen",
+   "genres": [
+    "gabber",
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/482674:Defqon-1"
+  },
+  {
+   "id": "495576",
+   "date": "2026-06-25T22:00:00+02:00",
+   "kind": "party",
+   "name": "STIMMEN",
+   "venue": "onbekende locatie",
+   "city": "Lörrach",
+   "genres": [
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/495576:STIMMEN"
+  },
+  {
+   "id": "489317",
+   "date": "2026-06-26T00:00:00+02:00",
+   "kind": "party",
+   "name": "Latin Thursday",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489317:Latin-Thursday"
+  },
+  {
+   "id": "495179",
+   "date": "2026-06-26T00:00:00+02:00",
+   "kind": "party",
+   "name": "THIRSTY THURSDAYS",
+   "venue": "Twenty Two",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495179:THIRSTY-THURSDAYS"
+  },
+  {
+   "id": "494547",
+   "date": "2026-06-26T01:00:00+02:00",
+   "kind": "party",
+   "name": "Techno Sessions",
+   "venue": "John Doe",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494547:Techno-Sessions"
+  },
+  {
+   "id": "486372",
+   "date": "2026-06-26T12:00:00+02:00",
+   "kind": "festival",
+   "name": "Lago Lago",
+   "venue": "Stroombroek",
+   "city": "Braamt",
+   "genres": [
+    "techno",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/486372:Lago-Lago"
+  },
+  {
+   "id": "482698",
+   "date": "2026-06-26T13:00:00+02:00",
+   "kind": "festival",
+   "name": "Defqon.1",
+   "venue": "Walibi Holland",
+   "city": "Biddinghuizen",
+   "genres": [
+    "techno",
+    "gabber",
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/482698:Defqon-1"
+  },
+  {
+   "id": "492162",
+   "date": "2026-06-26T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Luminosity Beach Festival",
+   "venue": "Bernie's Beachclub",
+   "city": "Zandvoort",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/492162:Luminosity-Beach-Festival"
+  },
+  {
+   "id": "481630",
+   "date": "2026-06-26T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Jera On Air",
+   "venue": "Zeilbergseweg",
+   "city": "Ysselsteyn",
+   "genres": [
+    "dnb",
+    "gabber",
+    "rock",
+    "metalcore",
+    "indie"
+   ],
+   "url": "https://partyflock.nl/party/481630:Jera-On-Air"
+  },
+  {
+   "id": "486282",
+   "date": "2026-06-26T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Concert at SEA",
+   "venue": "Brouwersdam",
+   "city": "Scharendijke",
+   "genres": [
+    "hiphop",
+    "rock",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/486282:Concert-at-SEA"
+  },
+  {
+   "id": "483519",
+   "date": "2026-06-26T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Vainstream",
+   "venue": "Hawerkamp Gelände",
+   "city": "Münster",
+   "genres": [
+    "metalcore"
+   ],
+   "url": "https://partyflock.nl/party/483519:Vainstream"
+  },
+  {
+   "id": "490712",
+   "date": "2026-06-26T18:00:00+02:00",
+   "kind": "festival",
+   "name": "TAPT Festival",
+   "venue": "Olympiaweg",
+   "city": "Alkmaar",
+   "genres": [
+    "techno",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/490712:TAPT-Festival"
+  },
+  {
+   "id": "493996",
+   "date": "2026-06-26T19:00:00+02:00",
+   "kind": "party",
+   "name": "Genk On Stage",
+   "venue": "Genk on Stage",
+   "city": "Genk",
+   "genres": [
+    "techno",
+    "dnb",
+    "hiphop",
+    "rock",
+    "pop",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/493996:Genk-On-Stage"
+  },
+  {
+   "id": "490792",
+   "date": "2026-06-26T19:00:00+02:00",
+   "kind": "party",
+   "name": "Vrijmiboot",
+   "venue": "unspecified boat",
+   "city": "Deventer",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/490792:Vrijmiboot"
+  },
+  {
+   "id": "486106",
+   "date": "2026-06-26T19:00:00+02:00",
+   "kind": "party",
+   "name": "'t Wonder",
+   "venue": "Exercitieterrein",
+   "city": "Woerden",
+   "genres": [
+    "hiphop",
+    "rock",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/486106:t-Wonder"
+  },
+  {
+   "id": "484198",
+   "date": "2026-06-26T20:00:00+02:00",
+   "kind": "party",
+   "name": "Kei Foute Party",
+   "venue": "Mijnbouwweg",
+   "city": "Amersfoort",
+   "genres": [
+    "techno",
+    "hiphop",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/484198:Kei-Foute-Party"
+  },
+  {
+   "id": "490813",
+   "date": "2026-06-26T20:00:00+02:00",
+   "kind": "party",
+   "name": "Vrijmiboot",
+   "venue": "unspecified boat",
+   "city": "Rotterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/490813:Vrijmiboot"
+  },
+  {
+   "id": "489360",
+   "date": "2026-06-26T20:00:00+02:00",
+   "kind": "party",
+   "name": "Bij Ons In Brabant",
+   "venue": "Philips Stadion",
+   "city": "Eindhoven",
+   "genres": [
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/489360:Bij-Ons-In-Brabant"
+  },
+  {
+   "id": "494835",
+   "date": "2026-06-26T21:00:00+02:00",
+   "kind": "party",
+   "name": "Get In Sync",
+   "venue": "Aloha Beachclub",
+   "city": "Wijk aan zee",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494835:Get-In-Sync"
+  },
+  {
+   "id": "493445",
+   "date": "2026-06-26T21:30:00+02:00",
+   "kind": "party",
+   "name": "Shalamar",
+   "venue": "Effenaar",
+   "city": "Eindhoven",
+   "genres": [
+    "hiphop",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/493445:Shalamar"
+  },
+  {
+   "id": "493490",
+   "date": "2026-06-26T23:00:00+02:00",
+   "kind": "party",
+   "name": "Club Leidse",
+   "venue": "Leidse",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/493490:Club-Leidse"
+  },
+  {
+   "id": "494802",
+   "date": "2026-06-27T00:00:00+02:00",
+   "kind": "party",
+   "name": "Dour × Garage",
+   "venue": "Garage Klub",
+   "city": "Antwerpen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494802:Dour-x-Garage"
+  },
+  {
+   "id": "495183",
+   "date": "2026-06-27T00:00:00+02:00",
+   "kind": "party",
+   "name": "Urban Friday",
+   "venue": "Twenty Two",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495183:Urban-Friday"
+  },
+  {
+   "id": "489070",
+   "date": "2026-06-27T00:00:00+02:00",
+   "kind": "party",
+   "name": "Latin Night",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489070:Latin-Night"
+  },
+  {
+   "id": "493719",
+   "date": "2026-06-27T01:00:00+02:00",
+   "kind": "party",
+   "name": "Basis",
+   "venue": "BASIS",
+   "city": "Utrecht",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493719:Basis"
+  },
+  {
+   "id": "495207",
+   "date": "2026-06-27T01:00:00+02:00",
+   "kind": "party",
+   "name": "Dam Swindle • Demi Riquísimo",
+   "venue": "Radio Radio",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495207:Dam-Swindle-o-Demi-Riquisimo"
+  },
+  {
+   "id": "494442",
+   "date": "2026-06-27T01:00:00+02:00",
+   "kind": "party",
+   "name": "Mindscape",
+   "venue": "Lofi",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494442:Mindscape"
+  },
+  {
+   "id": "494236",
+   "date": "2026-06-27T01:00:00+02:00",
+   "kind": "party",
+   "name": "Shelter",
+   "venue": "Shelter",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494236:Shelter"
+  },
+  {
+   "id": "494172",
+   "date": "2026-06-27T01:00:00+02:00",
+   "kind": "party",
+   "name": "Pretty Young Thing",
+   "venue": "Oliva",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494172:Pretty-Young-Thing"
+  },
+  {
+   "id": "494372",
+   "date": "2026-06-27T01:00:00+02:00",
+   "kind": "party",
+   "name": "Toffler",
+   "venue": "Toffler",
+   "city": "Rotterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494372:Toffler"
+  },
+  {
+   "id": "489768",
+   "date": "2026-06-27T01:00:00+02:00",
+   "kind": "party",
+   "name": "DnB Allstars",
+   "venue": "Now&Wow",
+   "city": "Rotterdam",
+   "genres": [
+    "dnb"
+   ],
+   "url": "https://partyflock.nl/party/489768:DnB-Allstars"
+  },
+  {
+   "id": "495503",
+   "date": "2026-06-27T01:00:00+02:00",
+   "kind": "party",
+   "name": "AMA-MIA",
+   "venue": "Superdisco",
+   "city": "Rotterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495503:AMA-MIA"
+  },
+  {
+   "id": "495468",
+   "date": "2026-06-27T01:30:00+02:00",
+   "kind": "party",
+   "name": "Fiesta Macumba",
+   "venue": "Melkweg",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495468:Fiesta-Macumba"
+  },
+  {
+   "id": "486373",
+   "date": "2026-06-27T12:00:00+02:00",
+   "kind": "festival",
+   "name": "Lago Lago",
+   "venue": "Stroombroek",
+   "city": "Braamt",
+   "genres": [
+    "techno",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/486373:Lago-Lago"
+  },
+  {
+   "id": "482700",
+   "date": "2026-06-27T13:00:00+02:00",
+   "kind": "festival",
+   "name": "Defqon.1",
+   "venue": "Walibi Holland",
+   "city": "Biddinghuizen",
+   "genres": [
+    "techno",
+    "gabber",
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/482700:Defqon-1"
+  },
+  {
+   "id": "492665",
+   "date": "2026-06-27T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Industrial Takeover",
+   "venue": "onbekende locatie",
+   "city": "Bogotá",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/492665:Industrial-Takeover"
+  },
+  {
+   "id": "492163",
+   "date": "2026-06-27T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Luminosity Beach Festival",
+   "venue": "Bernie's Beachclub",
+   "city": "Zandvoort",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/492163:Luminosity-Beach-Festival"
+  },
+  {
+   "id": "491714",
+   "date": "2026-06-27T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Sunrise Festival",
+   "venue": "De Lilse Bergen",
+   "city": "Lille",
+   "genres": [
+    "techno",
+    "gabber",
+    "hardstyle",
+    "hiphop",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/491714:Sunrise-Festival"
+  },
+  {
+   "id": "481631",
+   "date": "2026-06-27T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Jera On Air",
+   "venue": "Zeilbergseweg",
+   "city": "Ysselsteyn",
+   "genres": [
+    "gabber",
+    "hiphop",
+    "rock",
+    "death",
+    "metalcore",
+    "indie"
+   ],
+   "url": "https://partyflock.nl/party/481631:Jera-On-Air"
+  },
+  {
+   "id": "486283",
+   "date": "2026-06-27T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Concert at SEA",
+   "venue": "Brouwersdam",
+   "city": "Scharendijke",
+   "genres": [
+    "rock",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/486283:Concert-at-SEA"
+  },
+  {
+   "id": "486277",
+   "date": "2026-06-27T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Live is Live",
+   "venue": "Middenvijver",
+   "city": "Antwerpen",
+   "genres": [
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/486277:Live-is-Live"
+  },
+  {
+   "id": "490713",
+   "date": "2026-06-27T15:00:00+02:00",
+   "kind": "festival",
+   "name": "TAPT Festival",
+   "venue": "Olympiaweg",
+   "city": "Alkmaar",
+   "genres": [
+    "techno",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/490713:TAPT-Festival"
+  },
+  {
+   "id": "494937",
+   "date": "2026-06-27T15:00:00+02:00",
+   "kind": "festival",
+   "name": "Thuishaven",
+   "venue": "Thuishaven terrein",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494937:Thuishaven"
+  },
+  {
+   "id": "487019",
+   "date": "2026-06-27T15:00:00+02:00",
+   "kind": "festival",
+   "name": "Unreal × Kuko",
+   "venue": "Flanders Expo",
+   "city": "Gent",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/487019:Unreal-x-Kuko"
+  },
+  {
+   "id": "494444",
+   "date": "2026-06-27T16:00:00+02:00",
+   "kind": "festival",
+   "name": "Spectrum & A Trip To Galaxy",
+   "venue": "Lofi",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494444:Spectrum-and-A-Trip-To-Galaxy"
+  },
+  {
+   "id": "491834",
+   "date": "2026-06-27T17:00:00+02:00",
+   "kind": "festival",
+   "name": "Bruut! Festival",
+   "venue": "Graanfabriek",
+   "city": "Groningen",
+   "genres": [
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/491834:Bruut-Festival"
+  },
+  {
+   "id": "491492",
+   "date": "2026-06-27T17:00:00+02:00",
+   "kind": "party",
+   "name": "Adam & Eve × SUPPER Cruise",
+   "venue": "Supperclub Cruise",
+   "city": "Amsterdam",
+   "genres": [
+    "pop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/491492:Adam-and-Eve-x-SUPPER-Cruise"
+  },
+  {
+   "id": "494656",
+   "date": "2026-06-27T18:00:00+02:00",
+   "kind": "festival",
+   "name": "Old but Gold Hip Hop Open Air + Aftershowparty",
+   "venue": "Herr Kauzig",
+   "city": "Leipzig",
+   "genres": [
+    "techno",
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/494656:Old-but-Gold-Hip-Hop-Open-Air-Aftershowparty"
+  },
+  {
+   "id": "486107",
+   "date": "2026-06-27T18:00:00+02:00",
+   "kind": "party",
+   "name": "'t Wonder",
+   "venue": "Exercitieterrein",
+   "city": "Woerden",
+   "genres": [
+    "hiphop",
+    "rock",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/486107:t-Wonder"
+  },
+  {
+   "id": "494319",
+   "date": "2026-06-27T18:00:00+02:00",
+   "kind": "concert",
+   "name": "Capelse Zomer",
+   "venue": "Stadsplein",
+   "city": "Capelle aan den IJssel",
+   "genres": [
+    "rock"
+   ],
+   "url": "https://partyflock.nl/party/494319:Capelse-Zomer"
+  },
+  {
+   "id": "492358",
+   "date": "2026-06-27T19:00:00+02:00",
+   "kind": "party",
+   "name": "Colorado Charlie × Anjunadeep",
+   "venue": "Colorado Charlie",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/492358:Colorado-Charlie-x-Anjunadeep"
+  },
+  {
+   "id": "494621",
+   "date": "2026-06-27T19:00:00+02:00",
+   "kind": "party",
+   "name": "JOY",
+   "venue": "Bronze Beach",
+   "city": "Bloemendaal aan zee",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494621:JOY"
+  },
+  {
+   "id": "490814",
+   "date": "2026-06-27T19:00:00+02:00",
+   "kind": "party",
+   "name": "Vrijmiboot",
+   "venue": "unspecified boat",
+   "city": "Nijmegen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/490814:Vrijmiboot"
+  },
+  {
+   "id": "495033",
+   "date": "2026-06-27T20:00:00+02:00",
+   "kind": "party",
+   "name": "Societé",
+   "venue": "Boomerang Beach",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495033:Societe"
+  },
+  {
+   "id": "489359",
+   "date": "2026-06-27T20:00:00+02:00",
+   "kind": "party",
+   "name": "Bij Ons In Brabant",
+   "venue": "Philips Stadion",
+   "city": "Eindhoven",
+   "genres": [
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/489359:Bij-Ons-In-Brabant"
+  },
+  {
+   "id": "495602",
+   "date": "2026-06-27T21:00:00+02:00",
+   "kind": "party",
+   "name": "Kadinsky Sessions",
+   "venue": "Kadinsky Café",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495602:Kadinsky-Sessions"
+  },
+  {
+   "id": "495128",
+   "date": "2026-06-27T21:00:00+02:00",
+   "kind": "party",
+   "name": "METZ",
+   "venue": "Royal",
+   "city": "Hoek van Holland",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495128:METZ"
+  },
+  {
+   "id": "495190",
+   "date": "2026-06-27T22:00:00+02:00",
+   "kind": "party",
+   "name": "NMNH",
+   "venue": "Whitehouse",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495190:NMNH"
+  },
+  {
+   "id": "491866",
+   "date": "2026-06-27T22:00:00+02:00",
+   "kind": "party",
+   "name": "The sweet sound of House",
+   "venue": "K-Sjot",
+   "city": "Utrecht",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/491866:The-sweet-sound-of-House"
+  },
+  {
+   "id": "495125",
+   "date": "2026-06-27T23:00:00+02:00",
+   "kind": "party",
+   "name": "MAE",
+   "venue": "Yellow House",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495125:MAE"
+  },
+  {
+   "id": "493491",
+   "date": "2026-06-27T23:00:00+02:00",
+   "kind": "party",
+   "name": "Club Leidse",
+   "venue": "Leidse",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/493491:Club-Leidse"
+  },
+  {
+   "id": "495187",
+   "date": "2026-06-28T00:00:00+02:00",
+   "kind": "party",
+   "name": "GO WILD",
+   "venue": "Twenty Two",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495187:GO-WILD"
+  },
+  {
+   "id": "495461",
+   "date": "2026-06-28T00:00:00+02:00",
+   "kind": "party",
+   "name": "TRNDSTTRS",
+   "venue": "The Tequila Club",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/495461:TRNDSTTRS"
+  },
+  {
+   "id": "489190",
+   "date": "2026-06-28T00:00:00+02:00",
+   "kind": "party",
+   "name": "Rumba Latina",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489190:Rumba-Latina"
+  },
+  {
+   "id": "495208",
+   "date": "2026-06-28T01:00:00+02:00",
+   "kind": "party",
+   "name": "A For Alpha • SOLIT b2b Nathan Homan",
+   "venue": "Radio Radio",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495208:A-For-Alpha-o-SOLIT-b2b-Nathan-Homan"
+  },
+  {
+   "id": "494748",
+   "date": "2026-06-28T01:00:00+02:00",
+   "kind": "party",
+   "name": "Basis",
+   "venue": "BASIS",
+   "city": "Utrecht",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494748:Basis"
+  },
+  {
+   "id": "495631",
+   "date": "2026-06-28T01:00:00+02:00",
+   "kind": "party",
+   "name": "Temple of the Damned Apeldoorn",
+   "venue": "Gigant",
+   "city": "Apeldoorn",
+   "genres": [
+    "techno",
+    "dnb",
+    "gabber",
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/495631:Temple-of-the-Damned-Apeldoorn"
+  },
+  {
+   "id": "495590",
+   "date": "2026-06-28T01:00:00+02:00",
+   "kind": "festival",
+   "name": "Buiten Gewoon Festival Afterparty",
+   "venue": "Toffler",
+   "city": "Rotterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495590:Buiten-Gewoon-Festival-Afterparty"
+  },
+  {
+   "id": "495333",
+   "date": "2026-06-28T01:00:00+02:00",
+   "kind": "party",
+   "name": "FEVERR",
+   "venue": "De Helling",
+   "city": "Utrecht",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495333:FEVERR"
+  },
+  {
+   "id": "494237",
+   "date": "2026-06-28T01:00:00+02:00",
+   "kind": "party",
+   "name": "Shelter",
+   "venue": "Shelter",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494237:Shelter"
+  },
+  {
+   "id": "494222",
+   "date": "2026-06-28T01:00:00+02:00",
+   "kind": "party",
+   "name": "Soirée",
+   "venue": "Oliva",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/494222:Soiree"
+  },
+  {
+   "id": "494869",
+   "date": "2026-06-28T01:00:00+02:00",
+   "kind": "party",
+   "name": "Super Rich Kids",
+   "venue": "MUNCH",
+   "city": "Rotterdam",
+   "genres": [
+    "techno",
+    "hiphop",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/494869:Super-Rich-Kids"
+  },
+  {
+   "id": "494633",
+   "date": "2026-06-28T01:00:00+02:00",
+   "kind": "party",
+   "name": "VYBZ",
+   "venue": "Paradiso",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494633:VYBZ"
+  },
+  {
+   "id": "494259",
+   "date": "2026-06-28T01:00:00+02:00",
+   "kind": "party",
+   "name": "The Grapevyne",
+   "venue": "BIRD",
+   "city": "Rotterdam",
+   "genres": [
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/494259:The-Grapevyne"
+  },
+  {
+   "id": "494026",
+   "date": "2026-06-28T01:00:00+02:00",
+   "kind": "party",
+   "name": "4AM.",
+   "venue": "Holy Moly Club",
+   "city": "Breda",
+   "genres": [
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/494026:4AM"
+  },
+  {
+   "id": "494028",
+   "date": "2026-06-28T01:00:00+02:00",
+   "kind": "party",
+   "name": "4AM.",
+   "venue": "Hedon",
+   "city": "Zwolle",
+   "genres": [
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/494028:4AM"
+  },
+  {
+   "id": "486374",
+   "date": "2026-06-28T12:00:00+02:00",
+   "kind": "festival",
+   "name": "Lago Lago",
+   "venue": "Stroombroek",
+   "city": "Braamt",
+   "genres": [
+    "techno",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/486374:Lago-Lago"
+  },
+  {
+   "id": "482702",
+   "date": "2026-06-28T13:00:00+02:00",
+   "kind": "festival",
+   "name": "Defqon.1",
+   "venue": "Walibi Holland",
+   "city": "Biddinghuizen",
+   "genres": [
+    "techno",
+    "dnb",
+    "gabber",
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/482702:Defqon-1"
+  },
+  {
+   "id": "491608",
+   "date": "2026-06-28T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Kiesgrube",
+   "venue": "Kiesgrube",
+   "city": "Neuss",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/491608:Kiesgrube"
+  },
+  {
+   "id": "492164",
+   "date": "2026-06-28T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Luminosity Beach Festival",
+   "venue": "Bernie's Beachclub",
+   "city": "Zandvoort",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/492164:Luminosity-Beach-Festival"
+  },
+  {
+   "id": "491715",
+   "date": "2026-06-28T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Sunrise Festival",
+   "venue": "De Lilse Bergen",
+   "city": "Lille",
+   "genres": [
+    "techno",
+    "hardstyle",
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/491715:Sunrise-Festival"
+  },
+  {
+   "id": "492371",
+   "date": "2026-06-28T15:00:00+02:00",
+   "kind": "festival",
+   "name": "Thuishaven",
+   "venue": "Thuishaven terrein",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/492371:Thuishaven"
+  },
+  {
+   "id": "494770",
+   "date": "2026-06-28T15:00:00+02:00",
+   "kind": "party",
+   "name": "Haringparty met Jeroen van der Boom",
+   "venue": "Crazy Pianos",
+   "city": "Scheveningen",
+   "genres": [
+    "rock",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/494770:Haringparty-met-Jeroen-van-der-Boom"
+  },
+  {
+   "id": "495439",
+   "date": "2026-06-28T16:00:00+02:00",
+   "kind": "party",
+   "name": "E-beatza Outside",
+   "venue": "De Rooye Plas",
+   "city": "Handel",
+   "genres": [
+    "techno",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495439:E-beatza-Outside"
+  },
+  {
+   "id": "492680",
+   "date": "2026-06-28T17:00:00+02:00",
+   "kind": "party",
+   "name": "Nora × Eelke",
+   "venue": "Woodstock 69",
+   "city": "Bloemendaal aan zee",
+   "genres": [
+    "techno",
+    "indie"
+   ],
+   "url": "https://partyflock.nl/party/492680:Nora-x-Eelke"
+  },
+  {
+   "id": "493507",
+   "date": "2026-06-28T17:00:00+02:00",
+   "kind": "party",
+   "name": "Azure",
+   "venue": "LuminAir",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493507:Azure"
+  },
+  {
+   "id": "495469",
+   "date": "2026-06-28T17:45:00+02:00",
+   "kind": "party",
+   "name": "Fiesta Macumba28",
+   "venue": "unspecified boat",
+   "city": "Rotterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495469:Fiesta-Macumba28"
+  },
+  {
+   "id": "494138",
+   "date": "2026-06-28T19:00:00+02:00",
+   "kind": "party",
+   "name": "Colorado Charlie",
+   "venue": "Colorado Charlie",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494138:Colorado-Charlie"
+  },
+  {
+   "id": "493236",
+   "date": "2026-06-28T19:00:00+02:00",
+   "kind": "party",
+   "name": "Pulse",
+   "venue": "Bronze Beach",
+   "city": "Bloemendaal aan zee",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493236:Pulse"
+  },
+  {
+   "id": "495559",
+   "date": "2026-06-28T20:00:00+02:00",
+   "kind": "party",
+   "name": "Rotterdam Rave",
+   "venue": "Boomerang Beach",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495559:Rotterdam-Rave"
+  },
+  {
+   "id": "495356",
+   "date": "2026-06-28T22:00:00+02:00",
+   "kind": "party",
+   "name": "DOUGH 1 Year",
+   "venue": "Radio Radio",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/495356:DOUGH-1-Year"
+  },
+  {
+   "id": "486298",
+   "date": "2026-06-28T22:00:00+02:00",
+   "kind": "concert",
+   "name": "Guns N' Roses",
+   "venue": "AFAS Dome",
+   "city": "Antwerpen",
+   "genres": [
+    "rock"
+   ],
+   "url": "https://partyflock.nl/party/486298:Guns-N-Roses"
+  },
+  {
+   "id": "495218",
+   "date": "2026-06-29T00:00:00+02:00",
+   "kind": "party",
+   "name": "SAOKO",
+   "venue": "Supper Club",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495218:SAOKO"
+  },
+  {
+   "id": "489007",
+   "date": "2026-06-29T00:00:00+02:00",
+   "kind": "party",
+   "name": "El Vacilon de Los Domingos",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489007:El-Vacilon-de-Los-Domingos"
+  },
+  {
+   "id": "494511",
+   "date": "2026-06-29T01:00:00+02:00",
+   "kind": "party",
+   "name": "No Sunday Without Techno",
+   "venue": "John Doe",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494511:No-Sunday-Without-Techno"
+  },
+  {
+   "id": "486279",
+   "date": "2026-06-29T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Live is Live",
+   "venue": "Middenvijver",
+   "city": "Antwerpen",
+   "genres": [
+    "thrash"
+   ],
+   "url": "https://partyflock.nl/party/486279:Live-is-Live"
+  },
+  {
+   "id": "495229",
+   "date": "2026-06-30T22:00:00+02:00",
+   "kind": "party",
+   "name": "Chef'Special",
+   "venue": "Concertgebouw",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "rock",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/495229:ChefSpecial"
+  },
+  {
+   "id": "495173",
+   "date": "2026-07-01T00:00:00+02:00",
+   "kind": "party",
+   "name": "TIPSY TUESDAY",
+   "venue": "Twenty Two",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495173:TIPSY-TUESDAY"
+  },
+  {
+   "id": "494521",
+   "date": "2026-07-01T01:00:00+02:00",
+   "kind": "party",
+   "name": "Phantom",
+   "venue": "John Doe",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494521:Phantom"
+  },
+  {
+   "id": "495177",
+   "date": "2026-07-02T00:00:00+02:00",
+   "kind": "party",
+   "name": "SOJU WEDNESDAYS",
+   "venue": "Twenty Two",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495177:SOJU-WEDNESDAYS"
+  },
+  {
+   "id": "489243",
+   "date": "2026-07-02T00:00:00+02:00",
+   "kind": "party",
+   "name": "Latin Wednesday",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489243:Latin-Wednesday"
+  },
+  {
+   "id": "494530",
+   "date": "2026-07-02T01:00:00+02:00",
+   "kind": "party",
+   "name": "Raveland",
+   "venue": "John Doe",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494530:Raveland"
+  },
+  {
+   "id": "481802",
+   "date": "2026-07-02T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Rock Werchter",
+   "venue": "Festival Park",
+   "city": "Werchter",
+   "genres": [
+    "rock",
+    "death",
+    "indie"
+   ],
+   "url": "https://partyflock.nl/party/481802:Rock-Werchter"
+  },
+  {
+   "id": "492048",
+   "date": "2026-07-02T19:00:00+02:00",
+   "kind": "party",
+   "name": "Royal Park Live",
+   "venue": "Paleis Soestdijk",
+   "city": "Baarn",
+   "genres": [
+    "pop",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/492048:Royal-Park-Live"
+  },
+  {
+   "id": "495654",
+   "date": "2026-07-02T21:00:00+02:00",
+   "kind": "party",
+   "name": "Dias Latinos",
+   "venue": "onbekende locatie",
+   "city": "Amersfoort",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495654:Dias-Latinos"
+  },
+  {
+   "id": "493450",
+   "date": "2026-07-02T21:30:00+02:00",
+   "kind": "party",
+   "name": "Epic Rap Battles Of History",
+   "venue": "Effenaar",
+   "city": "Eindhoven",
+   "genres": [
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/493450:Epic-Rap-Battles-Of-History"
+  },
+  {
+   "id": "495497",
+   "date": "2026-07-02T22:00:00+02:00",
+   "kind": "party",
+   "name": "Bruno Mars",
+   "venue": "Johan Cruijff ArenA",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "pop",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/495497:Bruno-Mars"
+  },
+  {
+   "id": "489318",
+   "date": "2026-07-03T00:00:00+02:00",
+   "kind": "party",
+   "name": "Latin Thursday",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489318:Latin-Thursday"
+  },
+  {
+   "id": "495180",
+   "date": "2026-07-03T00:00:00+02:00",
+   "kind": "party",
+   "name": "Thirsty Thursdays",
+   "venue": "Twenty Two",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495180:Thirsty-Thursdays"
+  },
+  {
+   "id": "493636",
+   "date": "2026-07-03T13:00:00+02:00",
+   "kind": "festival",
+   "name": "Rampage Open Air",
+   "venue": "Festivalweide Kristalpark",
+   "city": "Lommel",
+   "genres": [
+    "techno",
+    "dnb"
+   ],
+   "url": "https://partyflock.nl/party/493636:Rampage-Open-Air"
+  },
+  {
+   "id": "485157",
+   "date": "2026-07-03T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Rock Werchter",
+   "venue": "Festival Park",
+   "city": "Werchter",
+   "genres": [
+    "techno",
+    "rock",
+    "indie",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/485157:Rock-Werchter"
+  },
+  {
+   "id": "490714",
+   "date": "2026-07-03T18:00:00+02:00",
+   "kind": "festival",
+   "name": "TAPT Festival",
+   "venue": "Julianapark",
+   "city": "Utrecht",
+   "genres": [
+    "techno",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/490714:TAPT-Festival"
+  },
+  {
+   "id": "494486",
+   "date": "2026-07-03T19:00:00+02:00",
+   "kind": "party",
+   "name": "Colorado Charlie",
+   "venue": "Colorado Charlie",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494486:Colorado-Charlie"
+  },
+  {
+   "id": "492049",
+   "date": "2026-07-03T19:00:00+02:00",
+   "kind": "party",
+   "name": "Royal Park Live",
+   "venue": "Paleis Soestdijk",
+   "city": "Baarn",
+   "genres": [
+    "rock",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/492049:Royal-Park-Live"
+  },
+  {
+   "id": "494640",
+   "date": "2026-07-03T20:00:00+02:00",
+   "kind": "party",
+   "name": "Vage Vrienden Zomerfest",
+   "venue": "Strand Tien",
+   "city": "Oss",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494640:Vage-Vrienden-Zomerfest"
+  },
+  {
+   "id": "490815",
+   "date": "2026-07-03T20:00:00+02:00",
+   "kind": "party",
+   "name": "Vrijmiboot",
+   "venue": "unspecified boat",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/490815:Vrijmiboot"
+  },
+  {
+   "id": "495061",
+   "date": "2026-07-03T21:00:00+02:00",
+   "kind": "party",
+   "name": "Klup Kaviaar",
+   "venue": "Minna Night Club",
+   "city": "Groningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495061:Klup-Kaviaar"
+  },
+  {
+   "id": "493451",
+   "date": "2026-07-03T21:30:00+02:00",
+   "kind": "concert",
+   "name": "Footballhead",
+   "venue": "The Jack",
+   "city": "Eindhoven",
+   "genres": [
+    "indie"
+   ],
+   "url": "https://partyflock.nl/party/493451:Footballhead"
+  },
+  {
+   "id": "494705",
+   "date": "2026-07-03T22:00:00+02:00",
+   "kind": "party",
+   "name": "Donder & Bliksem",
+   "venue": "Downstairs",
+   "city": "Eindhoven",
+   "genres": [
+    "dnb",
+    "gabber"
+   ],
+   "url": "https://partyflock.nl/party/494705:Donder-and-Bliksem"
+  },
+  {
+   "id": "494693",
+   "date": "2026-07-03T22:30:00+02:00",
+   "kind": "party",
+   "name": "Frostwave",
+   "venue": "Club VERZO",
+   "city": "Roosendaal",
+   "genres": [
+    "gabber",
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/494693:Frostwave"
+  },
+  {
+   "id": "493492",
+   "date": "2026-07-03T23:00:00+02:00",
+   "kind": "party",
+   "name": "Club Leidse",
+   "venue": "Leidse",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/493492:Club-Leidse"
+  },
+  {
+   "id": "494379",
+   "date": "2026-07-04T00:00:00+02:00",
+   "kind": "party",
+   "name": "UOTJ",
+   "venue": "KABUL à GoGo",
+   "city": "Utrecht",
+   "genres": [
+    "dnb"
+   ],
+   "url": "https://partyflock.nl/party/494379:UOTJ"
+  },
+  {
+   "id": "495184",
+   "date": "2026-07-04T00:00:00+02:00",
+   "kind": "party",
+   "name": "URBAN FRIDAY",
+   "venue": "Twenty Two",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495184:URBAN-FRIDAY"
+  },
+  {
+   "id": "489071",
+   "date": "2026-07-04T00:00:00+02:00",
+   "kind": "party",
+   "name": "Latin Night",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489071:Latin-Night"
+  },
+  {
+   "id": "495562",
+   "date": "2026-07-04T01:00:00+02:00",
+   "kind": "party",
+   "name": "BiBi",
+   "venue": "Shelter",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495562:BiBi"
+  },
+  {
+   "id": "493637",
+   "date": "2026-07-04T13:00:00+02:00",
+   "kind": "festival",
+   "name": "Rampage Open Air",
+   "venue": "Festivalweide Kristalpark",
+   "city": "Lommel",
+   "genres": [
+    "dnb",
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/493637:Rampage-Open-Air"
+  },
+  {
+   "id": "482072",
+   "date": "2026-07-04T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Wilde Weide",
+   "venue": "Netl",
+   "city": "Kraggenburg",
+   "genres": [
+    "techno",
+    "hiphop",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/482072:Wilde-Weide"
+  },
+  {
+   "id": "481636",
+   "date": "2026-07-04T14:00:00+02:00",
+   "kind": "festival",
+   "name": "ParkCity Live",
+   "venue": "Bekkerveld",
+   "city": "Heerlen",
+   "genres": [
+    "hiphop",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/481636:ParkCity-Live"
+  },
+  {
+   "id": "485158",
+   "date": "2026-07-04T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Rock Werchter",
+   "venue": "Festival Park",
+   "city": "Werchter",
+   "genres": [
+    "hiphop",
+    "rock",
+    "metalcore",
+    "indie",
+    "pop",
+    "jazz",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/485158:Rock-Werchter"
+  },
+  {
+   "id": "495568",
+   "date": "2026-07-04T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Festival de Ballade",
+   "venue": "Terrein Nieuw Neuzenweg",
+   "city": "Terneuzen",
+   "genres": [
+    "pop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495568:Festival-de-Ballade"
+  },
+  {
+   "id": "490715",
+   "date": "2026-07-04T15:00:00+02:00",
+   "kind": "festival",
+   "name": "TAPT Festival",
+   "venue": "Julianapark",
+   "city": "Utrecht",
+   "genres": [
+    "techno",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/490715:TAPT-Festival"
+  },
+  {
+   "id": "494758",
+   "date": "2026-07-04T15:00:00+02:00",
+   "kind": "party",
+   "name": "Teletech Weekender",
+   "venue": "Flanders Expo",
+   "city": "Gent",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494758:Teletech-Weekender"
+  },
+  {
+   "id": "486945",
+   "date": "2026-07-04T15:00:00+02:00",
+   "kind": "festival",
+   "name": "WiSH Outdoor",
+   "venue": "Bavaria Brouwerij",
+   "city": "Lieshout",
+   "genres": [
+    "techno",
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/486945:WiSH-Outdoor"
+  },
+  {
+   "id": "494624",
+   "date": "2026-07-04T15:00:00+02:00",
+   "kind": "party",
+   "name": "House Feeling Boat Party",
+   "venue": "unspecified boat",
+   "city": "'s-Hertogenbosch",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494624:House-Feeling-Boat-Party"
+  },
+  {
+   "id": "486565",
+   "date": "2026-07-04T15:00:00+02:00",
+   "kind": "festival",
+   "name": "In Het Volkspark",
+   "venue": "Volkspark",
+   "city": "Enschede",
+   "genres": [
+    "techno",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/486565:In-Het-Volkspark"
+  },
+  {
+   "id": "494445",
+   "date": "2026-07-04T16:00:00+02:00",
+   "kind": "festival",
+   "name": "Prncptl",
+   "venue": "Lofi",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494445:Prncptl"
+  },
+  {
+   "id": "481792",
+   "date": "2026-07-04T16:00:00+02:00",
+   "kind": "festival",
+   "name": "Beachrockers",
+   "venue": "Ulesprong",
+   "city": "Sint Nicolaasga",
+   "genres": [
+    "techno",
+    "hiphop",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/481792:Beachrockers"
+  },
+  {
+   "id": "494305",
+   "date": "2026-07-04T16:00:00+02:00",
+   "kind": "festival",
+   "name": "Hangar & MUSE invites",
+   "venue": "Château des Maisons",
+   "city": "Maisons-Laffitte",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494305:Hangar-and-MUSE-invites"
+  },
+  {
+   "id": "494298",
+   "date": "2026-07-04T17:00:00+02:00",
+   "kind": "festival",
+   "name": "Beauville",
+   "venue": "van Ooidonk",
+   "city": "Deinze",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494298:Beauville"
+  },
+  {
+   "id": "490295",
+   "date": "2026-07-04T17:00:00+02:00",
+   "kind": "festival",
+   "name": "Stereo Sunday",
+   "venue": "Julianapark",
+   "city": "Venlo",
+   "genres": [
+    "techno",
+    "gabber",
+    "hardstyle",
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/490295:Stereo-Sunday"
+  },
+  {
+   "id": "492051",
+   "date": "2026-07-04T19:00:00+02:00",
+   "kind": "party",
+   "name": "Royal Park Live",
+   "venue": "Paleis Soestdijk",
+   "city": "Baarn",
+   "genres": [
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/492051:Royal-Park-Live"
+  },
+  {
+   "id": "493672",
+   "date": "2026-07-04T20:00:00+02:00",
+   "kind": "party",
+   "name": "De Sessie",
+   "venue": "Boomerang Beach",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493672:De-Sessie"
+  },
+  {
+   "id": "495692",
+   "date": "2026-07-04T21:00:00+02:00",
+   "kind": "party",
+   "name": "ZAZU",
+   "venue": "Whitehouse",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495692:ZAZU"
+  },
+  {
+   "id": "494943",
+   "date": "2026-07-04T21:00:00+02:00",
+   "kind": "party",
+   "name": "Vroeg Pieken",
+   "venue": "De Parade",
+   "city": "'s-Hertogenbosch",
+   "genres": [
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/494943:Vroeg-Pieken"
+  },
+  {
+   "id": "493452",
+   "date": "2026-07-04T21:30:00+02:00",
+   "kind": "party",
+   "name": "junXion",
+   "venue": "Effenaar",
+   "city": "Eindhoven",
+   "genres": [
+    "rock",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/493452:junXion"
+  },
+  {
+   "id": "495024",
+   "date": "2026-07-04T22:00:00+02:00",
+   "kind": "party",
+   "name": "Vroeg Clubben",
+   "venue": "De Zwarte Silo",
+   "city": "Deventer",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495024:Vroeg-Clubben"
+  },
+  {
+   "id": "489048",
+   "date": "2026-07-04T22:00:00+02:00",
+   "kind": "party",
+   "name": "Bruno Mars",
+   "venue": "Johan Cruijff ArenA",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "pop",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/489048:Bruno-Mars"
+  },
+  {
+   "id": "493278",
+   "date": "2026-07-04T23:00:00+02:00",
+   "kind": "party",
+   "name": "GrooveBox at the Beach",
+   "venue": "Jells aan Zee",
+   "city": "Biggekerke",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493278:GrooveBox-at-the-Beach"
+  },
+  {
+   "id": "493493",
+   "date": "2026-07-04T23:00:00+02:00",
+   "kind": "party",
+   "name": "Club Leidse",
+   "venue": "Leidse",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/493493:Club-Leidse"
+  },
+  {
+   "id": "495188",
+   "date": "2026-07-05T00:00:00+02:00",
+   "kind": "party",
+   "name": "GO WILD",
+   "venue": "Twenty Two",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495188:GO-WILD"
+  },
+  {
+   "id": "489191",
+   "date": "2026-07-05T00:00:00+02:00",
+   "kind": "party",
+   "name": "Rumba Latina",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489191:Rumba-Latina"
+  },
+  {
+   "id": "495514",
+   "date": "2026-07-05T00:00:00+02:00",
+   "kind": "party",
+   "name": "The Queer Latin Party",
+   "venue": "The Other Side",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495514:The-Queer-Latin-Party"
+  },
+  {
+   "id": "495394",
+   "date": "2026-07-05T01:00:00+02:00",
+   "kind": "party",
+   "name": "Shelter",
+   "venue": "Shelter",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495394:Shelter"
+  },
+  {
+   "id": "493932",
+   "date": "2026-07-05T01:00:00+02:00",
+   "kind": "party",
+   "name": "VBX Summer Weekend",
+   "venue": "TILLA TEC",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493932:VBX-Summer-Weekend"
+  },
+  {
+   "id": "494166",
+   "date": "2026-07-05T01:00:00+02:00",
+   "kind": "party",
+   "name": "Liv",
+   "venue": "Oliva",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494166:Liv"
+  },
+  {
+   "id": "494691",
+   "date": "2026-07-05T01:00:00+02:00",
+   "kind": "party",
+   "name": "Boogies Afro Galaxy",
+   "venue": "Panama",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/494691:Boogies-Afro-Galaxy"
+  },
+  {
+   "id": "495153",
+   "date": "2026-07-05T01:59:59+02:00",
+   "kind": "party",
+   "name": "BASIS × By The Creek After",
+   "venue": "BASIS",
+   "city": "Utrecht",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495153:BASIS-x-By-The-Creek-After"
+  },
+  {
+   "id": "493638",
+   "date": "2026-07-05T13:00:00+02:00",
+   "kind": "festival",
+   "name": "Rampage Open Air",
+   "venue": "Festivalweide Kristalpark",
+   "city": "Lommel",
+   "genres": [
+    "techno",
+    "dnb"
+   ],
+   "url": "https://partyflock.nl/party/493638:Rampage-Open-Air"
+  },
+  {
+   "id": "482073",
+   "date": "2026-07-05T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Wilde Weide",
+   "venue": "Netl",
+   "city": "Kraggenburg",
+   "genres": [
+    "techno",
+    "hiphop",
+    "rock",
+    "pop",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/482073:Wilde-Weide"
+  },
+  {
+   "id": "485159",
+   "date": "2026-07-05T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Rock Werchter",
+   "venue": "Festival Park",
+   "city": "Werchter",
+   "genres": [
+    "techno",
+    "rock",
+    "indie",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/485159:Rock-Werchter"
+  },
+  {
+   "id": "486946",
+   "date": "2026-07-05T14:00:00+02:00",
+   "kind": "festival",
+   "name": "WiSH Outdoor",
+   "venue": "Bavaria Brouwerij",
+   "city": "Lieshout",
+   "genres": [
+    "techno",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/486946:WiSH-Outdoor"
+  },
+  {
+   "id": "490106",
+   "date": "2026-07-05T14:00:00+02:00",
+   "kind": "festival",
+   "name": "ParkCity Live",
+   "venue": "Bekkerveld",
+   "city": "Heerlen",
+   "genres": [
+    "hiphop",
+    "rock",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/490106:ParkCity-Live"
+  },
+  {
+   "id": "484086",
+   "date": "2026-07-05T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Muze Misse Festival",
+   "venue": "Jan Cunen park",
+   "city": "Oss",
+   "genres": [
+    "rock",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/484086:Muze-Misse-Festival"
+  },
+  {
+   "id": "495569",
+   "date": "2026-07-05T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Festival de Ballade",
+   "venue": "Terrein Nieuw Neuzenweg",
+   "city": "Terneuzen",
+   "genres": [
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/495569:Festival-de-Ballade"
+  },
+  {
+   "id": "491009",
+   "date": "2026-07-05T15:00:00+02:00",
+   "kind": "festival",
+   "name": "By the Creek",
+   "venue": "Middelwaard",
+   "city": "Vianen",
+   "genres": [
+    "techno",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/491009:By-the-Creek"
+  },
+  {
+   "id": "494759",
+   "date": "2026-07-05T15:00:00+02:00",
+   "kind": "party",
+   "name": "Teletech Weekender",
+   "venue": "Flanders Expo",
+   "city": "Gent",
+   "genres": [
+    "techno",
+    "gabber"
+   ],
+   "url": "https://partyflock.nl/party/494759:Teletech-Weekender"
+  },
+  {
+   "id": "493923",
+   "date": "2026-07-05T15:00:00+02:00",
+   "kind": "festival",
+   "name": "Thuishaven",
+   "venue": "Thuishaven terrein",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493923:Thuishaven"
+  },
+  {
+   "id": "493508",
+   "date": "2026-07-05T17:00:00+02:00",
+   "kind": "party",
+   "name": "Azure Day Party",
+   "venue": "LuminAir",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493508:Azure-Day-Party"
+  },
+  {
+   "id": "495003",
+   "date": "2026-07-05T18:00:00+02:00",
+   "kind": "party",
+   "name": "Summer Special",
+   "venue": "Stadshaven Brouwerij",
+   "city": "Rotterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495003:Summer-Special"
+  },
+  {
+   "id": "493828",
+   "date": "2026-07-05T19:00:00+02:00",
+   "kind": "party",
+   "name": "Colorado Charlie",
+   "venue": "Colorado Charlie",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493828:Colorado-Charlie"
+  },
+  {
+   "id": "492053",
+   "date": "2026-07-05T19:00:00+02:00",
+   "kind": "party",
+   "name": "Royal Park Live",
+   "venue": "Paleis Soestdijk",
+   "city": "Baarn",
+   "genres": [
+    "rock",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/492053:Royal-Park-Live"
+  },
+  {
+   "id": "489049",
+   "date": "2026-07-05T22:00:00+02:00",
+   "kind": "party",
+   "name": "Bruno Mars",
+   "venue": "Johan Cruijff ArenA",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "pop",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/489049:Bruno-Mars"
+  },
+  {
+   "id": "495219",
+   "date": "2026-07-06T00:00:00+02:00",
+   "kind": "party",
+   "name": "SAOKO",
+   "venue": "Supper Club",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/495219:SAOKO"
+  },
+  {
+   "id": "489008",
+   "date": "2026-07-06T00:00:00+02:00",
+   "kind": "party",
+   "name": "El Vacilon de Los Domingos",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489008:El-Vacilon-de-Los-Domingos"
+  },
+  {
+   "id": "494512",
+   "date": "2026-07-06T01:00:00+02:00",
+   "kind": "party",
+   "name": "No Sunday Without Techno",
+   "venue": "John Doe",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494512:No-Sunday-Without-Techno"
+  },
+  {
+   "id": "495154",
+   "date": "2026-07-06T01:59:59+02:00",
+   "kind": "party",
+   "name": "BASIS × By The Creek After",
+   "venue": "BASIS",
+   "city": "Utrecht",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495154:BASIS-x-By-The-Creek-After"
+  },
+  {
+   "id": "492068",
+   "date": "2026-07-06T19:00:00+02:00",
+   "kind": "concert",
+   "name": "Royal Park Live",
+   "venue": "Paleis Soestdijk",
+   "city": "Baarn",
+   "genres": [
+    "rock",
+    "pop",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/492068:Royal-Park-Live"
+  },
+  {
+   "id": "492620",
+   "date": "2026-07-07T19:30:00+02:00",
+   "kind": "concert",
+   "name": "Alanis Morissette",
+   "venue": "Zuiderpark",
+   "city": "Den Haag",
+   "genres": [
+    "rock",
+    "indie",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/492620:Alanis-Morissette"
+  },
+  {
+   "id": "495496",
+   "date": "2026-07-07T22:00:00+02:00",
+   "kind": "party",
+   "name": "Bruno Mars",
+   "venue": "Johan Cruijff ArenA",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "pop",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/495496:Bruno-Mars"
+  },
+  {
+   "id": "492070",
+   "date": "2026-07-08T19:00:00+02:00",
+   "kind": "party",
+   "name": "Royal Park Live",
+   "venue": "Paleis Soestdijk",
+   "city": "Baarn",
+   "genres": [
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/492070:Royal-Park-Live"
+  },
+  {
+   "id": "487341",
+   "date": "2026-07-08T21:00:00+02:00",
+   "kind": "concert",
+   "name": "Breaking Benjamin",
+   "venue": "AFAS Live",
+   "city": "Amsterdam",
+   "genres": [
+    "indie"
+   ],
+   "url": "https://partyflock.nl/party/487341:Breaking-Benjamin"
+  },
+  {
+   "id": "489244",
+   "date": "2026-07-09T00:00:00+02:00",
+   "kind": "party",
+   "name": "Latin Wednesday",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489244:Latin-Wednesday"
+  },
+  {
+   "id": "494531",
+   "date": "2026-07-09T01:00:00+02:00",
+   "kind": "party",
+   "name": "Raveland",
+   "venue": "John Doe",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494531:Raveland"
+  },
+  {
+   "id": "482602",
+   "date": "2026-07-09T17:00:00+02:00",
+   "kind": "festival",
+   "name": "Airbeat One",
+   "venue": "Airport Neustadt-Glewe",
+   "city": "Neustadt-Glewe",
+   "genres": [
+    "techno",
+    "gabber",
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/482602:Airbeat-One"
+  },
+  {
+   "id": "486910",
+   "date": "2026-07-09T19:00:00+02:00",
+   "kind": "party",
+   "name": "Royal Park Live",
+   "venue": "Paleis Soestdijk",
+   "city": "Baarn",
+   "genres": [
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/486910:Royal-Park-Live"
+  },
+  {
+   "id": "489319",
+   "date": "2026-07-10T00:00:00+02:00",
+   "kind": "party",
+   "name": "Latin Thursday",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489319:Latin-Thursday"
+  },
+  {
+   "id": "493984",
+   "date": "2026-07-10T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Stone Techno Night Event",
+   "venue": "onbekende locatie",
+   "city": "Essen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493984:Stone-Techno-Night-Event"
+  },
+  {
+   "id": "482007",
+   "date": "2026-07-10T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Wildeburg",
+   "venue": "Netl",
+   "city": "Kraggenburg",
+   "genres": [
+    "techno",
+    "indie",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/482007:Wildeburg"
+  },
+  {
+   "id": "482687",
+   "date": "2026-07-10T17:00:00+02:00",
+   "kind": "festival",
+   "name": "Airbeat One",
+   "venue": "Airport Neustadt-Glewe",
+   "city": "Neustadt-Glewe",
+   "genres": [
+    "techno",
+    "gabber",
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/482687:Airbeat-One"
+  },
+  {
+   "id": "482670",
+   "date": "2026-07-10T18:00:00+02:00",
+   "kind": "party",
+   "name": "Electric Love",
+   "venue": "Salzburgring",
+   "city": "Plainfeld",
+   "genres": [
+    "techno",
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/482670:Electric-Love"
+  },
+  {
+   "id": "490716",
+   "date": "2026-07-10T18:00:00+02:00",
+   "kind": "festival",
+   "name": "TAPT Festival",
+   "venue": "Malieveld",
+   "city": "Den Haag",
+   "genres": [
+    "techno",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/490716:TAPT-Festival"
+  },
+  {
+   "id": "494595",
+   "date": "2026-07-10T19:00:00+02:00",
+   "kind": "party",
+   "name": "The Cuckoo's Nest",
+   "venue": "Colorado Charlie",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494595:The-Cuckoos-Nest"
+  },
+  {
+   "id": "490816",
+   "date": "2026-07-10T19:00:00+02:00",
+   "kind": "party",
+   "name": "Vrijmiboot",
+   "venue": "unspecified boat",
+   "city": "Zwolle",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/490816:Vrijmiboot"
+  },
+  {
+   "id": "490274",
+   "date": "2026-07-10T19:00:00+02:00",
+   "kind": "party",
+   "name": "The Opposites",
+   "venue": "Zuiderpark",
+   "city": "Den Haag",
+   "genres": [
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/490274:The-Opposites"
+  },
+  {
+   "id": "494950",
+   "date": "2026-07-10T21:30:00+02:00",
+   "kind": "party",
+   "name": "Vroeg Pieken Op Het Water",
+   "venue": "SS Rotterdam",
+   "city": "Rotterdam",
+   "genres": [
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/494950:Vroeg-Pieken-Op-Het-Water"
+  },
+  {
+   "id": "489072",
+   "date": "2026-07-11T00:00:00+02:00",
+   "kind": "party",
+   "name": "Latin Night",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489072:Latin-Night"
+  },
+  {
+   "id": "483850",
+   "date": "2026-07-11T01:00:00+02:00",
+   "kind": "party",
+   "name": "Bassmania",
+   "venue": "Hawerkamp Gelände",
+   "city": "Münster",
+   "genres": [
+    "techno",
+    "dnb"
+   ],
+   "url": "https://partyflock.nl/party/483850:Bassmania"
+  },
+  {
+   "id": "494798",
+   "date": "2026-07-11T01:00:00+02:00",
+   "kind": "party",
+   "name": "Afro Slush",
+   "venue": "Up",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/494798:Afro-Slush"
+  },
+  {
+   "id": "495502",
+   "date": "2026-07-11T01:59:59+02:00",
+   "kind": "party",
+   "name": "BASIS Talent Night",
+   "venue": "BASIS",
+   "city": "Utrecht",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495502:BASIS-Talent-Night"
+  },
+  {
+   "id": "487006",
+   "date": "2026-07-11T13:00:00+02:00",
+   "kind": "festival",
+   "name": "Bospop",
+   "venue": "Evenemententerrein A2 Weert Noord",
+   "city": "Weert",
+   "genres": [
+    "rock",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/487006:Bospop"
+  },
+  {
+   "id": "482008",
+   "date": "2026-07-11T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Wildeburg",
+   "venue": "Netl",
+   "city": "Kraggenburg",
+   "genres": [
+    "techno",
+    "indie",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/482008:Wildeburg"
+  },
+  {
+   "id": "490328",
+   "date": "2026-07-11T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Legends of Rock",
+   "venue": "Weide Sonsbeek",
+   "city": "Arnhem",
+   "genres": [
+    "rock"
+   ],
+   "url": "https://partyflock.nl/party/490328:Legends-of-Rock"
+  },
+  {
+   "id": "490100",
+   "date": "2026-07-11T15:00:00+02:00",
+   "kind": "festival",
+   "name": "Awakenings Festival",
+   "venue": "Beekse Bergen",
+   "city": "Hilvarenbeek",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/490100:Awakenings-Festival"
+  },
+  {
+   "id": "482846",
+   "date": "2026-07-11T15:00:00+02:00",
+   "kind": "festival",
+   "name": "So W'Happy Festival",
+   "venue": "Evenemententerrein Rongy",
+   "city": "Rongy",
+   "genres": [
+    "techno",
+    "dnb",
+    "gabber",
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/482846:So-WHappy-Festival"
+  },
+  {
+   "id": "490717",
+   "date": "2026-07-11T15:00:00+02:00",
+   "kind": "festival",
+   "name": "TAPT Festival",
+   "venue": "Malieveld",
+   "city": "Den Haag",
+   "genres": [
+    "techno",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/490717:TAPT-Festival"
+  },
+  {
+   "id": "492575",
+   "date": "2026-07-11T15:00:00+02:00",
+   "kind": "festival",
+   "name": "Thuishaven",
+   "venue": "Thuishaven terrein",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/492575:Thuishaven"
+  },
+  {
+   "id": "493650",
+   "date": "2026-07-11T16:00:00+02:00",
+   "kind": "party",
+   "name": "Club Voltaire",
+   "venue": "Bamboo Lodge",
+   "city": "Groningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493650:Club-Voltaire"
+  },
+  {
+   "id": "487632",
+   "date": "2026-07-11T16:00:00+02:00",
+   "kind": "festival",
+   "name": "Industrial Insanity",
+   "venue": "Parkeerplaats Wegrestaurant Napoleon",
+   "city": "Hank",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/487632:Industrial-Insanity"
+  },
+  {
+   "id": "482369",
+   "date": "2026-07-11T16:00:00+02:00",
+   "kind": "festival",
+   "name": "Ostend Beach Festival",
+   "venue": "Montgomerykaai 1",
+   "city": "Oostende",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/482369:Ostend-Beach-Festival"
+  },
+  {
+   "id": "486235",
+   "date": "2026-07-11T16:30:00+02:00",
+   "kind": "festival",
+   "name": "North Sea Jazz festival",
+   "venue": "Ahoy",
+   "city": "Rotterdam",
+   "genres": [
+    "pop",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/486235:North-Sea-Jazz-festival"
+  },
+  {
+   "id": "482686",
+   "date": "2026-07-11T17:00:00+02:00",
+   "kind": "festival",
+   "name": "Airbeat One",
+   "venue": "Airport Neustadt-Glewe",
+   "city": "Neustadt-Glewe",
+   "genres": [
+    "techno",
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/482686:Airbeat-One"
+  },
+  {
+   "id": "490609",
+   "date": "2026-07-11T19:00:00+02:00",
+   "kind": "party",
+   "name": "Woodstock",
+   "venue": "Woodstock 69",
+   "city": "Bloemendaal aan zee",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/490609:Woodstock"
+  },
+  {
+   "id": "494872",
+   "date": "2026-07-11T19:00:00+02:00",
+   "kind": "party",
+   "name": "Colorado Charlie",
+   "venue": "Colorado Charlie",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494872:Colorado-Charlie"
+  },
+  {
+   "id": "495605",
+   "date": "2026-07-11T19:00:00+02:00",
+   "kind": "party",
+   "name": "BBQ 4 You",
+   "venue": "JACK",
+   "city": "Rotterdam",
+   "genres": [
+    "dnb",
+    "gabber"
+   ],
+   "url": "https://partyflock.nl/party/495605:BBQ-4-You"
+  },
+  {
+   "id": "494799",
+   "date": "2026-07-11T19:00:00+02:00",
+   "kind": "party",
+   "name": "The Playground",
+   "venue": "Zuiderpark",
+   "city": "Den Haag",
+   "genres": [
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/494799:The-Playground"
+  },
+  {
+   "id": "486912",
+   "date": "2026-07-11T19:00:00+02:00",
+   "kind": "party",
+   "name": "Royal Park Live",
+   "venue": "Paleis Soestdijk",
+   "city": "Baarn",
+   "genres": [
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/486912:Royal-Park-Live"
+  },
+  {
+   "id": "494300",
+   "date": "2026-07-11T20:00:00+02:00",
+   "kind": "party",
+   "name": "Hutje Mutje",
+   "venue": "Evenementen Terrein",
+   "city": "Deil",
+   "genres": [
+    "techno",
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/494300:Hutje-Mutje"
+  },
+  {
+   "id": "493913",
+   "date": "2026-07-11T21:00:00+02:00",
+   "kind": "party",
+   "name": "Back To Base",
+   "venue": "Boomerang Beach",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493913:Back-To-Base"
+  },
+  {
+   "id": "485968",
+   "date": "2026-07-11T23:00:00+02:00",
+   "kind": "party",
+   "name": "Bootshaus Sommerfest",
+   "venue": "Bootshaus",
+   "city": "Keulen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/485968:Bootshaus-Sommerfest"
+  },
+  {
+   "id": "494726",
+   "date": "2026-07-12T00:00:00+02:00",
+   "kind": "party",
+   "name": "Café × Goes Hard",
+   "venue": "Café X",
+   "city": "Purmerend",
+   "genres": [
+    "gabber",
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/494726:Cafe-x-Goes-Hard"
+  },
+  {
+   "id": "489192",
+   "date": "2026-07-12T00:00:00+02:00",
+   "kind": "party",
+   "name": "Rumba Latina",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489192:Rumba-Latina"
+  },
+  {
+   "id": "495347",
+   "date": "2026-07-12T01:00:00+02:00",
+   "kind": "party",
+   "name": "BASIS",
+   "venue": "BASIS",
+   "city": "Utrecht",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495347:BASIS"
+  },
+  {
+   "id": "495378",
+   "date": "2026-07-12T01:00:00+02:00",
+   "kind": "party",
+   "name": "MoBlack Records",
+   "venue": "Lofi",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495378:MoBlack-Records"
+  },
+  {
+   "id": "495393",
+   "date": "2026-07-12T01:00:00+02:00",
+   "kind": "party",
+   "name": "Shelter",
+   "venue": "Shelter",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495393:Shelter"
+  },
+  {
+   "id": "494223",
+   "date": "2026-07-12T01:00:00+02:00",
+   "kind": "party",
+   "name": "Soirée",
+   "venue": "Oliva",
+   "city": "Amsterdam",
+   "genres": [
+    "techno",
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/494223:Soiree"
+  },
+  {
+   "id": "494287",
+   "date": "2026-07-12T01:00:00+02:00",
+   "kind": "party",
+   "name": "UMAH",
+   "venue": "013",
+   "city": "Tilburg",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494287:UMAH"
+  },
+  {
+   "id": "491609",
+   "date": "2026-07-12T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Kiesgrube",
+   "venue": "Kiesgrube",
+   "city": "Neuss",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/491609:Kiesgrube"
+  },
+  {
+   "id": "482847",
+   "date": "2026-07-12T14:00:00+02:00",
+   "kind": "festival",
+   "name": "So W'Happy Festival",
+   "venue": "Evenemententerrein Rongy",
+   "city": "Rongy",
+   "genres": [
+    "techno",
+    "dnb",
+    "gabber",
+    "hardstyle"
+   ],
+   "url": "https://partyflock.nl/party/482847:So-WHappy-Festival"
+  },
+  {
+   "id": "482009",
+   "date": "2026-07-12T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Wildeburg",
+   "venue": "Netl",
+   "city": "Kraggenburg",
+   "genres": [
+    "techno",
+    "indie",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/482009:Wildeburg"
+  },
+  {
+   "id": "487008",
+   "date": "2026-07-12T14:00:00+02:00",
+   "kind": "festival",
+   "name": "Bospop",
+   "venue": "Evenemententerrein A2 Weert Noord",
+   "city": "Weert",
+   "genres": [
+    "rock",
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/487008:Bospop"
+  },
+  {
+   "id": "490329",
+   "date": "2026-07-12T14:00:00+02:00",
+   "kind": "concert",
+   "name": "Legends of Rock",
+   "venue": "Weide Sonsbeek",
+   "city": "Arnhem",
+   "genres": [
+    "rock"
+   ],
+   "url": "https://partyflock.nl/party/490329:Legends-of-Rock"
+  },
+  {
+   "id": "490101",
+   "date": "2026-07-12T15:00:00+02:00",
+   "kind": "festival",
+   "name": "Awakenings Festival",
+   "venue": "Beekse Bergen",
+   "city": "Hilvarenbeek",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/490101:Awakenings-Festival"
+  },
+  {
+   "id": "494013",
+   "date": "2026-07-12T15:00:00+02:00",
+   "kind": "festival",
+   "name": "Thuishaven",
+   "venue": "Thuishaven terrein",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494013:Thuishaven"
+  },
+  {
+   "id": "482370",
+   "date": "2026-07-12T16:00:00+02:00",
+   "kind": "festival",
+   "name": "Ostend Beach Festival",
+   "venue": "Montgomerykaai 1",
+   "city": "Oostende",
+   "genres": [
+    "techno",
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/482370:Ostend-Beach-Festival"
+  },
+  {
+   "id": "487633",
+   "date": "2026-07-12T16:00:00+02:00",
+   "kind": "festival",
+   "name": "Industrial Insanity",
+   "venue": "Parkeerplaats Wegrestaurant Napoleon",
+   "city": "Hank",
+   "genres": [
+    "gabber"
+   ],
+   "url": "https://partyflock.nl/party/487633:Industrial-Insanity"
+  },
+  {
+   "id": "486236",
+   "date": "2026-07-12T16:30:00+02:00",
+   "kind": "festival",
+   "name": "North Sea Jazz festival",
+   "venue": "Ahoy",
+   "city": "Rotterdam",
+   "genres": [
+    "hiphop",
+    "pop",
+    "jazz"
+   ],
+   "url": "https://partyflock.nl/party/486236:North-Sea-Jazz-festival"
+  },
+  {
+   "id": "493509",
+   "date": "2026-07-12T17:00:00+02:00",
+   "kind": "party",
+   "name": "Azure Day Party",
+   "venue": "LuminAir",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493509:Azure-Day-Party"
+  },
+  {
+   "id": "493453",
+   "date": "2026-07-12T17:00:00+02:00",
+   "kind": "party",
+   "name": "Tiësto",
+   "venue": "Silverworks Island",
+   "city": "London",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/493453:Tiesto"
+  },
+  {
+   "id": "494817",
+   "date": "2026-07-12T18:30:00+02:00",
+   "kind": "party",
+   "name": "Moody Mehran",
+   "venue": "Four Elements Hotel",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494817:Moody-Mehran"
+  },
+  {
+   "id": "495133",
+   "date": "2026-07-12T19:00:00+02:00",
+   "kind": "party",
+   "name": "Colorado Charlie",
+   "venue": "Colorado Charlie",
+   "city": "Scheveningen",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495133:Colorado-Charlie"
+  },
+  {
+   "id": "490611",
+   "date": "2026-07-12T19:00:00+02:00",
+   "kind": "party",
+   "name": "Woodstock",
+   "venue": "Woodstock 69",
+   "city": "Bloemendaal aan zee",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/490611:Woodstock"
+  },
+  {
+   "id": "489009",
+   "date": "2026-07-13T00:00:00+02:00",
+   "kind": "party",
+   "name": "El Vacilon de Los Domingos",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489009:El-Vacilon-de-Los-Domingos"
+  },
+  {
+   "id": "494513",
+   "date": "2026-07-13T01:00:00+02:00",
+   "kind": "party",
+   "name": "No Sunday Without Techno",
+   "venue": "John Doe",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494513:No-Sunday-Without-Techno"
+  },
+  {
+   "id": "492077",
+   "date": "2026-07-13T19:00:00+02:00",
+   "kind": "party",
+   "name": "Royal Park Live",
+   "venue": "Paleis Soestdijk",
+   "city": "Baarn",
+   "genres": [
+    "pop"
+   ],
+   "url": "https://partyflock.nl/party/492077:Royal-Park-Live"
+  },
+  {
+   "id": "482723",
+   "date": "2026-07-15T18:00:00+02:00",
+   "kind": "party",
+   "name": "Verknipt Croatia",
+   "venue": "Zrce beach",
+   "city": "Novalja",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/482723:Verknipt-Croatia"
+  },
+  {
+   "id": "488105",
+   "date": "2026-07-15T22:00:00+02:00",
+   "kind": "party",
+   "name": "Pitbull",
+   "venue": "GelreDome",
+   "city": "Arnhem",
+   "genres": [
+    "techno",
+    "hiphop"
+   ],
+   "url": "https://partyflock.nl/party/488105:Pitbull"
+  },
+  {
+   "id": "489245",
+   "date": "2026-07-16T00:00:00+02:00",
+   "kind": "party",
+   "name": "Latin Wednesday",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489245:Latin-Wednesday"
+  },
+  {
+   "id": "494532",
+   "date": "2026-07-16T01:00:00+02:00",
+   "kind": "party",
+   "name": "Raveland",
+   "venue": "John Doe",
+   "city": "Amsterdam",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/494532:Raveland"
+  },
+  {
+   "id": "495005",
+   "date": "2026-07-16T19:00:00+02:00",
+   "kind": "party",
+   "name": "Terminal",
+   "venue": "The Garden Resort",
+   "city": "Tisno",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://partyflock.nl/party/495005:Terminal"
+  },
+  {
+   "id": "489320",
+   "date": "2026-07-17T00:00:00+02:00",
+   "kind": "party",
+   "name": "Latin Thursday",
+   "venue": "Out",
+   "city": "Amsterdam",
+   "genres": [
+    "hiphop",
+    "latin"
+   ],
+   "url": "https://partyflock.nl/party/489320:Latin-Thursday"
+  }
+ ]
+}

@@ -60,21 +60,30 @@
                 <span class="gtag"><i [style.background]="tag.color"></i>{{ tag.label }}</span>
               }
             </div>
-            <h3>{{ e.name }}</h3>
+            <h3>
+              <a [href]="e.url" target="_blank" rel="noopener">{{ e.name }}</a>
+            </h3>
             <p class="where">{{ e.venue }} · {{ e.city }}</p>
           </div>
-          <p class="note">{{ e.note }}</p>
         </li>
       } @empty {
         <li class="silence">
-          <p>Nothing on these frequencies this month — try widening your taste.</p>
+          @if (loaded()) {
+            <p>Nothing on these frequencies this month — try widening your taste.</p>
+          } @else {
+            <p>tuning in…</p>
+          }
         </li>
       }
     </ol>
 
     <p class="foot kicker">
-      <span class="tick">▸</span> a fictional programme, regenerated against today's date —
-      the page is wired so a real events api can drop straight in
+      <span class="tick">▸</span> programme scraped from
+      <a href="https://partyflock.nl" target="_blank" rel="noopener">partyflock.nl</a>
+      @if (scrapedAt()) {
+        on {{ scrapedAt() }}
+      }
+      — refreshed daily by the deploy workflow
     </p>
   </section>
 </div>
